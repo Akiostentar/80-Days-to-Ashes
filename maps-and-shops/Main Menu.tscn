@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://ckxcjkvo71ibl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v5gy4"]
+
+[sub_resource type="SystemFont" id="SystemFont_1vivr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dvdtt"]
+bg_color = Color(0.9372549, 0.8784314, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5b7ti"]
+bg_color = Color(0.5485432, 0.41253436, 9.62615e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yr4w"]
+bg_color = Color(0.9372549, 0.6784314, 0, 1)
+
+[node name="MainMenu" type="Control" unique_id=69459231]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="." unique_id=1307624708]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_v5gy4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1530605669]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 684.0
+offset_top = 267.0
+offset_right = 1047.0
+offset_bottom = 574.0
+grow_vertical = 2
+theme_override_constants/separation = 11
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=362761058]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_1vivr")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_dvdtt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5b7ti")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yr4w")
+text = "Play"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=963566741]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_1vivr")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_dvdtt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5b7ti")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yr4w")
+text = "Settings"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1234693428]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_1vivr")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_dvdtt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5b7ti")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7yr4w")
+text = "Exit"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=868200076]
+layout_mode = 0
+offset_left = 728.0
+offset_top = 65.0
+offset_right = 1011.0
+offset_bottom = 258.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -30
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 7
+theme_override_font_sizes/font_size = 69
+text = "80 Days
+to Ashes"
+horizontal_alignment = 1
+vertical_alignment = 1
