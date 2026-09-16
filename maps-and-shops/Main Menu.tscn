@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://ckxcjkvo71ibl"]
 
+[ext_resource type="Script" uid="uid://di55pr42cly8s" path="res://main_menu.gd" id="1_5b7ti"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v5gy4"]
 
 [sub_resource type="SystemFont" id="SystemFont_1vivr"]
@@ -22,6 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+script = ExtResource("1_5b7ti")
 
 [node name="Panel" type="Panel" parent="." unique_id=1307624708]
 layout_mode = 1
@@ -100,3 +103,7 @@ text = "80 Days
 to Ashes"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
