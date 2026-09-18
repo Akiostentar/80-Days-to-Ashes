@@ -123,7 +123,6 @@ offset_bottom = 86.51065
 text = "Back"
 
 [node name="Panel" type="Panel" parent="." unique_id=444333545]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -144,6 +143,9 @@ offset_top = 11.0
 offset_right = 377.0
 offset_bottom = 64.0
 scale = Vector2(1.0466822, 1.1903116)
+placeholder_text = "Name..."
+alignment = 1
+max_length = 20
 
 [node name="Button" type="Button" parent="Panel" unique_id=2051634086]
 layout_mode = 1
@@ -192,3 +194,4 @@ vertical_alignment = 1
 [connection signal="pressed" from="HBoxContainer/VBoxContainer3/Button" to="." method="_on_s3b_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_nameback_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_confirm_pressed"]
