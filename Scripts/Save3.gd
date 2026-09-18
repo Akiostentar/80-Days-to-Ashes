@@ -9,7 +9,9 @@ var player_intelligence: int = 50
 var player_dexterity: int = 10
 
 func data() -> Dictionary:
-	return {
+	return stats
+
+var stats := {
 		"name": player_name,
 		"hp": player_health,
 		"str": player_strength,
