@@ -10,11 +10,12 @@ var Save3 = SV3.new()
 @onready var S2: Label = $HBoxContainer/VBoxContainer2/Label2
 @onready var S3: Label = $HBoxContainer/VBoxContainer3/Label2
 @onready var S1: Label = $HBoxContainer/VBoxContainer/Label2
-# Called when the node enters the scene tree for the first time.
+@onready var name_input: Panel = $Panel
+
 func _ready() -> void:
 	label_content()
 
-func label_content():
+func label_content() -> void:
 	var data1 = Save1.data()
 	var data2 = Save2.data()
 	var data3 = Save3.data()
@@ -27,7 +28,16 @@ func label_content():
 		S3.text = data3["name"]
 	else:
 		pass
-	
-
 func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file("uid://ckxcjkvo71ibl") # Replace with function body.
+	get_tree().change_scene_to_file("uid://ckxcjkvo71ibl")
+
+
+func _on_s1b_pressed() -> void:
+	name_input.visible = true
+func _on_s2b_pressed() -> void:
+	name_input.visible = true
+func _on_s3b_pressed() -> void:
+	name_input.visible = true
+
+func _on_nameback_pressed() -> void:
+	name_input.visible = false
