@@ -1,6 +1,6 @@
 extends Node
 
-var player_name: String = "\n No Save Data"
+var player_name: String = ""
 var player_health: int = 100
 var player_strength: int = 5
 var player_defense: int = 5

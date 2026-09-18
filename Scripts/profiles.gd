@@ -18,10 +18,16 @@ func label_content():
 	var data1 = Save1.data()
 	var data2 = Save2.data()
 	var data3 = Save3.data()
-	S1.text = data1["name"]
-	S2.text = data2["name"]
-	S3.text = data3["name"]
-
+	
+	if data1["name"] != '':
+		S2.text = data1["name"]
+	if data2["name"] != '':
+		S2.text = data2["name"]	
+	if data3["name"] != '':
+		S3.text = data3["name"]
+	else:
+		pass
+	
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("uid://ckxcjkvo71ibl") # Replace with function body.
