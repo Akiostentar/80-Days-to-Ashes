@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ckxcjkvo71ibl"]
 
-[ext_resource type="Script" uid="uid://di55pr42cly8s" path="res://main_menu.gd" id="1_5b7ti"]
+[ext_resource type="Script" uid="uid://di55pr42cly8s" path="res://Scripts/main_menu.gd" id="1_totuj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v5gy4"]
 
@@ -24,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_5b7ti")
+script = ExtResource("1_totuj")
 
 [node name="Panel" type="Panel" parent="." unique_id=1307624708]
 layout_mode = 1
