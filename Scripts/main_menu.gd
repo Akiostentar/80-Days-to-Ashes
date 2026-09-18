@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://Profiles.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("uid://2a3g0r6d8ovv") # Replace with function body.
 
 func _on_settings_pressed() -> void:
 	print("Settings") 
