@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://2a3g0r6d8ovv"]
 
-[ext_resource type="Script" uid="uid://bn8l1dftp8f3u" path="res://profiles.gd" id="1_ta4hh"]
+[ext_resource type="Script" uid="uid://bn8l1dftp8f3u" path="res://Scripts/profiles.gd" id="1_ta4hh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vrlf"]
 
@@ -34,6 +34,34 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 20
 
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1647672780]
+propagate_maximum_size = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=571611136]
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 11.13
+theme_override_styles/normal = SubResource("StyleBoxFlat_8vrlf")
+text = "Save 1"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=34591943]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_styles/normal = SubResource("StyleBoxFlat_v5gy4")
+text = "
+No Save Data"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=1349885565]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Button"
+
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer" unique_id=1196159578]
 propagate_maximum_size = false
 layout_mode = 2
@@ -45,7 +73,7 @@ layout_mode = 2
 size_flags_vertical = 0
 size_flags_stretch_ratio = 11.13
 theme_override_styles/normal = SubResource("StyleBoxFlat_8vrlf")
-text = "Save 1"
+text = "Save 2"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer2" unique_id=746707621]
@@ -73,7 +101,7 @@ layout_mode = 2
 size_flags_vertical = 0
 size_flags_stretch_ratio = 11.13
 theme_override_styles/normal = SubResource("StyleBoxFlat_8vrlf")
-text = "Save 1"
+text = "Save 3"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer3" unique_id=780424260]
@@ -86,34 +114,6 @@ No Save Data"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="HBoxContainer/VBoxContainer3" unique_id=2096393859]
-layout_mode = 2
-size_flags_vertical = 8
-text = "Button"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1647672780]
-propagate_maximum_size = false
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 4
-
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=571611136]
-layout_mode = 2
-size_flags_vertical = 0
-size_flags_stretch_ratio = 11.13
-theme_override_styles/normal = SubResource("StyleBoxFlat_8vrlf")
-text = "Save 1"
-horizontal_alignment = 1
-
-[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=34591943]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
-theme_override_styles/normal = SubResource("StyleBoxFlat_v5gy4")
-text = "
-No Save Data"
-horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=1349885565]
 layout_mode = 2
 size_flags_vertical = 8
 text = "Button"
