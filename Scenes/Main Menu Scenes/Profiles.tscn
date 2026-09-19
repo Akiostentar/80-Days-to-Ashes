@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://2a3g0r6d8ovv"]
 
-[ext_resource type="Script" uid="uid://bn8l1dftp8f3u" path="res://Scripts/profiles.gd" id="1_ta4hh"]
+[ext_resource type="Script" uid="uid://bn8l1dftp8f3u" path="res://Scripts/Main Menu Scripts/profiles.gd" id="1_ta4hh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vrlf"]
 
