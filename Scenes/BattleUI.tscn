@@ -4,6 +4,9 @@
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qeq5k"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_qeq5k"]
+font_size = 22
+
 [node name="Battle UI" type="Control" unique_id=397725992]
 texture_filter = 1
 layout_mode = 3
@@ -58,6 +61,45 @@ grow_horizontal = 2
 layout_mode = 2
 size_flags_vertical = 3
 texture = SubResource("PlaceholderTexture2D_qeq5k")
+
+[node name="Buttons2" type="VBoxContainer" parent="." unique_id=682224449]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.009000001
+anchor_top = 0.23700002
+anchor_right = 0.99000007
+anchor_bottom = 0.98700005
+offset_left = 0.47999954
+offset_top = 0.35998535
+offset_right = -0.20007324
+offset_bottom = 0.35998535
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Buttons2" unique_id=1005315701]
+layout_mode = 2
+text = "Text Here"
+label_settings = SubResource("LabelSettings_qeq5k")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Buttons2" unique_id=1131993112]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Option1" type="Button" parent="Buttons2/HBoxContainer" unique_id=2092457070]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Option2" type="Button" parent="Buttons2/HBoxContainer" unique_id=1088923062]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Option3" type="Button" parent="Buttons2/HBoxContainer" unique_id=1020849767]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Option4" type="Button" parent="Buttons2/HBoxContainer" unique_id=963973548]
+layout_mode = 2
+size_flags_horizontal = 3
 
 [connection signal="pressed" from="Buttons/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="Buttons/HBoxContainer/Action" to="." method="_on_action_pressed"]
