@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ch4atb75uf2n1" path="res://Scripts/Main Menu Scripts/attribute_upgrade.gd" id="1_o1b5c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1b5c"]
+content_margin_top = 36.0
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
@@ -32,8 +33,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o1b5c")
-metadata/_edit_horizontal_guides_ = [90.0, 180.0, 148.0]
-metadata/_edit_vertical_guides_ = [500.0, 460.0, 780.0, 1026.0]
 
 [node name="Panel" type="Panel" parent="." unique_id=1166737554]
 layout_mode = 1
@@ -50,6 +49,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Up_Desc" type="Label" parent="Panel" unique_id=402589759]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.19100001
@@ -61,7 +61,7 @@ offset_top = -233.0
 offset_right = 155.25299
 offset_bottom = 237.0
 grow_vertical = 2
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_o1b5c")
 text = "Attribute Descriptions Will Show Up Here"
 horizontal_alignment = 1

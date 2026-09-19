@@ -33,32 +33,32 @@ var Dex_count = 0
 
 #-------- Attribute Descriptions -----------#
 func _on_vitality_mouse_entered() -> void:
-	Description_Box.text = 'viality description'
+	Description_Box.text = 'VITALITY \n\n Each upgrade point increase your base health by 1.5 points.'
 func _on_vitality_mouse_exited() -> void:
 	Description_Box.text = 'Attribute Descriptions will show up here'
 
 func _on_strength_mouse_entered() -> void:
-	Description_Box.text = 'strength description'
+	Description_Box.text = 'STRENGTH \n\n Each upgrade point increases your base damage by 0.3 points'
 func _on_strength_mouse_exited() -> void:
 	Description_Box.text = 'Attribute Descriptions will show up here'
 
 func _on_defense_mouse_entered() -> void:
-	Description_Box.text = 'defense  description'
+	Description_Box.text = 'DEFENSE \n\n Each upgrade point reduces damage taken by 0.3 points'
 func _on_defense_mouse_exited() -> void:
 	Description_Box.text = 'Attribute Descriptions will show up here'
 
 func _on_agility_mouse_entered() -> void:
-	Description_Box.text = 'agility description'
+	Description_Box.text = 'AGILITY \n\n Each upgrade point increases dodge chance by 0.3%'
 func _on_agility_mouse_exited() -> void:
 	Description_Box.text = 'Attribute Descriptions will show up here'
 
 func _on_intelligence_mouse_entered() -> void:
-	Description_Box.text = 'intelligence description'
+	Description_Box.text = 'INTELLIGENCE \n\n Each point does something IG'
 func _on_intelligence_mouse_exited() -> void:
 	Description_Box.text = 'Attribute Descriptions will show up here'
 
 func _on_dexterity_mouse_entered() -> void:
-	Description_Box.text = 'dexterity description'
+	Description_Box.text = 'DEXTERITY \n\n Each upgrade point increases your max energy by 0.2 points'
 func _on_dexterity_mouse_exited() -> void:
 	Description_Box.text = 'Attribute Descriptions will show up here'
 
