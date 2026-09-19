@@ -225,7 +225,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 6
 
-[node name="Vit count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1361670223]
+[node name="Vit_count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1361670223]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
@@ -235,7 +235,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Str count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1783125860]
+[node name="Str_count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1783125860]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
@@ -245,7 +245,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Def count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1884438345]
+[node name="Def_count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1884438345]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
@@ -255,7 +255,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Agi count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1499915540]
+[node name="Agi_count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1499915540]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
@@ -265,7 +265,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Int count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1247380815]
+[node name="Int_count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1247380815]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
@@ -275,7 +275,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Dex count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=404296096]
+[node name="Dex_count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=404296096]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
@@ -338,3 +338,15 @@ text = "-"
 [connection signal="mouse_exited" from="Panel/VBoxContainer/Intelligence" to="." method="_on_intelligence_mouse_exited"]
 [connection signal="mouse_entered" from="Panel/VBoxContainer/Dexterity" to="." method="_on_dexterity_mouse_entered"]
 [connection signal="mouse_exited" from="Panel/VBoxContainer/Dexterity" to="." method="_on_dexterity_mouse_exited"]
+[connection signal="pressed" from="Panel/HBoxContainer/Plus/Vit plus" to="." method="_on_vit_plus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Plus/Str plus" to="." method="_on_str_plus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Plus/Def plus" to="." method="_on_def_plus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Plus/Agi plus" to="." method="_on_agi_plus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Plus/Int plus" to="." method="_on_int_plus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Plus/Dex plus" to="." method="_on_dex_plus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Minus/Vit minus" to="." method="_on_vit_minus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Minus/Str minus" to="." method="_on_str_minus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Minus/Def minus" to="." method="_on_def_minus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Minus/Agi minus" to="." method="_on_agi_minus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Minus/Int minus" to="." method="_on_int_minus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Minus/Dex minus" to="." method="_on_dex_minus_pressed"]
