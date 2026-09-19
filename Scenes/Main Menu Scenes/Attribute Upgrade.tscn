@@ -1,5 +1,13 @@
 [gd_scene format=3 uid="uid://0vbi5ewy3q5f"]
 
+[ext_resource type="Script" uid="uid://ch4atb75uf2n1" path="res://Scripts/Main Menu Scripts/attribute_upgrade.gd" id="1_o1b5c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1b5c"]
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vivr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8vrlf"]
@@ -20,6 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_o1b5c")
 metadata/_edit_horizontal_guides_ = [90.0, 180.0]
 metadata/_edit_vertical_guides_ = [500.0, 460.0, 780.0]
 
@@ -49,7 +58,12 @@ offset_top = -233.0
 offset_right = 155.25299
 offset_bottom = 237.0
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_o1b5c")
+text = "Attribute Descriptions Will Show Up Here"
+horizontal_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
 
 [node name="Up_left" type="Label" parent="Panel" unique_id=813876363]
 layout_mode = 1
@@ -82,6 +96,7 @@ theme_override_constants/separation = 6
 [node name="Vitality" type="Label" parent="Panel/VBoxContainer" unique_id=458418108]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
 text = "Vitality"
 label_settings = SubResource("LabelSettings_1vivr")
@@ -92,6 +107,7 @@ uppercase = true
 [node name="Strength" type="Label" parent="Panel/VBoxContainer" unique_id=347103238]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
 text = "Strength"
 label_settings = SubResource("LabelSettings_1vivr")
@@ -102,6 +118,7 @@ uppercase = true
 [node name="Defense" type="Label" parent="Panel/VBoxContainer" unique_id=659455667]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
 text = "Defense"
 label_settings = SubResource("LabelSettings_1vivr")
@@ -112,6 +129,7 @@ uppercase = true
 [node name="Agility" type="Label" parent="Panel/VBoxContainer" unique_id=1786064143]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
 text = "Agility"
 label_settings = SubResource("LabelSettings_1vivr")
@@ -122,6 +140,7 @@ uppercase = true
 [node name="Intelligence" type="Label" parent="Panel/VBoxContainer" unique_id=1124913466]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
 text = "Intelligence"
 label_settings = SubResource("LabelSettings_1vivr")
@@ -132,6 +151,7 @@ uppercase = true
 [node name="Dexterity" type="Label" parent="Panel/VBoxContainer" unique_id=895950260]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
 text = "Dexterity"
 label_settings = SubResource("LabelSettings_1vivr")
@@ -293,3 +313,16 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 35
 text = "-"
+
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Vitality" to="." method="_on_vitality_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Vitality" to="." method="_on_vitality_mouse_exited"]
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Strength" to="." method="_on_strength_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Strength" to="." method="_on_strength_mouse_exited"]
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Defense" to="." method="_on_defense_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Defense" to="." method="_on_defense_mouse_exited"]
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Agility" to="." method="_on_agility_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Agility" to="." method="_on_agility_mouse_exited"]
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Intelligence" to="." method="_on_intelligence_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Intelligence" to="." method="_on_intelligence_mouse_exited"]
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Dexterity" to="." method="_on_dexterity_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Dexterity" to="." method="_on_dexterity_mouse_exited"]
