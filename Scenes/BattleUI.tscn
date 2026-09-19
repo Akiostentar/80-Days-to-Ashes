@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://b4jddjl6komah"]
+
+[ext_resource type="Script" uid="uid://d2abtlti7nc4m" path="res://Scripts/battle_ui.gd" id="1_gl3jw"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qeq5k"]
+
+[node name="Battle UI" type="Control" unique_id=397725992]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gl3jw")
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=263720134]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.748
+anchor_bottom = 0.21700001
+offset_right = 0.5599365
+offset_bottom = -0.2400055
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Buttons" unique_id=946987777]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Attack" type="Button" parent="Buttons/HBoxContainer" unique_id=2039991748]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Action" type="Button" parent="Buttons/HBoxContainer" unique_id=1522666081]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Items" type="Button" parent="Buttons/HBoxContainer" unique_id=2008339554]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Run" type="Button" parent="Buttons/HBoxContainer" unique_id=1032483797]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Menu" type="VBoxContainer" parent="." unique_id=748146107]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.21800001
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.039993286
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="Menu" unique_id=718102146]
+layout_mode = 2
+size_flags_vertical = 3
+texture = SubResource("PlaceholderTexture2D_qeq5k")
+
+[connection signal="pressed" from="Buttons/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="Buttons/HBoxContainer/Action" to="." method="_on_action_pressed"]
+[connection signal="pressed" from="Buttons/HBoxContainer/Items" to="." method="_on_items_pressed"]
+[connection signal="pressed" from="Buttons/HBoxContainer/Run" to="." method="_on_run_pressed"]
