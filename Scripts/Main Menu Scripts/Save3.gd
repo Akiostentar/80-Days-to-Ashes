@@ -1,5 +1,7 @@
 extends Node
 
+var day = 0
+
 var stats := {
 	"player_name": '',
 	"player_health": 100,
