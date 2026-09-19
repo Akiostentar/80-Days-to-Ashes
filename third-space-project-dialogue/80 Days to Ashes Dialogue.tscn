@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://djhg8nsnvqs4u"]
+
+[ext_resource type="Script" path="res://button.gd" id="1_pu4dr"]
+[ext_resource type="Script" path="res://dialogue_panel.gd" id="2_53px2"]
+[ext_resource type="Texture2D" path="res://Screenshot 2026-09-19 184913.png" id="3_4106p"]
+[ext_resource type="Texture2D" path="res://icon.svg" id="3_umopm"]
+[ext_resource type="Script" path="res://button_2.gd" id="5_4106p"]
+
+[sub_resource type="GDScript" id="GDScript_t5rd6"]
+
+[node name="Node2D" type="Node2D" unique_id=670953577]
+
+[node name="DialogueTest" type="Control" parent="." unique_id=1169170951]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1200.0
+offset_bottom = 720.0
+size_flags_stretch_ratio = 0.0
+script = SubResource("GDScript_t5rd6")
+
+[node name="NamePanel" type="Panel" parent="DialogueTest" unique_id=1521095057]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_left = 149.0
+offset_top = 337.0
+offset_right = 398.0
+offset_bottom = 400.0
+mouse_filter = 2
+
+[node name="NameLabel" type="Label" parent="DialogueTest/NamePanel" unique_id=1137955682]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = -14.5
+offset_right = 121.0
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialoguePanel" type="Panel" parent="DialogueTest" unique_id=192731793]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 148.0
+offset_top = 410.0
+offset_right = 1053.0
+offset_bottom = 601.0
+script = ExtResource("2_53px2")
+
+[node name="DialogueLabel" type="Label" parent="DialogueTest/DialoguePanel" unique_id=940663442]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 33.0
+offset_top = 30.0
+offset_right = -34.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+autowrap_mode = 2
+
+[node name="CharacterSprite" type="TextureRect" parent="DialogueTest" unique_id=1155461186]
+unique_name_in_owner = true
+visible = false
+show_behind_parent = true
+layout_mode = 0
+offset_left = 481.0
+offset_top = 101.0
+offset_right = 660.0
+offset_bottom = 477.0
+texture = ExtResource("3_umopm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="DialogueTest" unique_id=1053877959]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 57.0
+offset_top = 34.0
+offset_right = 249.0
+offset_bottom = 170.0
+text = "Dialogue Test"
+script = ExtResource("1_pu4dr")
+character_texture = ExtResource("3_umopm")
+
+[node name="Button2" type="Button" parent="DialogueTest" unique_id=2041400702]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 286.0
+offset_top = 34.0
+offset_right = 478.0
+offset_bottom = 170.0
+text = "Prologue Dialogue"
+script = ExtResource("5_4106p")
+character_texture = ExtResource("3_4106p")
+
+[node name="FadeOverlay" type="ColorRect" parent="DialogueTest" unique_id=630446417]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="FlashbackLabel" type="Label" parent="DialogueTest/FadeOverlay" unique_id=1374912296]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -378.0
+offset_top = -50.5
+offset_right = 378.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
