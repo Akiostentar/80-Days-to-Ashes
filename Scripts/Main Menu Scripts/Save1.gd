@@ -1,7 +1,7 @@
 extends Node
 
 var stats := {
-	"player_name": "",
+	"player_name": '',
 	"player_health": 100,
 	"player_strength": 5,
 	"player_defense": 5,
