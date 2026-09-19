@@ -1,6 +1,6 @@
 extends Control
 
-var GS = 0 #game save
+var GS = 1 #game save
 
 func _ready() -> void:
 	pass # Replace with function body.

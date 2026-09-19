@@ -14,6 +14,7 @@ func _ready() -> void:
 @onready var Intelligence_Counter: Label = $Panel/HBoxContainer/Count/Int_count
 @onready var Dexterity_Counter: Label = $Panel/HBoxContainer/Count/Dex_count
 
+
 var Attribute_Points = 0
 func AP() -> void:
 	if MainMenu.GS == 1:
@@ -165,8 +166,78 @@ func _on_dex_minus_pressed() -> void:
 		pass
 
 #-------- Confirm Button -------------------#
-
-
-
 func _on_confirm_pressed() -> void:
-	pass # Replace with function body.
+	var Confirm: Panel = $Confirm
+	Confirm.visible = true
+func _on_confirm_yes_pressed() -> void:
+	var Confirm: Panel = $Confirm
+	var Confirmed: Label = $Confirm/Label
+	if MainMenu.GS == 1:
+		Save1.stats["player_health"] += Vit_count
+		Save1.stats["player_strength"] += Str_count
+		Save1.stats["player_defense"] += Def_count
+		Save1.stats["player_agility"] += Agi_count
+		Save1.stats["player_intelligence"] += Int_count
+		Save1.stats["player_dexterity"] += Dex_count
+		Vit_count = 0
+		Str_count = 0
+		Def_count = 0
+		Agi_count = 0
+		Int_count = 0
+		Dex_count = 0
+		Vitality_Counter.text = str(0)
+		Strength_Counter.text = str(0)
+		Defense_Counter.text = str(0)
+		Agility_Counter.text = str(0)
+		Intelligence_Counter.text = str(0)
+		Dexterity_Counter.text = str(0)
+		Confirmed.text = "Confirmed"
+		await get_tree().create_timer(2.0).timeout
+		Confirm.visible = false
+	elif MainMenu.GS == 2:
+		Save2.stats["player_health"] += Vit_count
+		Save2.stats["player_strength"] += Str_count
+		Save2.stats["player_defense"] += Def_count
+		Save2.stats["player_agility"] += Agi_count
+		Save2.stats["player_intelligence"] += Int_count
+		Save2.stats["player_dexterity"] += Dex_count
+		Vit_count = 0
+		Str_count = 0
+		Def_count = 0
+		Agi_count = 0
+		Int_count = 0
+		Dex_count = 0
+		Vitality_Counter.text = str(0)
+		Strength_Counter.text = str(0)
+		Defense_Counter.text = str(0)
+		Agility_Counter.text = str(0)
+		Intelligence_Counter.text = str(0)
+		Dexterity_Counter.text = str(0)
+		Confirmed.text = "Confirmed"
+		await get_tree().create_timer(2.0).timeout
+		Confirm.visible = false
+	else:
+		Save3.stats["player_health"] += Vit_count
+		Save3.stats["player_strength"] += Str_count
+		Save3.stats["player_defense"] += Def_count
+		Save3.stats["player_agility"] += Agi_count
+		Save3.stats["player_intelligence"] += Int_count
+		Save3.stats["player_dexterity"] += Dex_count
+		Vit_count = 0
+		Str_count = 0
+		Def_count = 0
+		Agi_count = 0
+		Int_count = 0
+		Dex_count = 0
+		Vitality_Counter.text = str(0)
+		Strength_Counter.text = str(0)
+		Defense_Counter.text = str(0)
+		Agility_Counter.text = str(0)
+		Intelligence_Counter.text = str(0)
+		Dexterity_Counter.text = str(0)
+		Confirmed.text = "Confirmed"
+		await get_tree().create_timer(2.0).timeout
+		Confirm.visible = false
+func _on_confirm_no_pressed() -> void:
+	var Confirm: Panel = $Confirm
+	Confirm.visible = false
