@@ -4,7 +4,16 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vrlf"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v5gy4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eotax"]
+content_margin_top = 24.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_totuj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udm2q"]
+content_margin_top = 24.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mjet1"]
+content_margin_top = 24.0
 
 [node name="Profiles" type="Control" unique_id=2077628652]
 layout_mode = 3
@@ -48,9 +57,9 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-theme_override_styles/normal = SubResource("StyleBoxFlat_v5gy4")
-text = "
-No Save Data"
+theme_override_styles/normal = SubResource("StyleBoxFlat_eotax")
+text = "No Save Data"
+label_settings = SubResource("LabelSettings_totuj")
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=1349885565]
@@ -76,9 +85,8 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-theme_override_styles/normal = SubResource("StyleBoxFlat_v5gy4")
-text = "
-No Save Data"
+theme_override_styles/normal = SubResource("StyleBoxFlat_udm2q")
+text = "No Save Data"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="HBoxContainer/VBoxContainer2" unique_id=1180527940]
@@ -104,9 +112,8 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
-theme_override_styles/normal = SubResource("StyleBoxFlat_v5gy4")
-text = "
-No Save Data"
+theme_override_styles/normal = SubResource("StyleBoxFlat_mjet1")
+text = "No Save Data"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="HBoxContainer/VBoxContainer3" unique_id=2096393859]
@@ -123,6 +130,7 @@ offset_bottom = 86.51065
 text = "Back"
 
 [node name="Panel" type="Panel" parent="." unique_id=444333545]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
