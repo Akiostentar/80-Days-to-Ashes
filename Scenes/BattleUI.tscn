@@ -2,6 +2,25 @@
 
 [ext_resource type="Script" uid="uid://d2abtlti7nc4m" path="res://Scripts/battle_ui.gd" id="1_gl3jw"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbkf8"]
+bg_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6eyfp"]
+bg_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8qwt"]
+bg_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_vxmu1"]
+
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qeq5k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qeq5k"]
@@ -34,18 +53,39 @@ size_flags_vertical = 3
 [node name="Attack" type="Button" parent="Buttons/HBoxContainer" unique_id=2039991748]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_sbkf8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6eyfp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d8qwt")
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_vxmu1")
 
 [node name="Action" type="Button" parent="Buttons/HBoxContainer" unique_id=1522666081]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_sbkf8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6eyfp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d8qwt")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_vxmu1")
 
 [node name="Items" type="Button" parent="Buttons/HBoxContainer" unique_id=2008339554]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_sbkf8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6eyfp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d8qwt")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_vxmu1")
 
 [node name="Run" type="Button" parent="Buttons/HBoxContainer" unique_id=1032483797]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_sbkf8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6eyfp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d8qwt")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_vxmu1")
 
 [node name="Menu" type="VBoxContainer" parent="." unique_id=748146107]
 texture_filter = 1

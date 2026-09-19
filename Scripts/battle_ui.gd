@@ -1,6 +1,9 @@
 extends Control
 @onready var label: Label = $Buttons2/Label
 
+func _ready() -> void:
+	label.text = "Attack"
+
 func _on_attack_pressed() -> void:
 	label.text = "Attack"
 
