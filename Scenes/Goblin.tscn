@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bxq2jfjbeyu4c"]
+
+[ext_resource type="Script" uid="uid://dj06cw38e67ko" path="res://Scripts/goblin.gd" id="1_564fj"]
+[ext_resource type="Texture2D" uid="uid://dm47f72q5wi5i" path="res://icon.svg" id="2_wqigr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qeq5k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wqigr")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Goblin" type="CharacterBody2D" unique_id=1652504916]
+script = ExtResource("1_564fj")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1235116263]
+sprite_frames = SubResource("SpriteFrames_qeq5k")
