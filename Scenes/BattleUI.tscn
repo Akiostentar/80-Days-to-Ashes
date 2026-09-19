@@ -49,10 +49,10 @@ script = ExtResource("1_gl3jw")
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.748
-anchor_bottom = 0.21700001
-offset_right = 0.5599365
-offset_bottom = -0.2400055
+anchor_right = 0.595
+anchor_bottom = 0.216
+offset_right = 0.16497803
+offset_bottom = -0.03200531
 grow_horizontal = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Buttons" unique_id=946987777]

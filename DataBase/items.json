@@ -1,0 +1,76 @@
+{
+  "Misc": {
+    "torch": {
+      "item_name": "Brother's Chamberstick",
+      "item_type": "Item",
+      "item_rarity": "Rare",
+      "item_maxst": 1,
+      "item_upgd": true,
+      "item_maxup": 3
+    },
+    "": {},
+    "hscroll": {
+      "item_name": "Scroll of Health",
+      "item_desc": "placeholder text",
+      "item_type": "Item",
+      "item_rarity": "Uncommon",
+      "item_maxst": 1,
+      "item_upgd": true,
+      "item_maxup": 3
+    },
+    "mscroll": {
+      "item_name": "Scroll of Mana",
+      "item_desc": "placeholder text",
+      "item_type": "Item",
+      "item_rarity": "Uncommon",
+      "item_maxst": 1,
+      "item_upgd": true,
+      "item_maxup": 3
+    },
+    "ring": {
+      "item_name": "Holy Ring of [DEITY]",
+      "item_desc": "placeholder text",
+      "item_type": "Item",
+      "item_rarity": "Rare",
+      "item_maxst": 1,
+      "item_upgd": false,
+      "item_maxup": "N/A"
+    },
+    "hppot1": {
+      "item_name": "Vial of Health",
+      "item_desc": "placeholder text",
+      "item_type": "Consumable",
+      "item_rarity": "Common",
+      "item_maxst": 5,
+      "item_upgd": true,
+      "item_maxup": 3
+    },
+    "hppot2": {
+      "item_name": "Bottle of Health",
+      "item_desc": "placeholder text",
+      "item_type": "Consumable",
+      "item_rarity": "Uncommon",
+      "item_maxst": 5,
+      "item_upgd": true,
+      "item_maxup": 3
+    },
+    "manapot1": {
+      "item_name": "Vial of Mana",
+      "item_desc": "placeholder text",
+      "item_type": "Consumable",
+      "item_rarity": "Common",
+      "item_maxst": 5,
+      "item_upgd": true,
+      "item_maxup": 3
+    },
+    "manapot2": {
+      "item_name": "Bottle of Mana",
+      "item_desc": "placeholder text",
+      "item_type": "Consumable",
+      "item_rarity": "Uncommon",
+      "item_maxst": 5,
+      "item_upgd": true,
+      "item_maxup": 3
+    }
+  }
+}

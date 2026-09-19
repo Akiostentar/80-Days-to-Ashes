@@ -15,6 +15,10 @@ run/main_scene="uid://ckxcjkvo71ibl"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+StaticData="*uid://ba8s5m5lf6b0u"
+
 [display]
 
 window/size/viewport_width=1280
@@ -31,7 +35,8 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 folder_colors={
 "res://Assets/": "red",
-"res://Scenes/": "orange",
+"res://DataBase/": "orange",
+"res://Scenes/": "yellow",
 "res://Scripts/": "green"
 }
 
