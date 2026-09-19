@@ -1,0 +1,295 @@
+[gd_scene format=3 uid="uid://0vbi5ewy3q5f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vivr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8vrlf"]
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1vivr"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(0.8473826, 0.8699217, 1, 0.5411765)
+shadow_offset = Vector2(-1, 1)
+
+[node name="AttributeUpgrade" type="Control" unique_id=62853293]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_horizontal_guides_ = [90.0, 180.0]
+metadata/_edit_vertical_guides_ = [500.0, 460.0, 780.0]
+
+[node name="Panel" type="Panel" parent="." unique_id=1166737554]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -508.5
+offset_top = -271.0
+offset_right = 508.5
+offset_bottom = 271.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Up_Desc" type="Label" parent="Panel" unique_id=402589759]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19100001
+anchor_top = 0.5
+anchor_right = 0.19100001
+anchor_bottom = 0.5
+offset_left = -154.74701
+offset_top = -233.0
+offset_right = 155.25299
+offset_bottom = 237.0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+
+[node name="Up_left" type="Label" parent="Panel" unique_id=813876363]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19100001
+anchor_top = 0.5
+anchor_right = 0.19100001
+anchor_bottom = 0.5
+offset_left = 362.253
+offset_top = -233.0
+offset_right = 672.253
+offset_bottom = -188.0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "Upgrade Points Left: 0"
+label_settings = SubResource("LabelSettings_8vrlf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=556592246]
+propagate_maximum_size = false
+layout_mode = 1
+offset_left = 433.68182
+offset_top = 129.0
+offset_right = 711.3181
+offset_bottom = 504.0
+rotation = -6.2831855
+theme_override_constants/separation = 6
+
+[node name="Vitality" type="Label" parent="Panel/VBoxContainer" unique_id=458418108]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "Vitality"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Strength" type="Label" parent="Panel/VBoxContainer" unique_id=347103238]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "Strength"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Defense" type="Label" parent="Panel/VBoxContainer" unique_id=659455667]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "Defense"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Agility" type="Label" parent="Panel/VBoxContainer" unique_id=1786064143]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "Agility"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Intelligence" type="Label" parent="Panel/VBoxContainer" unique_id=1124913466]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "Intelligence"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Dexterity" type="Label" parent="Panel/VBoxContainer" unique_id=895950260]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "Dexterity"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=1913331533]
+layout_mode = 0
+offset_left = 776.5
+offset_top = 128.0
+offset_right = 958.5
+offset_bottom = 504.0
+
+[node name="Plus" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=92476307]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="Button" type="Button" parent="Panel/HBoxContainer/Plus" unique_id=414788801]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "+"
+
+[node name="Button2" type="Button" parent="Panel/HBoxContainer/Plus" unique_id=1678546470]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "+"
+
+[node name="Button3" type="Button" parent="Panel/HBoxContainer/Plus" unique_id=456454808]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "+"
+
+[node name="Button4" type="Button" parent="Panel/HBoxContainer/Plus" unique_id=1623416672]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "+"
+
+[node name="Button5" type="Button" parent="Panel/HBoxContainer/Plus" unique_id=110398615]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "+"
+
+[node name="Button6" type="Button" parent="Panel/HBoxContainer/Plus" unique_id=1110547911]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "+"
+
+[node name="Count" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=875282386]
+propagate_maximum_size = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="Vitality" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1361670223]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "0"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Strength" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1783125860]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "0"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Defense" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1884438345]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "0"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Agility" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1499915540]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "0"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Intelligence" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1247380815]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "0"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Dexterity" type="Label" parent="Panel/HBoxContainer/Count" unique_id=404296096]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "0"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Minus" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=1361854746]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="Button" type="Button" parent="Panel/HBoxContainer/Minus" unique_id=1946109913]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "-"
+
+[node name="Button2" type="Button" parent="Panel/HBoxContainer/Minus" unique_id=1226049967]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "-"
+
+[node name="Button3" type="Button" parent="Panel/HBoxContainer/Minus" unique_id=47639001]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "-"
+
+[node name="Button4" type="Button" parent="Panel/HBoxContainer/Minus" unique_id=1802897313]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "-"
+
+[node name="Button5" type="Button" parent="Panel/HBoxContainer/Minus" unique_id=1249109992]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "-"
+
+[node name="Button6" type="Button" parent="Panel/HBoxContainer/Minus" unique_id=834658388]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "-"
