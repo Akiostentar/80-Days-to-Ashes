@@ -7,7 +7,7 @@ extends Control
 @onready var inventory: ScrollContainer = $"Action Menu/Menu/Inventory"
 @onready var text_box: Label = $"Inspect Text Box/TextBox"
 @onready var inspect_text: Panel = $"Inspect Text Box"
-
+@onready var hp: TextureProgressBar = $"Category Menu/HP"
 
 func _ready() -> void:
 	label.text = "Attack"
@@ -15,6 +15,7 @@ func _ready() -> void:
 	fight.visible = true
 	inspect_text.visible = false
 	text_box.text = ""
+	hp.value = 100.0
 	
 func clear_ui():
 	fight.visible = false
