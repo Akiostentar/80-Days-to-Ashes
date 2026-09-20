@@ -66,22 +66,22 @@ func _on_fo_2_mouse_entered() -> void:
 func _on_ao_1_mouse_entered() -> void:
 	inspect_text.visible = true
 	text_box.text = "Action 1:
-		Ability"
+		PLaceholder Text Here"
 
 func _on_ao_2_mouse_entered() -> void:
 	inspect_text.visible = true
 	text_box.text = "Action 2:
-		Ability"
+		Placeholder Text Here"
 
 func _on_ao_3_mouse_entered() -> void:
 	inspect_text.visible = true
-	text_box.text = "Action 3:
-		Ability"
+	text_box.text = "Focus:
+		Gain 10 Energy"
 
 func _on_ao_4_mouse_entered() -> void:
 	inspect_text.visible = true
-	text_box.text = "Action 4:
-		Ability"
+	text_box.text = "Sheild:
+		Block 80% of incoming damage"
 
 
 # Inventory Slots

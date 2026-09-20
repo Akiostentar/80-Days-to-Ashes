@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b4jddjl6komah"]
 
-[ext_resource type="Script" uid="uid://d2abtlti7nc4m" path="res://Scripts/battle_ui.gd" id="1_gl3jw"]
+[ext_resource type="Script" uid="uid://d2abtlti7nc4m" path="res://Scripts/Battle Scripts/battle_ui.gd" id="1_gl3jw"]
 [ext_resource type="Texture2D" uid="uid://b414vhytoh7lr" path="res://Assets/Item_Sheet1.png" id="2_d8qwt"]
 [ext_resource type="Texture2D" uid="uid://uu55eodfkvwk" path="res://Assets/ProgressBars/Under.png" id="3_f6fb8"]
 [ext_resource type="Texture2D" uid="uid://c6uo6k0agyaty" path="res://Assets/ProgressBars/Progress.png" id="4_sbkf8"]
@@ -59,6 +59,14 @@ texture = SubResource("PlaceholderTexture2D_ltp5q")
 
 [sub_resource type="LabelSettings" id="LabelSettings_qeq5k"]
 font_size = 22
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7wtv"]
+atlas = ExtResource("2_d8qwt")
+region = Rect2(64, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntsqp"]
+atlas = ExtResource("2_d8qwt")
+region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vxmu1"]
 
@@ -212,11 +220,15 @@ size_flags_vertical = 3
 custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
+expand_icon = true
 
 [node name="FO2" type="Button" parent="Action Menu/Menu/Fight" unique_id=39998851]
 custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
+expand_icon = true
 
 [node name="Act" type="HBoxContainer" parent="Action Menu/Menu" unique_id=1004102576]
 visible = false
@@ -227,21 +239,31 @@ size_flags_vertical = 3
 custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
+expand_icon = true
 
 [node name="AO2" type="Button" parent="Action Menu/Menu/Act" unique_id=426595836]
 custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
+expand_icon = true
 
 [node name="AO3" type="Button" parent="Action Menu/Menu/Act" unique_id=639397723]
 custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_x7wtv")
+icon_alignment = 1
+expand_icon = true
 
 [node name="AO4" type="Button" parent="Action Menu/Menu/Act" unique_id=1298468167]
 custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_ntsqp")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Mercy" type="HBoxContainer" parent="Action Menu/Menu" unique_id=1010154610]
 visible = false
@@ -252,11 +274,15 @@ size_flags_vertical = 3
 custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
+expand_icon = true
 
 [node name="MO2" type="Button" parent="Action Menu/Menu/Mercy" unique_id=1239814977]
 custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
+expand_icon = true
 
 [node name="Inventory" type="ScrollContainer" parent="Action Menu/Menu" unique_id=585508941]
 visible = false
