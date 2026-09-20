@@ -1,7 +1,13 @@
-[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dxllpsmsmjl4p"]
+[gd_resource type="Resource" script_class="WeaponItemData" format=3 uid="uid://dxllpsmsmjl4p"]
 
-[ext_resource type="Script" uid="uid://dcl6g3t1p82w" path="res://Scripts/Items/item_data.gd" id="1_oess2"]
+[ext_resource type="Script" uid="uid://baa1jp5pom3kf" path="res://Scripts/Items/weapon_item_data.gd" id="1_oess2"]
+[ext_resource type="Texture2D" uid="uid://b414vhytoh7lr" path="res://Assets/Item_Sheet1.png" id="1_os1mg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_os1mg"]
+atlas = ExtResource("1_os1mg")
+region = Rect2(64, 48, 16, 16)
 
 [resource]
 script = ExtResource("1_oess2")
+icon = SubResource("AtlasTexture_os1mg")
 metadata/_custom_type_script = "uid://dcl6g3t1p82w"

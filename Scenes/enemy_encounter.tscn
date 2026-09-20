@@ -14,6 +14,7 @@ player_chr = NodePath("Player")
 enemy = NodePath("Enemy placement/Goblin")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1459453531]
+visible = false
 position = Vector2(639.74994, 360.00006)
 scale = Vector2(1280.4999, 720.00006)
 texture = SubResource("PlaceholderTexture2D_qeq5k")
@@ -28,10 +29,10 @@ texture = ExtResource("1_lhx5r")
 position = Vector2(77.49997, 0)
 
 [node name="Goblin" parent="Enemy placement" unique_id=1652504916 instance=ExtResource("2_k8f17")]
-position = Vector2(563.5, 384)
+position = Vector2(904.5, 360)
 
 [node name="Player" parent="." unique_id=422262428 instance=ExtResource("3_mr7g5")]
-position = Vector2(387, 585)
+position = Vector2(301, 570)
 
 [node name="UI" type="CanvasLayer" parent="Player" unique_id=298991704]
 
