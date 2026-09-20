@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ckxcjkvo71ibl"]
 
-[ext_resource type="Script" uid="uid://di55pr42cly8s" path="res://Scripts/main_menu.gd" id="1_totuj"]
+[ext_resource type="Script" uid="uid://di55pr42cly8s" path="res://Scripts/Main Menu Scripts/main_menu.gd" id="1_totuj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v5gy4"]
 

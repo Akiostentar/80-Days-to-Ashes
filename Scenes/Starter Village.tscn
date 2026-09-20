@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://ouxh8qrje06o"]
+
+[ext_resource type="Script" uid="uid://cguqkbiqogweq" path="res://Scenes/starter_village.gd" id="1_r3wr3"]
+[ext_resource type="Texture2D" uid="uid://c4jbupve2q71g" path="res://Assets/2026-09-20_17.25.33.png" id="2_vwlqd"]
+[ext_resource type="Texture2D" uid="uid://dsgrymo0n0kxu" path="res://Assets/2026-09-20_17.25.png" id="3_6jiip"]
+[ext_resource type="Texture2D" uid="uid://bq3rjfy375nea" path="res://Assets/clicked.png" id="4_6jiip"]
+[ext_resource type="Texture2D" uid="uid://bx7kiae7y4t8l" path="res://Assets/hovered.png" id="5_m18t3"]
+
+[node name="StarterVillage" type="Control" unique_id=1761633685]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r3wr3")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1282624335]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = -24.0
+offset_right = 43.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vwlqd")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=28003065]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 68.0
+offset_right = 704.0
+offset_bottom = 443.0
+texture_normal = ExtResource("3_6jiip")
+texture_pressed = ExtResource("4_6jiip")
+texture_hover = ExtResource("5_m18t3")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

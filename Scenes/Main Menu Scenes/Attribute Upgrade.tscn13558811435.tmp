@@ -1,0 +1,412 @@
+[gd_scene format=3 uid="uid://0vbi5ewy3q5f"]
+
+[ext_resource type="Script" uid="uid://ch4atb75uf2n1" path="res://Scripts/Main Menu Scripts/attribute_upgrade.gd" id="1_o1b5c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1b5c"]
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vivr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8vrlf"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1vivr"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(0.8473826, 0.8699217, 1, 0.5411765)
+shadow_offset = Vector2(-1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vrlf"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="AttributeUpgrade" type="Control" unique_id=62853293]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o1b5c")
+metadata/_edit_horizontal_guides_ = [90.0, 180.0, 148.0]
+metadata/_edit_vertical_guides_ = [500.0, 460.0, 780.0, 1026.0]
+
+[node name="Panel" type="Panel" parent="." unique_id=1166737554]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -508.5
+offset_top = -271.0
+offset_right = 508.5
+offset_bottom = 271.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Up_Desc" type="Label" parent="Panel" unique_id=402589759]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19100001
+anchor_top = 0.5
+anchor_right = 0.19100001
+anchor_bottom = 0.5
+offset_left = -154.74701
+offset_top = -233.0
+offset_right = 155.25299
+offset_bottom = 237.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_o1b5c")
+text = "Attribute Descriptions Will Show Up Here"
+horizontal_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="Up_left" type="Label" parent="Panel" unique_id=813876363]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19100001
+anchor_top = 0.5
+anchor_right = 0.19100001
+anchor_bottom = 0.5
+offset_left = 239.25299
+offset_top = -235.0
+offset_right = 619.253
+offset_bottom = -176.0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "Upgrade Points Left: 0"
+label_settings = SubResource("LabelSettings_8vrlf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Confirm" type="Button" parent="Panel" unique_id=472587578]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -149.5
+offset_top = 36.0
+offset_right = -58.5
+offset_bottom = 95.0
+grow_horizontal = 0
+text = "Continue"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=556592246]
+propagate_maximum_size = false
+layout_mode = 1
+offset_left = 433.68182
+offset_top = 129.0
+offset_right = 711.3181
+offset_bottom = 504.0
+rotation = -6.2831855
+theme_override_constants/separation = 6
+
+[node name="Vitality" type="Label" parent="Panel/VBoxContainer" unique_id=458418108]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "Vitality"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Strength" type="Label" parent="Panel/VBoxContainer" unique_id=347103238]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "Strength"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Defense" type="Label" parent="Panel/VBoxContainer" unique_id=659455667]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "Defense"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Agility" type="Label" parent="Panel/VBoxContainer" unique_id=1786064143]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "Agility"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Intelligence" type="Label" parent="Panel/VBoxContainer" unique_id=1124913466]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "Intelligence"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Dexterity" type="Label" parent="Panel/VBoxContainer" unique_id=895950260]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "Dexterity"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=1913331533]
+layout_mode = 0
+offset_left = 776.5
+offset_top = 129.0
+offset_right = 958.5
+offset_bottom = 505.0
+
+[node name="Plus" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=92476307]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="Vit plus" type="Button" parent="Panel/HBoxContainer/Plus" unique_id=414788801]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "+"
+
+[node name="Str plus" type="Button" parent="Panel/HBoxContainer/Plus" unique_id=1678546470]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "+"
+
+[node name="Def plus" type="Button" parent="Panel/HBoxContainer/Plus" unique_id=456454808]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "+"
+
+[node name="Agi plus" type="Button" parent="Panel/HBoxContainer/Plus" unique_id=1623416672]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "+"
+
+[node name="Int plus" type="Button" parent="Panel/HBoxContainer/Plus" unique_id=110398615]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "+"
+
+[node name="Dex plus" type="Button" parent="Panel/HBoxContainer/Plus" unique_id=1110547911]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "+"
+
+[node name="Count" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=875282386]
+propagate_maximum_size = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="Vit_count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1361670223]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "0"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Str_count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1783125860]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "0"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Def_count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1884438345]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "0"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Agi_count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1499915540]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "0"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Int_count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=1247380815]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "0"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Dex_count" type="Label" parent="Panel/HBoxContainer/Count" unique_id=404296096]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "0"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Minus" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=1361854746]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="Vit minus" type="Button" parent="Panel/HBoxContainer/Minus" unique_id=1946109913]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "-"
+
+[node name="Str minus" type="Button" parent="Panel/HBoxContainer/Minus" unique_id=1226049967]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "-"
+
+[node name="Def minus" type="Button" parent="Panel/HBoxContainer/Minus" unique_id=47639001]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "-"
+
+[node name="Agi minus" type="Button" parent="Panel/HBoxContainer/Minus" unique_id=1802897313]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "-"
+
+[node name="Int minus" type="Button" parent="Panel/HBoxContainer/Minus" unique_id=1249109992]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "-"
+
+[node name="Dex minus" type="Button" parent="Panel/HBoxContainer/Minus" unique_id=834658388]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "-"
+
+[node name="Confirm" type="Panel" parent="." unique_id=27603781]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.0
+offset_top = -69.0
+offset_right = 172.0
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8vrlf")
+
+[node name="Button" type="Button" parent="Confirm" unique_id=1633418090]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 57.0
+grow_vertical = 2
+text = "Yes"
+
+[node name="Button2" type="Button" parent="Confirm" unique_id=2098361074]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -55.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "No"
+
+[node name="Label" type="Label" parent="Confirm" unique_id=109186658]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -43.5
+offset_right = 80.0
+offset_bottom = 43.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Confirm
+ Upgrades?"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Panel/Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Vitality" to="." method="_on_vitality_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Vitality" to="." method="_on_vitality_mouse_exited"]
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Strength" to="." method="_on_strength_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Strength" to="." method="_on_strength_mouse_exited"]
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Defense" to="." method="_on_defense_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Defense" to="." method="_on_defense_mouse_exited"]
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Agility" to="." method="_on_agility_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Agility" to="." method="_on_agility_mouse_exited"]
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Intelligence" to="." method="_on_intelligence_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Intelligence" to="." method="_on_intelligence_mouse_exited"]
+[connection signal="mouse_entered" from="Panel/VBoxContainer/Dexterity" to="." method="_on_dexterity_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/VBoxContainer/Dexterity" to="." method="_on_dexterity_mouse_exited"]
+[connection signal="pressed" from="Panel/HBoxContainer/Plus/Vit plus" to="." method="_on_vit_plus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Plus/Str plus" to="." method="_on_str_plus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Plus/Def plus" to="." method="_on_def_plus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Plus/Agi plus" to="." method="_on_agi_plus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Plus/Int plus" to="." method="_on_int_plus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Plus/Dex plus" to="." method="_on_dex_plus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Minus/Vit minus" to="." method="_on_vit_minus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Minus/Str minus" to="." method="_on_str_minus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Minus/Def minus" to="." method="_on_def_minus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Minus/Agi minus" to="." method="_on_agi_minus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Minus/Int minus" to="." method="_on_int_minus_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Minus/Dex minus" to="." method="_on_dex_minus_pressed"]
+[connection signal="pressed" from="Confirm/Button" to="." method="_on_confirm_yes_pressed"]
+[connection signal="pressed" from="Confirm/Button2" to="." method="_on_confirm_no_pressed"]

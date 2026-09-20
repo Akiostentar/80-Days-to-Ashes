@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cv4wcakr4pii8"]
 
-[ext_resource type="Texture2D" uid="uid://cai11l2wesi1a" path="res://Assets/enemybg placeholder.jpg" id="1_lhx5r"]
-[ext_resource type="Script" uid="uid://do6ldwnspssac" path="res://Scripts/game_manager.gd" id="1_mcb4u"]
-[ext_resource type="PackedScene" uid="uid://bxq2jfjbeyu4c" path="res://Scenes/Goblin.tscn" id="2_k8f17"]
-[ext_resource type="PackedScene" uid="uid://c0gkatg2ko3jo" path="res://Scenes/Player.tscn" id="3_mr7g5"]
-[ext_resource type="PackedScene" uid="uid://b4jddjl6komah" path="res://Scenes/BattleUI.tscn" id="4_mr7g5"]
+[ext_resource type="Texture2D" path="res://Assets/enemybg placeholder.jpg" id="1_lhx5r"]
+[ext_resource type="Script" uid="uid://do6ldwnspssac" path="res://Scripts/Battle Scripts/game_manager.gd" id="1_mcb4u"]
+[ext_resource type="PackedScene" uid="uid://bxq2jfjbeyu4c" path="res://Scenes/Battle Scenes/Goblin.tscn" id="2_k8f17"]
+[ext_resource type="PackedScene" uid="uid://c0gkatg2ko3jo" path="res://Scenes/Battle Scenes/Player.tscn" id="3_mr7g5"]
+[ext_resource type="PackedScene" uid="uid://b4jddjl6komah" path="res://Scenes/Battle Scenes/BattleUI.tscn" id="4_mr7g5"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qeq5k"]
 
