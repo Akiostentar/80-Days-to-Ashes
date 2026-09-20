@@ -35,7 +35,7 @@ We definitely want to polish these systems and include more stuff in the future!
   - _**Overall,**_ the basic functionality of the entire game to make it playable is present, however we would like to contine developing it until it matches the quality we're pleased with.
 
 ## Acknowledgements
-- **PROGRAMMERS:** TB
+- **PROGRAMMERS:** Esan, Eron and Akio
 - **ART:** TBA
 - **SOUND DESIGN:** TBA
 - **PROGRAMS/TOOLS USED:** Godot, Git/Github, Milanote
