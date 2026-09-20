@@ -26,17 +26,17 @@ script = ExtResource("1_ta4hh")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=601997794]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 offset_left = -360.0
-offset_top = -526.0
+offset_top = -232.5
 offset_right = 360.0
-offset_bottom = -61.0
+offset_bottom = 232.5
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_constants/separation = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1647672780]
@@ -123,10 +123,10 @@ text = "Play"
 
 [node name="Button" type="Button" parent="." unique_id=182918282]
 layout_mode = 0
-offset_left = 1021.0
-offset_top = 40.0
-offset_right = 1114.6321
-offset_bottom = 86.51065
+offset_left = 1087.0
+offset_top = 51.0
+offset_right = 1180.6321
+offset_bottom = 97.51065
 text = "Back"
 
 [node name="Panel" type="Panel" parent="." unique_id=444333545]
