@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+StaticData="*uid://ba8s5m5lf6b0u"
 MainMenu="*uid://di55pr42cly8s"
 Save1="*uid://dpikte7ybok0u"
 Save2="*uid://cy7t10cp5trqt"
@@ -26,6 +27,7 @@ Save3="*uid://ba8qubhgxsrt6"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -37,8 +39,10 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 folder_colors={
 "res://Assets/": "red",
-"res://Scenes/": "orange",
-"res://Scripts/": "green"
+"res://DataBase/": "orange",
+"res://Items/": "yellow",
+"res://Scenes/": "green",
+"res://Scripts/": "blue"
 }
 
 [physics]

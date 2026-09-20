@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://c0gkatg2ko3jo"]
 
 [ext_resource type="Script" uid="uid://db4jbcndm7xwu" path="res://Scripts/player.gd" id="1_kyqiw"]
-[ext_resource type="Texture2D" uid="uid://dm47f72q5wi5i" path="res://icon.svg" id="1_rpqav"]
+[ext_resource type="Script" uid="uid://o2or7p7nbere" path="res://Scripts/Inventory/inventory_management.gd" id="2_kyqiw"]
+[ext_resource type="Script" uid="uid://dcl6g3t1p82w" path="res://Scripts/Items/item_data.gd" id="3_5ixxa"]
+[ext_resource type="Resource" uid="uid://cmurdsouwxcpk" path="res://Items/Consumables/hppot1.tres" id="4_nn08x"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sbkf8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qeq5k"]
 
@@ -9,8 +13,14 @@
 script = ExtResource("1_kyqiw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1470833685]
-scale = Vector2(1.625, 2.125)
-texture = ExtResource("1_rpqav")
+scale = Vector2(300, 300)
+texture = SubResource("PlaceholderTexture2D_sbkf8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=630340990]
 sprite_frames = SubResource("SpriteFrames_qeq5k")
+
+[node name="Inventory" type="Node" parent="." unique_id=267274327]
+script = ExtResource("2_kyqiw")
+start_items = Dictionary[ExtResource("3_5ixxa"), int]({
+ExtResource("4_nn08x"): 5
+})

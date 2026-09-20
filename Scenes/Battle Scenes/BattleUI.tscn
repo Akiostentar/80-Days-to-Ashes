@@ -1,62 +1,109 @@
 [gd_scene format=3 uid="uid://b4jddjl6komah"]
 
 [ext_resource type="Script" uid="uid://d2abtlti7nc4m" path="res://Scripts/battle_ui.gd" id="1_gl3jw"]
-[ext_resource type="Texture2D" uid="uid://dd5b18niucxde" path="res://Assets/Item__00.png" id="2_d8qwt"]
+[ext_resource type="Texture2D" uid="uid://b414vhytoh7lr" path="res://Assets/Item_Sheet1.png" id="2_d8qwt"]
+[ext_resource type="Texture2D" uid="uid://uu55eodfkvwk" path="res://Assets/ProgressBars/Under.png" id="3_f6fb8"]
+[ext_resource type="Texture2D" uid="uid://c6uo6k0agyaty" path="res://Assets/ProgressBars/Progress.png" id="4_sbkf8"]
+[ext_resource type="Texture2D" uid="uid://dr2maq2e2e7sk" path="res://Assets/ProgressBars/Outline.png" id="5_sbkf8"]
+[ext_resource type="Script" uid="uid://flh0tn6de4tr" path="res://Scripts/inventory.gd" id="6_6eyfp"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_okhu5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ltp5q"]
+texture = SubResource("PlaceholderTexture2D_okhu5")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbkf8"]
-bg_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
+bg_color = Color(0.3019608, 0.3019608, 0.3019608, 0.6509804)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3019608, 0.3019608, 0.3019608, 0.6509804)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6eyfp"]
-bg_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+bg_color = Color(0.3019608, 0.3019608, 0.3019608, 0.6509804)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8qwt"]
-bg_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+bg_color = Color(0.3019608, 0.3019608, 0.3019608, 0.6509804)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_vxmu1"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qeq5k"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8qwt"]
+atlas = ExtResource("2_d8qwt")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_205fa"]
+atlas = ExtResource("2_d8qwt")
+region = Rect2(112, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6fb8"]
+atlas = ExtResource("2_d8qwt")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yjd7"]
+atlas = ExtResource("2_d8qwt")
+region = Rect2(48, 96, 16, 16)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ltp5q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qeq5k"]
+texture = SubResource("PlaceholderTexture2D_ltp5q")
 
 [sub_resource type="LabelSettings" id="LabelSettings_qeq5k"]
 font_size = 22
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vxmu1"]
+
+[sub_resource type="Theme" id="Theme_d8qwt"]
+HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_vxmu1")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6e87q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_okhu5"]
+texture = SubResource("PlaceholderTexture2D_6e87q")
+
+[sub_resource type="LabelSettings" id="LabelSettings_7l4x2"]
+font_size = 32
+
 [node name="Battle UI" type="Control" unique_id=397725992]
 texture_filter = 1
 layout_mode = 3
-anchors_preset = 15
+anchor_left = 0.537
+anchor_top = 0.711
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -0.35998535
+offset_top = 0.07998657
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gl3jw")
 
-[node name="Buttons" type="VBoxContainer" parent="." unique_id=263720134]
-texture_filter = 1
+[node name="Category Menu" type="Panel" parent="." unique_id=1442233848]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.748
-anchor_bottom = 0.21700001
-offset_right = 0.5599365
-offset_bottom = -0.2400055
-grow_horizontal = 2
+anchor_top = -0.0050000004
+anchor_right = 1.0
+anchor_bottom = 0.216
+offset_top = 0.04000008
+offset_bottom = 0.071998596
+theme_override_styles/panel = SubResource("StyleBoxTexture_ltp5q")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Buttons" unique_id=946987777]
-layout_mode = 2
+[node name="HBoxContainer" type="HBoxContainer" parent="Category Menu" unique_id=946987777]
+layout_mode = 0
+offset_right = 346.0
+offset_bottom = 46.0
 size_flags_vertical = 3
+theme_override_constants/separation = 1
 
-[node name="Attack" type="Button" parent="Buttons/HBoxContainer" unique_id=2039991748]
+[node name="Attack" type="Button" parent="Category Menu/HBoxContainer" unique_id=2039991748]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_sbkf8")
@@ -65,11 +112,11 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_d8qwt")
 toggle_mode = true
 button_pressed = true
 button_group = SubResource("ButtonGroup_vxmu1")
-icon = ExtResource("2_d8qwt")
+icon = SubResource("AtlasTexture_d8qwt")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Action" type="Button" parent="Buttons/HBoxContainer" unique_id=1522666081]
+[node name="Action" type="Button" parent="Category Menu/HBoxContainer" unique_id=1522666081]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_sbkf8")
@@ -77,11 +124,11 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_6eyfp")
 theme_override_styles/hover = SubResource("StyleBoxFlat_d8qwt")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_vxmu1")
-icon = ExtResource("2_d8qwt")
+icon = SubResource("AtlasTexture_205fa")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Items" type="Button" parent="Buttons/HBoxContainer" unique_id=2008339554]
+[node name="Items" type="Button" parent="Category Menu/HBoxContainer" unique_id=2008339554]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_sbkf8")
@@ -89,11 +136,11 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_6eyfp")
 theme_override_styles/hover = SubResource("StyleBoxFlat_d8qwt")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_vxmu1")
-icon = ExtResource("2_d8qwt")
+icon = SubResource("AtlasTexture_f6fb8")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Run" type="Button" parent="Buttons/HBoxContainer" unique_id=1032483797]
+[node name="Run" type="Button" parent="Category Menu/HBoxContainer" unique_id=1032483797]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_sbkf8")
@@ -101,65 +148,180 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_6eyfp")
 theme_override_styles/hover = SubResource("StyleBoxFlat_d8qwt")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_vxmu1")
-icon = ExtResource("2_d8qwt")
+icon = SubResource("AtlasTexture_7yjd7")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Menu" type="VBoxContainer" parent="." unique_id=748146107]
-texture_filter = 1
+[node name="HP" type="TextureProgressBar" parent="Category Menu" unique_id=1185751861]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 358.0
+offset_top = 12.0
+offset_right = -10.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 100.0
+texture_under = ExtResource("3_f6fb8")
+texture_progress = ExtResource("4_sbkf8")
+tint_progress = Color(0.98039216, 0.22352941, 0.23137255, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Category Menu/HP" unique_id=1665209287]
+position = Vector2(112, 10)
+scale = Vector2(0.2565658, 0.48571387)
+texture = ExtResource("5_sbkf8")
+
+[node name="Action Menu" type="Panel" parent="." unique_id=76322116]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.21800001
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 0.039993286
-grow_horizontal = 2
-
-[node name="TextureRect" type="TextureRect" parent="Menu" unique_id=718102146]
-layout_mode = 2
+anchor_bottom = 1.0020001
+offset_top = 0.039970398
+offset_bottom = -0.032043457
 size_flags_vertical = 3
-texture = SubResource("PlaceholderTexture2D_qeq5k")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qeq5k")
 
-[node name="Buttons2" type="VBoxContainer" parent="." unique_id=682224449]
+[node name="Menu" type="VBoxContainer" parent="Action Menu" unique_id=682224449]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.009000001
-anchor_top = 0.23700002
-anchor_right = 0.99000007
-anchor_bottom = 0.98700005
-offset_left = 0.47999954
-offset_top = 0.35998535
-offset_right = -0.20007324
-offset_bottom = 0.35998535
+anchor_left = 0.008
+anchor_right = 0.99300003
+anchor_bottom = 0.97300005
+offset_left = 0.25599957
+offset_top = -0.38397217
+offset_right = 0.15100098
+offset_bottom = 0.01701355
 grow_horizontal = 2
+alignment = 1
 
-[node name="Label" type="Label" parent="Buttons2" unique_id=1005315701]
+[node name="Label" type="Label" parent="Action Menu/Menu" unique_id=1005315701]
 layout_mode = 2
 text = "Text Here"
 label_settings = SubResource("LabelSettings_qeq5k")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Buttons2" unique_id=1131993112]
+[node name="Fight" type="HBoxContainer" parent="Action Menu/Menu" unique_id=1131993112]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Option1" type="Button" parent="Buttons2/HBoxContainer" unique_id=2092457070]
+[node name="FO1" type="Button" parent="Action Menu/Menu/Fight" unique_id=2092457070]
+custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Option2" type="Button" parent="Buttons2/HBoxContainer" unique_id=1088923062]
+[node name="FO2" type="Button" parent="Action Menu/Menu/Fight" unique_id=39998851]
+custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Option3" type="Button" parent="Buttons2/HBoxContainer" unique_id=1020849767]
+[node name="Act" type="HBoxContainer" parent="Action Menu/Menu" unique_id=1004102576]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AO1" type="Button" parent="Action Menu/Menu/Act" unique_id=793362522]
+custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Option4" type="Button" parent="Buttons2/HBoxContainer" unique_id=963973548]
+[node name="AO2" type="Button" parent="Action Menu/Menu/Act" unique_id=426595836]
+custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[connection signal="pressed" from="Buttons/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
-[connection signal="pressed" from="Buttons/HBoxContainer/Action" to="." method="_on_action_pressed"]
-[connection signal="pressed" from="Buttons/HBoxContainer/Items" to="." method="_on_items_pressed"]
-[connection signal="pressed" from="Buttons/HBoxContainer/Run" to="." method="_on_run_pressed"]
+[node name="AO3" type="Button" parent="Action Menu/Menu/Act" unique_id=639397723]
+custom_maximum_size = Vector2(143, 124)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AO4" type="Button" parent="Action Menu/Menu/Act" unique_id=1298468167]
+custom_maximum_size = Vector2(143, 124)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Mercy" type="HBoxContainer" parent="Action Menu/Menu" unique_id=1010154610]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MO1" type="Button" parent="Action Menu/Menu/Mercy" unique_id=1423042568]
+custom_maximum_size = Vector2(143, 124)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MO2" type="Button" parent="Action Menu/Menu/Mercy" unique_id=1239814977]
+custom_maximum_size = Vector2(143, 124)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Inventory" type="ScrollContainer" parent="Action Menu/Menu" unique_id=585508941]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_d8qwt")
+script = ExtResource("6_6eyfp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Action Menu/Menu/Inventory" unique_id=18258318]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Slot1" type="Button" parent="Action Menu/Menu/Inventory/HBoxContainer" unique_id=1298074461]
+custom_minimum_size = Vector2(143, 0)
+layout_mode = 2
+
+[node name="Inspect Text Box" type="Panel" parent="." unique_id=441469320]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.75900006
+anchor_top = -2.4620001
+anchor_right = 0.6
+anchor_bottom = -1.702
+offset_left = 0.08703613
+offset_top = 0.0960083
+offset_right = 0.19998169
+offset_bottom = 0.015991211
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_okhu5")
+
+[node name="TextBox" type="Label" parent="Inspect Text Box" unique_id=1597322949]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.009000001
+anchor_top = 0.038000003
+anchor_right = 0.99000007
+anchor_bottom = 0.95600003
+offset_left = -0.25400066
+offset_top = -0.004000187
+offset_right = 0.059936523
+offset_bottom = -0.04800415
+text = "Test"
+label_settings = SubResource("LabelSettings_7l4x2")
+
+[connection signal="pressed" from="Category Menu/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="Category Menu/HBoxContainer/Action" to="." method="_on_action_pressed"]
+[connection signal="pressed" from="Category Menu/HBoxContainer/Items" to="." method="_on_items_pressed"]
+[connection signal="pressed" from="Category Menu/HBoxContainer/Run" to="." method="_on_run_pressed"]
+[connection signal="mouse_entered" from="Action Menu/Menu/Fight/FO1" to="." method="_on_fo_1_mouse_entered"]
+[connection signal="mouse_exited" from="Action Menu/Menu/Fight/FO1" to="." method="_on_fo_1_mouse_exited"]
+[connection signal="mouse_entered" from="Action Menu/Menu/Fight/FO2" to="." method="_on_fo_2_mouse_entered"]
+[connection signal="mouse_exited" from="Action Menu/Menu/Fight/FO2" to="." method="_on_fo_2_mouse_exited"]
+[connection signal="mouse_entered" from="Action Menu/Menu/Act/AO1" to="." method="_on_ao_1_mouse_entered"]
+[connection signal="mouse_exited" from="Action Menu/Menu/Act/AO1" to="." method="_on_ao_1_mouse_exited"]
+[connection signal="mouse_entered" from="Action Menu/Menu/Act/AO2" to="." method="_on_ao_2_mouse_entered"]
+[connection signal="mouse_exited" from="Action Menu/Menu/Act/AO2" to="." method="_on_ao_2_mouse_exited"]
+[connection signal="mouse_entered" from="Action Menu/Menu/Act/AO3" to="." method="_on_ao_3_mouse_entered"]
+[connection signal="mouse_exited" from="Action Menu/Menu/Act/AO3" to="." method="_on_ao_3_mouse_exited"]
+[connection signal="mouse_entered" from="Action Menu/Menu/Act/AO4" to="." method="_on_ao_4_mouse_entered"]
+[connection signal="mouse_exited" from="Action Menu/Menu/Act/AO4" to="." method="_on_ao_4_mouse_exited"]
+[connection signal="mouse_entered" from="Action Menu/Menu/Mercy/MO1" to="." method="_on_mo_1_mouse_entered"]
+[connection signal="mouse_exited" from="Action Menu/Menu/Mercy/MO1" to="." method="_on_mo_1_mouse_exited"]
+[connection signal="mouse_entered" from="Action Menu/Menu/Mercy/MO2" to="." method="_on_mo_2_mouse_entered"]
+[connection signal="mouse_exited" from="Action Menu/Menu/Mercy/MO2" to="." method="_on_mo_2_mouse_exited"]
+[connection signal="mouse_entered" from="Action Menu/Menu/Inventory/HBoxContainer/Slot1" to="." method="_on_slot_1_mouse_entered"]
+[connection signal="mouse_exited" from="Action Menu/Menu/Inventory/HBoxContainer/Slot1" to="." method="_on_slot_1_mouse_exited"]

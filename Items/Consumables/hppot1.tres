@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ConsumableItemData" format=3 uid="uid://cmurdsouwxcpk"]
+
+[ext_resource type="Script" uid="uid://ti6t00nufdxm" path="res://Scripts/Items/consumable_item_data.gd" id="1_k6lj1"]
+[ext_resource type="Texture2D" uid="uid://b414vhytoh7lr" path="res://Assets/Item_Sheet1.png" id="1_n6n46"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8qwt"]
+atlas = ExtResource("1_n6n46")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_k6lj1")
+min_heal_amount = 10
+max_heal_amount = 20
+display_name = "Vial of Health"
+max_stack_size = 5
+icon = SubResource("AtlasTexture_d8qwt")
+metadata/_custom_type_script = "uid://ti6t00nufdxm"
