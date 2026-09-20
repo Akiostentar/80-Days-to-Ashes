@@ -26,10 +26,9 @@ scale = Vector2(2.2213593, 2.1726193)
 texture = ExtResource("1_lhx5r")
 
 [node name="Enemy placement" type="Node2D" parent="." unique_id=953059396]
-position = Vector2(77.49997, 0)
 
 [node name="Goblin" parent="Enemy placement" unique_id=1652504916 instance=ExtResource("2_k8f17")]
-position = Vector2(904.5, 360)
+position = Vector2(959, 347)
 
 [node name="Player" parent="." unique_id=422262428 instance=ExtResource("3_mr7g5")]
 position = Vector2(301, 570)
