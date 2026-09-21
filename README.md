@@ -33,9 +33,10 @@ We definitely want to polish these systems and include more stuff in the future!
   - Includes initial battle scene
   - Includes Placeholder sprites for the player, enemy, UI and pretty much everything
   - _**Overall,**_ the basic functionality of the entire game to make it playable is present, however we would like to contine developing it until it matches the quality we're pleased with.
+  - _**IMPORTANT NOTE**_ most of the mentioned inclusions are not connected to each other yet. Only the title screen and save selection is available. Interconnectability between all screens will be added in the next ship
 
 ## Acknowledgements
-- **PROGRAMMERS:** Esan, Eron and Akio
+- **PROGRAMMERS:** Easan, Eron and Akio
 - **ART:** TBA
 - **SOUND DESIGN:** TBA
 - **PROGRAMS/TOOLS USED:** Godot, Git/Github, Milanote
