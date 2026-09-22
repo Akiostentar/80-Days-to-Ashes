@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://uu55eodfkvwk" path="res://Assets/ProgressBars/Under.png" id="3_f6fb8"]
 [ext_resource type="Texture2D" uid="uid://c6uo6k0agyaty" path="res://Assets/ProgressBars/Progress.png" id="4_sbkf8"]
 [ext_resource type="Texture2D" uid="uid://dr2maq2e2e7sk" path="res://Assets/ProgressBars/Outline.png" id="5_sbkf8"]
-[ext_resource type="Script" uid="uid://flh0tn6de4tr" path="res://Scripts/inventory.gd" id="6_6eyfp"]
+[ext_resource type="Script" uid="uid://07pxbvt6stxv" path="res://Scripts/inventory_slots.gd" id="6_ntsqp"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_okhu5"]
 
@@ -289,14 +289,14 @@ visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_d8qwt")
-script = ExtResource("6_6eyfp")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Action Menu/Menu/Inventory" unique_id=18258318]
+[node name="Inventory Slots" type="HBoxContainer" parent="Action Menu/Menu/Inventory" unique_id=18258318]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("6_ntsqp")
 
-[node name="Slot1" type="Button" parent="Action Menu/Menu/Inventory/HBoxContainer" unique_id=1298074461]
+[node name="SlotBase" type="Button" parent="Action Menu/Menu/Inventory/Inventory Slots" unique_id=1298074461]
 custom_minimum_size = Vector2(143, 0)
 layout_mode = 2
 
@@ -349,5 +349,5 @@ label_settings = SubResource("LabelSettings_7l4x2")
 [connection signal="mouse_exited" from="Action Menu/Menu/Mercy/MO1" to="." method="_on_mo_1_mouse_exited"]
 [connection signal="mouse_entered" from="Action Menu/Menu/Mercy/MO2" to="." method="_on_mo_2_mouse_entered"]
 [connection signal="mouse_exited" from="Action Menu/Menu/Mercy/MO2" to="." method="_on_mo_2_mouse_exited"]
-[connection signal="mouse_entered" from="Action Menu/Menu/Inventory/HBoxContainer/Slot1" to="." method="_on_slot_1_mouse_entered"]
-[connection signal="mouse_exited" from="Action Menu/Menu/Inventory/HBoxContainer/Slot1" to="." method="_on_slot_1_mouse_exited"]
+[connection signal="mouse_entered" from="Action Menu/Menu/Inventory/Inventory Slots/SlotBase" to="." method="_on_slot_1_mouse_entered"]
+[connection signal="mouse_exited" from="Action Menu/Menu/Inventory/Inventory Slots/SlotBase" to="." method="_on_slot_1_mouse_exited"]

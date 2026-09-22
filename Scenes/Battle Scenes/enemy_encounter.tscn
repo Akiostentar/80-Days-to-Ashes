@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cv4wcakr4pii8"]
 
-[ext_resource type="Texture2D" path="res://Assets/enemybg placeholder.jpg" id="1_lhx5r"]
+[ext_resource type="Texture2D" uid="uid://cai11l2wesi1a" path="res://Assets/enemybg placeholder.jpg" id="1_lhx5r"]
 [ext_resource type="Script" uid="uid://do6ldwnspssac" path="res://Scripts/Battle Scripts/game_manager.gd" id="1_mcb4u"]
 [ext_resource type="PackedScene" uid="uid://bxq2jfjbeyu4c" path="res://Scenes/Battle Scenes/Goblin.tscn" id="2_k8f17"]
 [ext_resource type="PackedScene" uid="uid://c0gkatg2ko3jo" path="res://Scenes/Battle Scenes/Player.tscn" id="3_mr7g5"]
@@ -14,7 +14,6 @@ player_chr = NodePath("Player")
 enemy = NodePath("Enemy placement/Goblin")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1459453531]
-visible = false
 position = Vector2(639.74994, 360.00006)
 scale = Vector2(1280.4999, 720.00006)
 texture = SubResource("PlaceholderTexture2D_qeq5k")
