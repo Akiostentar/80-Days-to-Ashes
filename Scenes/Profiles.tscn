@@ -123,6 +123,7 @@ offset_bottom = 86.51065
 text = "Back"
 
 [node name="Panel" type="Panel" parent="." unique_id=444333545]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
