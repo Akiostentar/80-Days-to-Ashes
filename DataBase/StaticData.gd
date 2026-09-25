@@ -1,12 +1,12 @@
 extends Node
 
-var ItemData = {}
+var ItemDataBase = {}
 
 var data_file_path = "res://DataBase/ITEM DATABASE.json"
 
 
 func _ready() -> void:
-	ItemData = load_json_file(data_file_path)
+	ItemDataBase = load_json_file(data_file_path)
 
 func load_json_file(filePath: String):
 	if FileAccess.file_exists(filePath):
