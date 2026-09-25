@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cs4gqgwe4foup"]
+
+[ext_resource type="Texture2D" uid="uid://b37vaud0bniat" path="res://Assets/Maps/Village 1/V1.jpg" id="1_nyj33"]
+[ext_resource type="Texture2D" uid="uid://5tkkryy65mxl" path="res://Assets/Maps/Village 1/V1 blacksmith.png" id="2_6y3hx"]
+[ext_resource type="Texture2D" uid="uid://sblup32x2n8g" path="res://Assets/Maps/Village 1/V1 Main Hall.png" id="2_50opq"]
+[ext_resource type="Texture2D" uid="uid://ej3yhimufagu" path="res://Assets/Maps/Village 1/V1 blacksmith click.png" id="3_edamn"]
+[ext_resource type="Texture2D" uid="uid://d1fls168x4wpp" path="res://Assets/Maps/Village 1/V1 blacksmith hovered.png" id="4_duvrd"]
+[ext_resource type="Texture2D" uid="uid://ww3yote0deyj" path="res://Assets/Maps/Village 1/V1 Main hall clicked.png" id="6_ls7mj"]
+[ext_resource type="Texture2D" uid="uid://3j7lti0tjdoe" path="res://Assets/Maps/Village 1/V1 Main Hall hover.png" id="7_redmv"]
+[ext_resource type="Texture2D" uid="uid://dvhpxofbykhbb" path="res://Assets/Maps/Village 1/V1 general store.png" id="8_f6tay"]
+[ext_resource type="Texture2D" uid="uid://crbwwylvpc2ow" path="res://Assets/Maps/Village 1/V1 general store click.png" id="9_vfhcl"]
+[ext_resource type="Texture2D" uid="uid://mj0ye3hokqtx" path="res://Assets/Maps/Village 1/V1 general store hovered.png" id="10_mn1hh"]
+
+[node name="Control" type="Control" unique_id=2140989491]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="V1" type="Sprite2D" parent="." unique_id=1648770936]
+position = Vector2(641, 362)
+texture = ExtResource("1_nyj33")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=306177650]
+layout_mode = 0
+offset_left = 724.0
+offset_top = 197.0
+offset_right = 1358.0
+offset_bottom = 729.0
+scale = Vector2(1.0052078, 1.0128646)
+texture_normal = ExtResource("2_6y3hx")
+texture_pressed = ExtResource("3_edamn")
+texture_hover = ExtResource("4_duvrd")
+
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=826921554]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 49.0
+offset_right = 725.0
+offset_bottom = 439.0
+scale = Vector2(1.113028, 1.1000574)
+texture_normal = ExtResource("2_50opq")
+texture_pressed = ExtResource("6_ls7mj")
+texture_hover = ExtResource("7_redmv")
+
+[node name="TextureButton3" type="TextureButton" parent="." unique_id=1408440801]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 205.0
+offset_right = 347.0
+offset_bottom = 721.0
+texture_normal = ExtResource("8_f6tay")
+texture_pressed = ExtResource("9_vfhcl")
+texture_hover = ExtResource("10_mn1hh")

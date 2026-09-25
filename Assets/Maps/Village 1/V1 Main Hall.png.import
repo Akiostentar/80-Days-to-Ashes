@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsfjo76ukmd0w"
-path="res://.godot/imported/image-1.png-dbab14dd40403047ee602a1bb16c5f26.ctex"
+uid="uid://sblup32x2n8g"
+path="res://.godot/imported/V1 Main Hall.png-1cf6b2ceadec4c70e66e707dfcde73c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://image-1.png"
-dest_files=["res://.godot/imported/image-1.png-dbab14dd40403047ee602a1bb16c5f26.ctex"]
+source_file="res://Assets/Maps/Village 1/V1 Main Hall.png"
+dest_files=["res://.godot/imported/V1 Main Hall.png-1cf6b2ceadec4c70e66e707dfcde73c1.ctex"]
 
 [params]
 
