@@ -1,18 +1,20 @@
 [gd_scene format=3 uid="uid://cw1cfy4f3ysji"]
 
-[ext_resource type="Script" uid="uid://bgy1f1ndurirl" path="res://button.gd" id="1_pu4dr"]
-[ext_resource type="Script" uid="uid://cbgaggsuwty0f" path="res://dialogue_panel.gd" id="2_umopm"]
-[ext_resource type="Texture2D" uid="uid://btlylhltyraks" path="res://icon.svg" id="3_umopm"]
-[ext_resource type="Script" uid="uid://dw0a6wc537g7r" path="res://button_2.gd" id="4_4106p"]
-[ext_resource type="Texture2D" uid="uid://ciouk6cq82v5i" path="res://Screenshot 2026-09-19 184913.png" id="5_4106p"]
-[ext_resource type="Script" uid="uid://trlqk0gwaa1v" path="res://button_3.gd" id="6_4w87o"]
-[ext_resource type="Script" uid="uid://crqee6lx5swm8" path="res://button_4.gd" id="7_jytiq"]
-[ext_resource type="Script" uid="uid://c4pd6hn8molwc" path="res://button_5.gd" id="8_cysq1"]
-[ext_resource type="Script" uid="uid://cwy8qx75nidkj" path="res://button_6.gd" id="9_cmlmt"]
-[ext_resource type="Script" uid="uid://bqwvm1o2r5vtc" path="res://button_7.gd" id="10_pavnk"]
-[ext_resource type="Script" uid="uid://duy6tjrul2rva" path="res://button_8.gd" id="11_pavnk"]
-[ext_resource type="Script" uid="uid://3oj8cifmfhl" path="res://button_9.gd" id="12_infp5"]
-[ext_resource type="Script" uid="uid://bai474sgd2a8r" path="res://button_10.gd" id="13_infp5"]
+[ext_resource type="Script" uid="uid://bgy1f1ndurirl" path="res://Scripts/button.gd" id="1_pu4dr"]
+[ext_resource type="Script" uid="uid://cbgaggsuwty0f" path="res://Scripts/dialogue_panel.gd" id="2_umopm"]
+[ext_resource type="Texture2D" uid="uid://dm47f72q5wi5i" path="res://icon.svg" id="3_umopm"]
+[ext_resource type="Script" uid="uid://dw0a6wc537g7r" path="res://Scripts/button_2.gd" id="4_4106p"]
+[ext_resource type="Script" uid="uid://trlqk0gwaa1v" path="res://Scripts/button_3.gd" id="6_4w87o"]
+[ext_resource type="Script" uid="uid://crqee6lx5swm8" path="res://Scripts/button_4.gd" id="7_jytiq"]
+[ext_resource type="Script" uid="uid://c4pd6hn8molwc" path="res://Scripts/button_5.gd" id="8_cysq1"]
+[ext_resource type="Script" uid="uid://cwy8qx75nidkj" path="res://Scripts/button_6.gd" id="9_cmlmt"]
+[ext_resource type="Script" uid="uid://bqwvm1o2r5vtc" path="res://Scripts/button_7.gd" id="10_pavnk"]
+[ext_resource type="Script" uid="uid://duy6tjrul2rva" path="res://Scripts/button_8.gd" id="11_pavnk"]
+[ext_resource type="Script" uid="uid://3oj8cifmfhl" path="res://Scripts/button_9.gd" id="12_infp5"]
+[ext_resource type="Script" uid="uid://bai474sgd2a8r" path="res://Scripts/button_10.gd" id="13_infp5"]
+
+[sub_resource type="Resource" id="Resource_5v3al"]
+metadata/__load_path__ = "res://Screenshot 2026-09-19 184913.png"
 
 [node name="Node2D" type="Node2D" unique_id=670953577]
 
@@ -24,12 +26,12 @@ offset_bottom = 720.0
 
 [node name="FadeOverlay" type="ColorRect" parent="DialogueTest" unique_id=813082618]
 unique_name_in_owner = true
-visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 80.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -126,7 +128,7 @@ offset_right = 499.0
 offset_bottom = 186.0
 text = "Prologue Dialogue"
 script = ExtResource("4_4106p")
-character_texture = ExtResource("5_4106p")
+character_texture = SubResource("Resource_5v3al")
 
 [node name="Button3" type="Button" parent="DialogueTest" unique_id=208844643]
 layout_mode = 0
@@ -139,64 +141,64 @@ script = ExtResource("6_4w87o")
 
 [node name="Button4" type="Button" parent="DialogueTest" unique_id=612279644]
 layout_mode = 0
-offset_left = 782.0
+offset_left = 772.0
 offset_top = 36.0
-offset_right = 982.0
+offset_right = 1002.0
 offset_bottom = 186.0
 text = "Starting Dialogue with NPC 1"
 script = ExtResource("7_jytiq")
 
 [node name="Button5" type="Button" parent="DialogueTest" unique_id=1914649932]
 layout_mode = 0
-offset_left = 57.0
-offset_top = 218.0
-offset_right = 287.0
-offset_bottom = 368.0
+offset_left = 1032.0
+offset_top = 37.0
+offset_right = 1262.0
+offset_bottom = 187.0
 text = "Dialogue for getting permit"
 script = ExtResource("8_cysq1")
 
 [node name="Button6" type="Button" parent="DialogueTest" unique_id=574994912]
 layout_mode = 0
-offset_left = 317.0
-offset_top = 218.0
-offset_right = 489.0
-offset_bottom = 368.0
+offset_left = 59.0
+offset_top = 215.0
+offset_right = 231.0
+offset_bottom = 365.0
 text = "Selling Station"
 script = ExtResource("9_cmlmt")
 
 [node name="Button7" type="Button" parent="DialogueTest" unique_id=498906187]
 layout_mode = 0
-offset_left = 541.0
-offset_top = 218.0
-offset_right = 713.0
-offset_bottom = 368.0
+offset_left = 269.0
+offset_top = 219.0
+offset_right = 441.0
+offset_bottom = 369.0
 text = "Blacksmith Area"
 script = ExtResource("10_pavnk")
 
 [node name="Button8" type="Button" parent="DialogueTest" unique_id=673630549]
 layout_mode = 0
-offset_left = 749.0
-offset_top = 215.0
-offset_right = 921.0
-offset_bottom = 365.0
+offset_left = 467.0
+offset_top = 221.0
+offset_right = 639.0
+offset_bottom = 371.0
 text = "Enchanting Area"
 script = ExtResource("11_pavnk")
 
 [node name="Button9" type="Button" parent="DialogueTest" unique_id=1554498499]
 layout_mode = 0
-offset_left = 57.0
-offset_top = 404.0
-offset_right = 287.0
-offset_bottom = 554.0
+offset_left = 852.0
+offset_top = 212.0
+offset_right = 1082.0
+offset_bottom = 362.0
 text = "Companion Dialogue"
 script = ExtResource("12_infp5")
 
 [node name="Button10" type="Button" parent="DialogueTest" unique_id=1648558061]
 layout_mode = 0
-offset_left = 349.0
-offset_top = 402.0
-offset_right = 521.0
-offset_bottom = 552.0
+offset_left = 663.0
+offset_top = 211.0
+offset_right = 835.0
+offset_bottom = 361.0
 theme_override_font_sizes/font_size = 20
 text = "Blacksmith Area"
 script = ExtResource("13_infp5")
