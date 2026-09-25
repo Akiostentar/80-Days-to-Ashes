@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e6dnuyxuepik"
-path="res://.godot/imported/image-4.png-a2ce2130be10b1d95e003f00369e02ea.ctex"
+uid="uid://crbwwylvpc2ow"
+path="res://.godot/imported/V1 general store click.png-55130bf22088e9295db21f5370f92a76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://image-4.png"
-dest_files=["res://.godot/imported/image-4.png-a2ce2130be10b1d95e003f00369e02ea.ctex"]
+source_file="res://Assets/Maps/Village 1/V1 general store click.png"
+dest_files=["res://.godot/imported/V1 general store click.png-55130bf22088e9295db21f5370f92a76.ctex"]
 
 [params]
 
