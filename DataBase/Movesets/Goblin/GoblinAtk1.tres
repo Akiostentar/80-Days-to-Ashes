@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="EnemyMoveSetData" format=3 uid="uid://c70dggyff6aml"]
+
+[ext_resource type="Script" uid="uid://c67eboyke1tbv" path="res://Scripts/Moveset/enemy_move_set_data.gd" id="1_ilyeo"]
+
+[resource]
+script = ExtResource("1_ilyeo")
+metadata/_custom_type_script = "uid://c67eboyke1tbv"
