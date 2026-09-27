@@ -162,37 +162,46 @@ columns = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Item 1"
+text = "Fate's Chamberstick
+2000G"
+icon_alignment = 1
+vertical_icon_alignment = 2
+expand_icon = true
 
 [node name="Item 2" type="Button" parent="GridContainer" unique_id=1493148830]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Item 2"
+text = "Scroll of Mana
+1000G"
 
 [node name="Item 3" type="Button" parent="GridContainer" unique_id=1952608981]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Item 3"
+text = "Holy Ring of [DEITY]
+2500G"
 
 [node name="Item 4" type="Button" parent="GridContainer" unique_id=994308982]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Item 4"
+text = "Vial of Health
+500G"
 
 [node name="Item 5" type="Button" parent="GridContainer" unique_id=1078268385]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Item 5"
+text = "Vial of Mana
+400G"
 
 [node name="Item 6" type="Button" parent="GridContainer" unique_id=1949582060]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Item 6"
+text = "Bottle of Mana
+650G"
 
 [node name="Label" type="Label" parent="." unique_id=1357888662]
 layout_mode = 0

@@ -8,6 +8,12 @@ extends Control
 @onready var Money: Label = $Label
 @onready var Notif: Label = $Notif
 @onready var Sell: HBoxContainer = $ScrollContainer/HBoxContainer
+@onready var Item1: Button = $"GridContainer/Item 1"
+@onready var Item2: Button = $"GridContainer/Item 2"
+@onready var Item3: Button = $"GridContainer/Item 3"
+@onready var Item4: Button = $"GridContainer/Item 4"
+@onready var Item5: Button = $"GridContainer/Item 5"
+@onready var Item6: Button = $"GridContainer/Item 6"
 
 func _ready() -> void:
 	upd_money()
@@ -21,7 +27,9 @@ func upd_money() -> void:
 		Money.text = str(Save2["growth"]["money"])
 	if MainMenu.GS == 3:
 		Money.text = str(Save3["growth"]["money"])
-
+func upd_butt_cont() -> void:
+	Item1
+#-------------------------------------------- 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("uid://c07yycqhh86kk")
 func _on_I1_pressed() -> void:
