@@ -83,6 +83,7 @@ func _on_I6_pressed() -> void:
 	Price.text = str(price)
 func _on_cancel_pressed() -> void:
 	Box.visible = false
+	Amount.text = "1"
 func _on_amount_text_changed(new_text: String) -> void:
 	var manu = int(Amount.text)
 	var comp_price = price * manu 
@@ -99,6 +100,7 @@ func _on_buy_pressed() -> void:
 			await get_tree().create_timer(1.0).timeout
 			Notif.text = ""
 			Box.visible = false
+			Amount.text = "1"
 		else:
 			Notif.text = "Not enough money"
 			await get_tree().create_timer(1).timeout
@@ -114,6 +116,7 @@ func _on_buy_pressed() -> void:
 			await get_tree().create_timer(1.0).timeout
 			Notif.text = "0"
 			Box.visible = false
+			Amount.text = "1"
 		else:
 			Notif.text = "Not enough money"
 			await get_tree().create_timer(1).timeout
@@ -129,6 +132,7 @@ func _on_buy_pressed() -> void:
 			await get_tree().create_timer(1.0).timeout
 			Notif.text = ""
 			Box.visible = false
+			Amount.text = "1"
 		else:
 			Notif.text = "Not enough money"
 			await get_tree().create_timer(1).timeout
@@ -146,10 +150,19 @@ func upd_sell() -> void:
 		button.pressed.connect(_on_bs_pressed.bind(button))
 		Sell.add_child(button)
 
+func get_value(data: Dictionary, target_name: String):
+	for category in data:
+		var items = data[category]
+		for item_id in items:
+			if items[item_id].get("item_name") == target_name:
+				return item_id
+	return null
+	
 func _on_bs_pressed(btn: Button):
 	var item = btn.text
-	print(item)
+	var itemID = get_value(StaticData.ItemDataBase, item)
+	
 	btn.queue_free()
 	Save1.inventory.erase(item) 
-	Save1.growth["money"] += 100
+	Save1.growth["money"] += StaticData.ItemDataBase["Misc"][itemID]["item_price"]*0.7
 	upd_money()
