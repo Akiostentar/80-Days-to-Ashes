@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_2o8eh")
+description = "Deals 10 damage"
 move_name = "Regular Atack"
 target_type = "single"
 damage = 10

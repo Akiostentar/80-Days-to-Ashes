@@ -4,7 +4,8 @@
 
 [resource]
 script = ExtResource("1_7gijx")
-cost = 10
+energy_cost = 10
+description = "Deals 20 damage, Costs 10 energy"
 move_name = "Charge Attack"
 damage = 20
 metadata/_custom_type_script = "uid://dyiiksfhmvv2s"

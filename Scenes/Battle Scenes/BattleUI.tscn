@@ -170,7 +170,7 @@ texture_under = ExtResource("3_2eets")
 texture_progress = ExtResource("4_x7wtv")
 tint_progress = Color(0.98039216, 0.22352941, 0.23137255, 1)
 
-[node name="HP2" type="TextureProgressBar" parent="Category Menu" unique_id=1979187571]
+[node name="Energy" type="TextureProgressBar" parent="Category Menu" unique_id=1979187571]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.60400003
