@@ -47,40 +47,40 @@ func _on_bck_2_ch_pressed() -> void:
 func _on_W1_pressed() -> void:
 	var texture = preload("uid://dm47f72q5wi5i")
 	Box.visible = true
-	item_name.text = "Item 1 Name"
-	item_desc.text = "Item 1 Description"
+	item_name.text = "Weapon 1 Name"
+	item_desc.text = "Weapon 1 Description"
 	item_price.text = "999"
 	item_pic.texture = texture
 
 func _on_W2_pressed() -> void:
 	var texture = preload("uid://dm47f72q5wi5i")
 	Box.visible = true
-	item_name.text = "Item 2 Name"
-	item_desc.text = "Item 2 Description"
+	item_name.text = "Weapon 2 Name"
+	item_desc.text = "Weapon 2 Description"
 	item_price.text = "499"
 	item_pic.texture = texture
 
 func _on_W3_pressed() -> void:
 	var texture = preload("uid://dm47f72q5wi5i")
 	Box.visible = true
-	item_name.text = "Item 3 Name"
-	item_desc.text = "Item 3 Description"
+	item_name.text = "Weapon 3 Name"
+	item_desc.text = "Weapon 3 Description"
 	item_price.text = "1800"
 	item_pic.texture = texture
 
 func _on_A1_pressed() -> void:
 	var texture = preload("uid://dm47f72q5wi5i")
 	Box.visible = true
-	item_name.text = "Item 4 name"
-	item_desc.text = "Item 4 Description"
+	item_name.text = "Armor 1 name"
+	item_desc.text = "Armor 1 Description"
 	item_price.text = "700"
 	item_pic.texture = texture	
 
 func _on_A2_pressed() -> void:
 	var texture = preload("uid://dm47f72q5wi5i")
 	Box.visible = true
-	item_name.text = "Item 5 name"
-	item_desc.text = "Item 5 description"
+	item_name.text = "Armor 2 name"
+	item_desc.text = "Armor 2 description"
 	item_price.text = "3400"
 	item_pic.texture = texture
 func _on_cancel_pressed() -> void:
@@ -91,7 +91,7 @@ func _on_buy_pressed() -> void:
 		if Save1.growth["money"] >= int(item_price.text)*int($Panel/Amount.text):
 			for i in range(int($Panel/Amount.text)):
 				Save1.growth["money"] -= int(item_price.text)
-				Save1.inventory.append(item_name)
+				Save1.inventory.append(item_name.text)
 			Notif.text = str($Panel/Amount.text) + " " + str(item_name.text) + " successfully purchased"
 			upd_money()
 			await get_tree().create_timer(1.0).timeout

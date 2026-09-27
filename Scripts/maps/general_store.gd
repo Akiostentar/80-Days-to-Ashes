@@ -130,3 +130,7 @@ func upd_sell() -> void:
 func _on_bs_pressed(btn: Button):
 	var item = btn.text
 	print(item)
+	btn.queue_free()
+	Save1.inventory.erase(item) 
+	Save1.growth["money"] += 100
+	upd_money()
