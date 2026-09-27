@@ -72,8 +72,10 @@ func _on_buy_pressed() -> void:
 			for i in range(int($Panel/Amount.text)):
 				Save1.inventory.append(Name.text)
 				Save1.growth["money"] -= int(Price.text)
+			Notif.text = $Panel/Amount.text + " " + Name.text +  " succesfully purchased"
 			upd_money()
 			await get_tree().create_timer(1.0).timeout
+			Notif.text = ""
 			Box.visible = false
 		else:
 			Notif.text = "Not enough money"
@@ -84,8 +86,10 @@ func _on_buy_pressed() -> void:
 			for i in range(int($Panel/Amount.text)):
 				Save1.inventory.append(Name.text)
 				Save1.growth["money"] -= int(Price.text)
+			Notif.text = $Panel/Amount.text + " " + Name.text +  " succesfully purchased"
 			upd_money()
 			await get_tree().create_timer(1.0).timeout
+			Notif.text = "0"
 			Box.visible = false
 		else:
 			Notif.text = "Not enough money"
@@ -96,8 +100,10 @@ func _on_buy_pressed() -> void:
 			for i in range(int($Panel/Amount.text)):
 				Save1.inventory.append(Name.text)
 				Save1.growth["money"] -= int(Price.text)
+			Notif.text = $Panel/Amount.text + " " + Name.text +  " succesfully purchased"
 			upd_money()
 			await get_tree().create_timer(1.0).timeout
+			Notif.text = ""
 			Box.visible = false
 		else:
 			Notif.text = "Not enough money"
