@@ -42,7 +42,6 @@ scale = Vector2(0.4526512, 0.4123393)
 texture = ExtResource("2_70ewi")
 
 [node name="Panel" type="Panel" parent="." unique_id=1544953980]
-visible = false
 top_level = true
 z_as_relative = false
 layout_mode = 1
@@ -54,7 +53,7 @@ anchor_bottom = 0.5
 offset_left = -140.0
 offset_top = -203.0
 offset_right = 159.0
-offset_bottom = 160.0
+offset_bottom = 187.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1vivr")
@@ -97,6 +96,21 @@ text = "Heals 5 Hp"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Price" type="Label" parent="Panel" unique_id=907020078]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -56.5
+offset_top = 352.0
+offset_right = 30.5
+offset_bottom = 375.0
+grow_horizontal = 2
+scale = Vector2(1.2828064, 1.4954783)
+text = "Price"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="LineEdit" type="LineEdit" parent="Panel" unique_id=424327318]
 layout_mode = 0
 offset_left = 111.0
@@ -123,6 +137,7 @@ offset_bottom = 345.0
 text = "Cancel"
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=120433243]
+visible = false
 layout_mode = 0
 offset_left = 589.0
 offset_top = 179.0
