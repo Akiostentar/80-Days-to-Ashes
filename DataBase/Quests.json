@@ -1,0 +1,8 @@
+{
+	"Village_1_Quest":{
+		"Name": "Tutorial Quest", 
+		"Descripton": "The village chief wants you to do the following tasks: /n Buy a sword from the blacksmith /n Go and take an expedition /n Upgrade your attributes /n Sell your items", 
+		"Rewards": "- 70 exp /n - 100 gold"
+ 	},
+	
+}
