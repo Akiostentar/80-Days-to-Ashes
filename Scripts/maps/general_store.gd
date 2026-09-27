@@ -5,6 +5,7 @@ extends Control
 @onready var Picture: TextureRect = $Panel/Picture
 @onready var Desc: Label = $Panel/Desc
 @onready var Price: Label = $Panel/Price
+@onready var Amount: LineEdit = $Panel/Amount
 @onready var Money: Label = $Label
 @onready var Notif: Label = $Notif
 @onready var Sell: HBoxContainer = $ScrollContainer/HBoxContainer
@@ -14,6 +15,8 @@ extends Control
 @onready var Item4: Button = $"GridContainer/Item 4"
 @onready var Item5: Button = $"GridContainer/Item 5"
 @onready var Item6: Button = $"GridContainer/Item 6"
+
+var price = 0
 
 func _ready() -> void:
 	upd_money()
@@ -27,8 +30,6 @@ func upd_money() -> void:
 		Money.text = str(Save2["growth"]["money"])
 	if MainMenu.GS == 3:
 		Money.text = str(Save3["growth"]["money"])
-func upd_butt_cont() -> void:
-	Item1
 #-------------------------------------------- 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("uid://c07yycqhh86kk")
@@ -38,51 +39,61 @@ func _on_I1_pressed() -> void:
 	Name.text = StaticData.ItemDataBase["Misc"]["torch"]["item_name"]
 	Picture.texture = texture
 	Desc.text = StaticData.ItemDataBase["Misc"]["torch"]["item_desc"]
-	Price.text = str(StaticData.ItemDataBase["Misc"]["torch"]["item_price"])
+	price = StaticData.ItemDataBase["Misc"]["torch"]["item_price"]
+	Price.text = str(price)
 func _on_I2_pressed() -> void:
 	var texture = preload("uid://bblgxqdel7dfq")
 	Box.visible = true
 	Name.text = StaticData.ItemDataBase["Misc"]["mscroll"]["item_name"]
 	Picture.texture = texture
 	Desc.text = StaticData.ItemDataBase["Misc"]["mscroll"]["item_desc"]
-	Price.text = str(StaticData.ItemDataBase["Misc"]["mscroll"]["item_price"])
+	price = StaticData.ItemDataBase["Misc"]["mscroll"]["item_price"]
+	Price.text = str(price)
 func _on_I3_pressed() -> void:
 	var texture = preload("uid://bblgxqdel7dfq")
 	Box.visible = true
 	Name.text = StaticData.ItemDataBase["Misc"]["ring"]["item_name"]
 	Picture.texture = texture
 	Desc.text = StaticData.ItemDataBase["Misc"]["ring"]["item_desc"]
-	Price.text = str(StaticData.ItemDataBase["Misc"]["ring"]["item_price"])
+	price = StaticData.ItemDataBase["Misc"]["ring"]["item_price"]
+	Price.text = str(price)
 func _on_I4_pressed() -> void:
 	var texture = preload("uid://bblgxqdel7dfq")
 	Box.visible = true
 	Name.text = StaticData.ItemDataBase["Misc"]["hppot1"]["item_name"]
 	Picture.texture = texture
 	Desc.text = StaticData.ItemDataBase["Misc"]["hppot1"]["item_desc"]
-	Price.text = str(StaticData.ItemDataBase["Misc"]["hppot1"]["item_price"])
+	price = StaticData.ItemDataBase["Misc"]["hppot1"]["item_price"]
+	Price.text = str(price)
 func _on_I5_pressed() -> void:
 	var texture = preload("uid://bblgxqdel7dfq")
 	Box.visible = true
 	Name.text = StaticData.ItemDataBase["Misc"]["manapot1"]["item_name"]
 	Picture.texture = texture
 	Desc.text = StaticData.ItemDataBase["Misc"]["manapot1"]["item_desc"]
-	Price.text = str(StaticData.ItemDataBase["Misc"]["manapot1"]["item_price"])
+	price = StaticData.ItemDataBase["Misc"]["manapot1"]["item_price"]
+	Price.text = str(price)
 func _on_I6_pressed() -> void:
 	var texture = preload("uid://bblgxqdel7dfq")
 	Box.visible = true
 	Name.text = StaticData.ItemDataBase["Misc"]["manapot2"]["item_name"]
 	Picture.texture = texture
 	Desc.text = StaticData.ItemDataBase["Misc"]["manapot2"]["item_desc"]
-	Price.text = str(StaticData.ItemDataBase["Misc"]["manapot2"]["item_price"])
+	price = StaticData.ItemDataBase["Misc"]["manapot2"]["item_price"]
+	Price.text = str(price)
 func _on_cancel_pressed() -> void:
 	Box.visible = false
+func _on_amount_text_changed(new_text: String) -> void:
+	var manu = int(Amount.text)
+	var comp_price = price * manu 
+	Price.text = str(comp_price)
 func _on_buy_pressed() -> void:
 	if MainMenu.GS == 1:
-		if Save1.growth["money"] >= int(Price.text)*int($Panel/Amount.text):
-			for i in range(int($Panel/Amount.text)):
+		if Save1.growth["money"] >= int(Price.text):
+			for i in range(int(Amount.text)):
 				Save1.inventory.append(Name.text)
-				Save1.growth["money"] -= int(Price.text)
-			Notif.text = $Panel/Amount.text + " " + Name.text +  " succesfully purchased"
+				Save1.growth["money"] -= price
+			Notif.text = Amount.text + " " + Name.text +  " succesfully purchased"
 			upd_money()
 			upd_sell()
 			await get_tree().create_timer(1.0).timeout
@@ -93,11 +104,11 @@ func _on_buy_pressed() -> void:
 			await get_tree().create_timer(1).timeout
 			Notif.text = ""
 	if MainMenu.GS == 2:
-		if Save1.growth["money"] >= int(Price.text)*int($Panel/Amount.text):
-			for i in range(int($Panel/Amount.text)):
+		if Save1.growth["money"] >= int(Price.text):
+			for i in range(int(Amount.text)):
 				Save1.inventory.append(Name.text)
-				Save1.growth["money"] -= int(Price.text)
-			Notif.text = $Panel/Amount.text + " " + Name.text +  " succesfully purchased"
+				Save1.growth["money"] -= price
+			Notif.text = Amount.text + " " + Name.text +  " succesfully purchased"
 			upd_money()
 			upd_sell()
 			await get_tree().create_timer(1.0).timeout
@@ -108,11 +119,11 @@ func _on_buy_pressed() -> void:
 			await get_tree().create_timer(1).timeout
 			Notif.text = ""
 	if MainMenu.GS == 3:
-		if Save1.growth["money"] >= int(Price.text)*int($Panel/Amount.text):
-			for i in range(int($Panel/Amount.text)):
+		if Save1.growth["money"] >= int(Price.text):
+			for i in range(int(Amount.text)):
 				Save1.inventory.append(Name.text)
-				Save1.growth["money"] -= int(Price.text)
-			Notif.text = $Panel/Amount.text + " " + Name.text +  " succesfully purchased"
+				Save1.growth["money"] -= price
+			Notif.text = Amount.text + " " + Name.text +  " succesfully purchased"
 			upd_money()
 			upd_sell()
 			await get_tree().create_timer(1.0).timeout

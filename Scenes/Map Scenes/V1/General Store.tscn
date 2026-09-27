@@ -255,6 +255,7 @@ offset_bottom = 687.0
 layout_mode = 2
 
 [connection signal="pressed" from="Back Butt" to="." method="_on_back_pressed"]
+[connection signal="text_changed" from="Panel/Amount" to="." method="_on_amount_text_changed"]
 [connection signal="pressed" from="Panel/Buy" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="Panel/Cancel" to="." method="_on_cancel_pressed"]
 [connection signal="pressed" from="GridContainer/Item 1" to="." method="_on_I1_pressed"]
