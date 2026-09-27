@@ -1,16 +1,20 @@
 [gd_scene format=3 uid="uid://c0gkatg2ko3jo"]
 
-[ext_resource type="Script" uid="uid://db4jbcndm7xwu" path="res://Scripts/player.gd" id="1_kyqiw"]
+[ext_resource type="Script" uid="uid://db4jbcndm7xwu" path="res://Scripts/Battle Scripts/player.gd" id="1_kyqiw"]
+[ext_resource type="Script" uid="uid://dyiiksfhmvv2s" path="res://Scripts/Moveset/player_move_set_data.gd" id="2_ks5bd"]
 [ext_resource type="Script" uid="uid://o2or7p7nbere" path="res://Scripts/Inventory/inventory_management.gd" id="2_kyqiw"]
 [ext_resource type="Script" uid="uid://dcl6g3t1p82w" path="res://Scripts/Items/item_data.gd" id="3_5ixxa"]
+[ext_resource type="Resource" uid="uid://dqtmn5lapigw5" path="res://DataBase/Movesets/Player/PlayerAtk1.tres" id="3_sdfdf"]
+[ext_resource type="Resource" uid="uid://cs8r7wg8dlqsc" path="res://DataBase/Movesets/Player/PlayerAtk2.tres" id="4_4swl2"]
 [ext_resource type="Resource" uid="uid://cmurdsouwxcpk" path="res://Items/Consumables/hppot1.tres" id="4_nn08x"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sbkf8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qeq5k"]
 
-[node name="Player" type="CharacterBody2D" unique_id=422262428]
+[node name="Player" type="Node2D" unique_id=337942514]
 script = ExtResource("1_kyqiw")
+moveset = Array[ExtResource("2_ks5bd")]([ExtResource("3_sdfdf"), ExtResource("4_4swl2")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1470833685]
 scale = Vector2(300, 300)

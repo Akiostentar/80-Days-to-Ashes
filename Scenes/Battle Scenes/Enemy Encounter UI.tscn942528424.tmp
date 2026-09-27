@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cv4wcakr4pii8"]
+
+[ext_resource type="Script" uid="uid://do6ldwnspssac" path="res://Scripts/Battle Scripts/game_manager.gd" id="1_hpg82"]
+[ext_resource type="Texture2D" uid="uid://cai11l2wesi1a" path="res://Assets/enemybg placeholder.jpg" id="2_aifky"]
+[ext_resource type="PackedScene" uid="uid://bxq2jfjbeyu4c" path="res://Scenes/Battle Scenes/Goblin.tscn" id="3_s3si6"]
+[ext_resource type="Script" uid="uid://c67eboyke1tbv" path="res://Scripts/Moveset/enemy_move_set_data.gd" id="4_aifky"]
+[ext_resource type="PackedScene" uid="uid://c0gkatg2ko3jo" path="res://Scenes/Battle Scenes/Player.tscn" id="4_y4k0p"]
+[ext_resource type="PackedScene" uid="uid://b4jddjl6komah" path="res://Scenes/Battle Scenes/BattleUI.tscn" id="5_p8vru"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qeq5k"]
+
+[node name="Enemy Encounter UI" type="Node" unique_id=1189780136 node_paths=PackedStringArray("player_chr", "enemy")]
+script = ExtResource("1_hpg82")
+player_chr = NodePath("Player")
+enemy = NodePath("Enemy placement/Goblin")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1459453531]
+position = Vector2(639.74994, 360.00006)
+scale = Vector2(1280.4999, 720.00006)
+texture = SubResource("PlaceholderTexture2D_qeq5k")
+
+[node name="EnemybgPlaceholder" type="Sprite2D" parent="." unique_id=1776270866]
+visible = false
+position = Vector2(620, 355)
+scale = Vector2(2.2213593, 2.1726193)
+texture = ExtResource("2_aifky")
+
+[node name="Enemy placement" type="Node2D" parent="." unique_id=953059396]
+
+[node name="Goblin" parent="Enemy placement" unique_id=1652504916 instance=ExtResource("3_s3si6")]
+position = Vector2(354, 286)
+enemy_name = "Goblin 1"
+description = "A little fella"
+moveset = Array[ExtResource("4_aifky")]([null])
+
+[node name="Goblin2" parent="Enemy placement" unique_id=1419284761 instance=ExtResource("3_s3si6")]
+position = Vector2(671, 351)
+enemy_name = "Goblin 2"
+description = "A little fella"
+moveset = Array[ExtResource("4_aifky")]([null])
+
+[node name="Goblin3" parent="Enemy placement" unique_id=1351804682 instance=ExtResource("3_s3si6")]
+position = Vector2(998, 336)
+enemy_name = "Goblin 3"
+description = "A little fella"
+moveset = Array[ExtResource("4_aifky")]([null])
+
+[node name="Player" parent="." unique_id=422262428 instance=ExtResource("4_y4k0p")]
+position = Vector2(301, 570)
+
+[node name="UI" type="CanvasLayer" parent="Player" unique_id=298991704]
+
+[node name="Battle UI" parent="Player/UI" unique_id=397725992 node_paths=PackedStringArray("player", "enemies") instance=ExtResource("5_p8vru")]
+player = NodePath("../..")
+enemies = [NodePath("../../../Enemy placement/Goblin"), NodePath("../../../Enemy placement/Goblin2"), NodePath("../../../Enemy placement/Goblin3")]

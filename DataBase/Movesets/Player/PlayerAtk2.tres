@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PlayerMoveSetData" format=3 uid="uid://cs8r7wg8dlqsc"]
+
+[ext_resource type="Script" uid="uid://dyiiksfhmvv2s" path="res://Scripts/Moveset/player_move_set_data.gd" id="1_7gijx"]
+
+[resource]
+script = ExtResource("1_7gijx")
+energy_cost = 10
+description = "Deals 20 damage, Costs 10 energy"
+move_name = "Charge Attack"
+damage = 20
+metadata/_custom_type_script = "uid://dyiiksfhmvv2s"

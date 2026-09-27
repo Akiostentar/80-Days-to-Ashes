@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PlayerMoveSetData" format=3 uid="uid://dqtmn5lapigw5"]
+
+[ext_resource type="Script" uid="uid://dyiiksfhmvv2s" path="res://Scripts/Moveset/player_move_set_data.gd" id="1_2o8eh"]
+
+[resource]
+script = ExtResource("1_2o8eh")
+description = "Deals 10 damage"
+move_name = "Regular Atack"
+target_type = "single"
+damage = 10
+metadata/_custom_type_script = "uid://dyiiksfhmvv2s"
