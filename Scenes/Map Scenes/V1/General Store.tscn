@@ -9,6 +9,17 @@ bg_color = Color(0, 0.13333334, 0.015686275, 0.9411765)
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_70ewi"]
 load_path = "res://.godot/imported/Item_Sheet1.png-26c8b1b1ce37c63c533b49a046b14e20.ctex"
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v5gy4"]
+bg_color = Color(0.11372549, 0.11372549, 0.11372549, 0.8352941)
+border_width_right = 13
+border_color = Color(0.11372549, 0.11372549, 0.11372549, 0.8352941)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbdty"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 15
+border_width_right = 15
+border_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="General Store" type="Control" unique_id=1997961319]
 layout_mode = 3
 anchors_preset = 15
@@ -27,8 +38,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -97.0
-offset_bottom = 44.0
+offset_left = -146.0
+offset_top = 4.0
+offset_right = -21.0
+offset_bottom = 61.0
 grow_horizontal = 0
 text = "back"
 
@@ -180,6 +193,29 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Item 6"
+
+[node name="Label" type="Label" parent="." unique_id=1357888662]
+layout_mode = 0
+offset_left = 848.0
+offset_top = 5.0
+offset_right = 1108.0
+offset_bottom = 62.0
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_v5gy4")
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Notif" type="Label" parent="." unique_id=1927796609]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 20.0
+offset_right = 467.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_qbdty")
+vertical_alignment = 1
 
 [connection signal="pressed" from="Back Butt" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Panel/Buy" to="." method="_on_buy_pressed"]

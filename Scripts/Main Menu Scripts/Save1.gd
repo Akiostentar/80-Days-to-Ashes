@@ -39,7 +39,7 @@ var growth := {
 	"level": 2,
 	"exp": 0,
 	"attribute_points": 10,
-	"money": 0
+	"money": 2000
 	}
 var progression := {
 		"day": 0,

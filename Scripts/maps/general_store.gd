@@ -5,9 +5,21 @@ extends Control
 @onready var Picture: TextureRect = $Panel/Picture
 @onready var Desc: Label = $Panel/Desc
 @onready var Price: Label = $Panel/Price
+@onready var Money: Label = $Label
+@onready var Notif: Label = $Notif
 
 func _ready() -> void:
-	pass # INSERT DIALOGUE HERE
+	upd_money()
+	 # INSERT DIALOGUE HERE
+
+func upd_money() -> void:
+	if MainMenu.GS == 1:
+		Money.text = str(Save1["growth"]["money"])
+	if MainMenu.GS == 2:
+		Money.text = str(Save2["growth"]["money"])
+	if MainMenu.GS == 3:
+		Money.text = str(Save3["growth"]["money"])
+
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("uid://c07yycqhh86kk")
 func _on_I1_pressed() -> void:
@@ -54,12 +66,40 @@ func _on_I6_pressed() -> void:
 	Price.text = "100"
 func _on_cancel_pressed() -> void:
 	Box.visible = false
-
 func _on_buy_pressed() -> void:
 	if MainMenu.GS == 1:
-		if Save1.growth["money"] >= int(Price.text):
+		if Save1.growth["money"] >= int(Price.text)*int($Panel/Amount.text):
 			for i in range(int($Panel/Amount.text)):
 				Save1.inventory.append(Name.text)
 				Save1.growth["money"] -= int(Price.text)
+			upd_money()
+			await get_tree().create_timer(1.0).timeout
+			Box.visible = false
 		else:
-			print("u is broke lol")
+			Notif.text = "Not enough money"
+			await get_tree().create_timer(1).timeout
+			Notif.text = ""
+	if MainMenu.GS == 2:
+		if Save1.growth["money"] >= int(Price.text)*int($Panel/Amount.text):
+			for i in range(int($Panel/Amount.text)):
+				Save1.inventory.append(Name.text)
+				Save1.growth["money"] -= int(Price.text)
+			upd_money()
+			await get_tree().create_timer(1.0).timeout
+			Box.visible = false
+		else:
+			Notif.text = "Not enough money"
+			await get_tree().create_timer(1).timeout
+			Notif.text = ""
+	if MainMenu.GS == 3:
+		if Save1.growth["money"] >= int(Price.text)*int($Panel/Amount.text):
+			for i in range(int($Panel/Amount.text)):
+				Save1.inventory.append(Name.text)
+				Save1.growth["money"] -= int(Price.text)
+			upd_money()
+			await get_tree().create_timer(1.0).timeout
+			Box.visible = false
+		else:
+			Notif.text = "Not enough money"
+			await get_tree().create_timer(1).timeout
+			Notif.text = ""
