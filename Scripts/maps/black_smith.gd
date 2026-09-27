@@ -2,18 +2,19 @@ extends Control
 
 @onready var Box: Panel = $Panel
 @onready var Money: Label = $Money
-@onready var Notif: Label = $Label
+@onready var Notif: Label = $Notif
 @onready var Choice: GridContainer = $Choice
 @onready var Weapons: GridContainer = $Weapons
 @onready var Armor: GridContainer = $Armors
-
+@onready var back: Button = $bck2ch
+@onready var item_name: Label = $"Panel/Item Name"
+@onready var item_desc: Label = $"Panel/Item Desc"
+@onready var item_price: Label = $"Panel/Item Price"
+@onready var item_pic: TextureRect = $"Panel/Picture"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file("uid://c07yycqhh86kk")
+	upd_money()
 
 func upd_money() -> void:
 	if MainMenu.GS == 1:
@@ -22,3 +23,82 @@ func upd_money() -> void:
 		Money.text = str(Save2["growth"]["money"])
 	if MainMenu.GS == 3:
 		Money.text = str(Save3["growth"]["money"])
+
+
+func _on_back_pressed() -> void:
+	get_tree().change_scene_to_file("uid://c07yycqhh86kk")
+
+func _on_weapon_pressed() -> void:
+	Choice.visible = false
+	Weapons.visible = true
+	back.visible = true
+
+func _on_armor_pressed() -> void:
+	Choice.visible = false
+	Armor.visible = true
+	back.visible = true
+
+func _on_bck_2_ch_pressed() -> void:
+	Choice.visible = true
+	Armor.visible = false
+	Weapons.visible = false
+	back.visible = false
+
+func _on_W1_pressed() -> void:
+	var texture = preload("uid://dm47f72q5wi5i")
+	Box.visible = true
+	item_name.text = "Item 1 Name"
+	item_desc.text = "Item 1 Description"
+	item_price.text = "999"
+	item_pic.texture = texture
+
+func _on_W2_pressed() -> void:
+	var texture = preload("uid://dm47f72q5wi5i")
+	Box.visible = true
+	item_name.text = "Item 2 Name"
+	item_desc.text = "Item 2 Description"
+	item_price.text = "499"
+	item_pic.texture = texture
+
+func _on_W3_pressed() -> void:
+	var texture = preload("uid://dm47f72q5wi5i")
+	Box.visible = true
+	item_name.text = "Item 3 Name"
+	item_desc.text = "Item 3 Description"
+	item_price.text = "1800"
+	item_pic.texture = texture
+
+func _on_A1_pressed() -> void:
+	var texture = preload("uid://dm47f72q5wi5i")
+	Box.visible = true
+	item_name.text = "Item 4 name"
+	item_desc.text = "Item 4 Description"
+	item_price.text = "700"
+	item_pic.texture = texture	
+
+func _on_A2_pressed() -> void:
+	var texture = preload("uid://dm47f72q5wi5i")
+	Box.visible = true
+	item_name.text = "Item 5 name"
+	item_desc.text = "Item 5 description"
+	item_price.text = "3400"
+	item_pic.texture = texture
+func _on_cancel_pressed() -> void:
+	Box.visible = false
+
+func _on_buy_pressed() -> void:
+	if MainMenu.GS == 1:
+		if Save1.growth["money"] >= int(item_price.text)*int($Panel/Amount.text):
+			for i in range(int($Panel/Amount.text)):
+				Save1.growth["money"] -= int(item_price.text)
+				Save1.inventory.append(item_name)
+			Notif.text = str($Panel/Amount.text) + " " + str(item_name.text) + " successfully purchased"
+			upd_money()
+			await get_tree().create_timer(1.0).timeout
+			Notif.text = ""
+			Box.visible = false
+		else:
+			Notif.text = "not enough money"
+			await get_tree().create_timer(1).timeout
+			Notif.text = ""
+			Box.visible = false

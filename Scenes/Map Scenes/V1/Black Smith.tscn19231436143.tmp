@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://wbqpas1khq0x" path="res://Scripts/maps/black_smith.gd" id="1_r7a1b"]
 [ext_resource type="Texture2D" uid="uid://c8acpm0agj0tm" path="res://Assets/shrek placeholder.png" id="2_4caqr"]
-[ext_resource type="Texture2D" uid="uid://dm47f72q5wi5i" path="res://icon.svg" id="3_tibw5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vivr"]
 bg_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
@@ -23,6 +22,63 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r7a1b")
+
+[node name="Panel" type="Panel" parent="." unique_id=1425400611]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.5
+offset_top = -195.5
+offset_right = 150.5
+offset_bottom = 195.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item Name" type="Label" parent="Panel" unique_id=852080522]
+layout_mode = 0
+offset_left = 122.5
+offset_top = 8.5
+offset_right = 162.5
+offset_bottom = 31.5
+
+[node name="Item Desc" type="Label" parent="Panel" unique_id=1697960830]
+layout_mode = 0
+offset_left = 123.5
+offset_top = 240.5
+offset_right = 163.5
+offset_bottom = 263.5
+
+[node name="Item Price" type="Label" parent="Panel" unique_id=1449644508]
+layout_mode = 0
+offset_left = 123.5
+offset_top = 350.5
+offset_right = 163.5
+offset_bottom = 373.5
+
+[node name="Buy" type="Button" parent="Panel" unique_id=127413975]
+layout_mode = 0
+offset_left = 228.5
+offset_top = 294.5
+offset_right = 284.0
+offset_bottom = 346.0
+
+[node name="Cancel" type="Button" parent="Panel" unique_id=838991742]
+layout_mode = 0
+offset_left = 8.5
+offset_top = 289.5
+offset_right = 64.0
+offset_bottom = 341.0
+
+[node name="Picture" type="TextureRect" parent="Panel" unique_id=471020842]
+layout_mode = 0
+offset_left = 57.5
+offset_top = 73.5
+offset_right = 254.5
+offset_bottom = 223.5
 
 [node name="Button" type="Button" parent="." unique_id=15687160]
 layout_mode = 1
@@ -127,13 +183,13 @@ columns = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Armor 1"
+text = "Weapons"
 
 [node name="Armor 2" type="Button" parent="Armors" unique_id=2043607133]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Armor 2"
+text = "Armor"
 
 [node name="bck2ch" type="Button" parent="." unique_id=972021902]
 visible = false
@@ -144,117 +200,7 @@ offset_right = 1131.7952
 offset_bottom = 202.0
 text = "<<<"
 
-[node name="Panel" type="Panel" parent="." unique_id=1425400611]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.5
-offset_top = -195.5
-offset_right = 150.5
-offset_bottom = 195.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Item Name" type="Label" parent="Panel" unique_id=852080522]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -54.0
-offset_top = 4.5
-offset_right = 54.0
-offset_bottom = 32.5
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 20
-text = "Item Name"
-
-[node name="Item Desc" type="Label" parent="Panel" unique_id=1697960830]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.62700003
-anchor_right = 0.5
-anchor_bottom = 0.62700003
-offset_left = -61.5
-offset_top = 3.342987
-offset_right = 61.5
-offset_bottom = 26.342987
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 20
-text = "Item Descripion"
-
-[node name="Item Price" type="Label" parent="Panel" unique_id=1449644508]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -37.5
-offset_right = 20.0
-offset_bottom = -5.5
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 23
-text = "200"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Buy" type="Button" parent="Panel" unique_id=127413975]
-layout_mode = 0
-offset_left = 213.5
-offset_top = 294.5
-offset_right = 283.5
-offset_bottom = 346.0
-text = "Buy"
-
-[node name="Cancel" type="Button" parent="Panel" unique_id=838991742]
-layout_mode = 0
-offset_left = 21.5
-offset_top = 294.5
-offset_right = 84.5
-offset_bottom = 346.0
-text = "Cancel"
-
-[node name="Picture" type="TextureRect" parent="Panel" unique_id=471020842]
-layout_mode = 0
-offset_left = 41.5
-offset_top = 41.5
-offset_right = 266.5
-offset_bottom = 233.5
-texture = ExtResource("3_tibw5")
-
-[node name="Amount" type="LineEdit" parent="Panel" unique_id=1671778399]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -52.5
-offset_top = -97.5
-offset_right = 51.5
-offset_bottom = -45.5
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 25
-text = "1"
-alignment = 1
-
 [connection signal="pressed" from="Button" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Choice/Weapon" to="." method="_on_weapon_pressed"]
 [connection signal="pressed" from="Choice/Armor" to="." method="_on_armor_pressed"]
-[connection signal="pressed" from="Weapons/Weapon1" to="." method="_on_W1_pressed"]
-[connection signal="pressed" from="Weapons/Weapon2" to="." method="_on_W2_pressed"]
-[connection signal="pressed" from="Weapons/Weapon3" to="." method="_on_W3_pressed"]
-[connection signal="pressed" from="Armors/Armor 1" to="." method="_on_A1_pressed"]
-[connection signal="pressed" from="Armors/Armor 2" to="." method="_on_A2_pressed"]
 [connection signal="pressed" from="bck2ch" to="." method="_on_bck_2_ch_pressed"]
-[connection signal="pressed" from="Panel/Buy" to="." method="_on_buy_pressed"]
-[connection signal="pressed" from="Panel/Cancel" to="." method="_on_cancel_pressed"]
