@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://djikfq55m6ru5"]
+
+[ext_resource type="Script" uid="uid://dmwtpqgb1rv42" path="res://Scripts/maps/general_store.gd" id="1_0dgms"]
+
+[node name="General Store" type="Control" unique_id=1997961319]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0dgms")
+
+[node name="Button" type="Button" parent="." unique_id=1399461602]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -97.0
+offset_bottom = 44.0
+grow_horizontal = 0
+text = "back"
+
+[connection signal="pressed" from="Button" to="." method="_on_back_pressed"]

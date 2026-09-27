@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cg60rvktwkhra"]
+
+[ext_resource type="Script" uid="uid://cfetw7htfny8s" path="res://Scripts/maps/main_hall.gd" id="1_3cn10"]
+
+[node name="MainHall" type="Control" unique_id=1997961319]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3cn10")
+
+[node name="Button" type="Button" parent="." unique_id=1796002156]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -116.0
+offset_bottom = 50.0
+grow_horizontal = 0
+text = "back"
+
+[connection signal="pressed" from="Button" to="." method="_on_back_pressed"]

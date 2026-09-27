@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://c07yycqhh86kk"]
+
+[ext_resource type="Script" uid="uid://ddse3qtosll34" path="res://Scripts/maps/village_1.gd" id="1_lfmwg"]
+
+[node name="Village1" type="Control" unique_id=1684389386]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lfmwg")
+
+[node name="MainHall" type="Button" parent="." unique_id=2072074343]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.0
+offset_top = -301.0
+offset_right = 151.0
+offset_bottom = -119.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Main Hall"
+
+[node name="BlackSmith" type="Button" parent="." unique_id=645873045]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 230.0
+offset_top = -119.0
+offset_right = 594.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Black_smith"
+
+[node name="Outside" type="Button" parent="." unique_id=1528572615]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = 232.0
+offset_right = 254.0
+offset_bottom = 344.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Go Outside"
+
+[node name="GeneralStore" type="Button" parent="." unique_id=544017483]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -612.0
+offset_top = 32.0
+offset_right = -248.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "General Store"
+
+[connection signal="pressed" from="MainHall" to="." method="_on_MH_pressed"]
+[connection signal="pressed" from="BlackSmith" to="." method="_on_BS_pressed"]
+[connection signal="pressed" from="Outside" to="." method="_on_outside_pressed"]
+[connection signal="pressed" from="GeneralStore" to="." method="_on_GS_pressed"]
