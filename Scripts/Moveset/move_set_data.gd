@@ -1,8 +1,10 @@
 class_name MoveSetData
 extends Resource
 
+enum Category {Attack, Heal, Defend}
+
 @export var move_name: String
-@export_enum("Attack", "Heal", "Defend") var category = "Attack"
+@export var category: Category = Category.Attack
 @export_enum("single", "all ememies", "self") var target_type = "Single"
 @export var condition: String
 @export var heal: int

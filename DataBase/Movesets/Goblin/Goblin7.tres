@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="EnemyMoveSet" format=3 uid="uid://dtb32aoxix260"]
-
-[ext_resource type="Script" uid="uid://c67eboyke1tbv" path="res://Scripts/Moveset/enemy_move_set_data.gd" id="1_h61or"]
-
-[resource]
-script = ExtResource("1_h61or")
-metadata/_custom_type_script = "uid://c67eboyke1tbv"

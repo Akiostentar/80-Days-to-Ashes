@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://b4jddjl6komah"]
 
 [ext_resource type="Script" uid="uid://d2abtlti7nc4m" path="res://Scripts/Battle Scripts/battle_ui.gd" id="1_gl3jw"]
-[ext_resource type="Texture2D" uid="uid://b414vhytoh7lr" path="res://Assets/Item_Sheet1.png" id="2_d8qwt"]
-[ext_resource type="Texture2D" uid="uid://uu55eodfkvwk" path="res://Assets/ProgressBars/Under.png" id="3_f6fb8"]
-[ext_resource type="Texture2D" uid="uid://c6uo6k0agyaty" path="res://Assets/ProgressBars/Progress.png" id="4_sbkf8"]
-[ext_resource type="Script" uid="uid://bd2is6fy30hp5" path="res://Scripts/inspect_text_box.gd" id="6_2eets"]
-[ext_resource type="Script" uid="uid://07pxbvt6stxv" path="res://Scripts/inventory_slots.gd" id="6_ntsqp"]
+[ext_resource type="Texture2D" uid="uid://b414vhytoh7lr" path="res://Assets/Item_Sheet1.png" id="2_ntsqp"]
+[ext_resource type="Texture2D" uid="uid://uu55eodfkvwk" path="res://Assets/ProgressBars/Under.png" id="3_2eets"]
+[ext_resource type="Texture2D" uid="uid://c6uo6k0agyaty" path="res://Assets/ProgressBars/Progress.png" id="4_x7wtv"]
+[ext_resource type="Script" uid="uid://07pxbvt6stxv" path="res://Scripts/inventory_slots.gd" id="5_d2a5v"]
+[ext_resource type="Script" uid="uid://bd2is6fy30hp5" path="res://Scripts/inspect_text_box.gd" id="6_gy3q7"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_okhu5"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ltp5q"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qwt7t"]
 texture = SubResource("PlaceholderTexture2D_okhu5")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbkf8"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uyhd8"]
 bg_color = Color(0.3019608, 0.3019608, 0.3019608, 0.6509804)
 border_width_left = 2
 border_width_top = 2
@@ -20,65 +20,57 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.3019608, 0.3019608, 0.3019608, 0.6509804)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6eyfp"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qq7e7"]
 bg_color = Color(0.3019608, 0.3019608, 0.3019608, 0.6509804)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8qwt"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_by31l"]
 bg_color = Color(0.3019608, 0.3019608, 0.3019608, 0.6509804)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_vxmu1"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_udb43"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d8qwt"]
-atlas = ExtResource("2_d8qwt")
+[sub_resource type="AtlasTexture" id="AtlasTexture_c07to"]
+atlas = ExtResource("2_ntsqp")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_205fa"]
-atlas = ExtResource("2_d8qwt")
+[sub_resource type="AtlasTexture" id="AtlasTexture_5grue"]
+atlas = ExtResource("2_ntsqp")
 region = Rect2(112, 112, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f6fb8"]
-atlas = ExtResource("2_d8qwt")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfsow"]
+atlas = ExtResource("2_ntsqp")
 region = Rect2(80, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7yjd7"]
-atlas = ExtResource("2_d8qwt")
+[sub_resource type="AtlasTexture" id="AtlasTexture_mocnk"]
+atlas = ExtResource("2_ntsqp")
 region = Rect2(48, 96, 16, 16)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ltp5q"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qeq5k"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_epcmy"]
 texture = SubResource("PlaceholderTexture2D_ltp5q")
 
-[sub_resource type="LabelSettings" id="LabelSettings_qeq5k"]
+[sub_resource type="LabelSettings" id="LabelSettings_hi4da"]
 font_size = 22
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x7wtv"]
-atlas = ExtResource("2_d8qwt")
-region = Rect2(64, 64, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ntsqp"]
-atlas = ExtResource("2_d8qwt")
-region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vxmu1"]
 
-[sub_resource type="Theme" id="Theme_d8qwt"]
+[sub_resource type="Theme" id="Theme_uwvw7"]
 HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_vxmu1")
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6e87q"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_okhu5"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jyruj"]
 texture = SubResource("PlaceholderTexture2D_6e87q")
 
-[sub_resource type="LabelSettings" id="LabelSettings_7l4x2"]
+[sub_resource type="LabelSettings" id="LabelSettings_kiage"]
 font_size = 32
 
 [node name="Battle UI" type="Control" unique_id=397725992]
@@ -94,7 +86,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gl3jw")
 
-[node name="Category Menu" type="Panel" parent="." unique_id=1442233848]
+[node name="Category Menu" type="Panel" parent="." unique_id=521235268]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.0050000004
@@ -102,65 +94,65 @@ anchor_right = 1.0
 anchor_bottom = 0.216
 offset_top = 0.04000008
 offset_bottom = 0.071998596
-theme_override_styles/panel = SubResource("StyleBoxTexture_ltp5q")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qwt7t")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Category Menu" unique_id=946987777]
+[node name="HBoxContainer" type="HBoxContainer" parent="Category Menu" unique_id=644945262]
 layout_mode = 0
 offset_right = 346.0
 offset_bottom = 46.0
 size_flags_vertical = 3
 theme_override_constants/separation = 1
 
-[node name="Attack" type="Button" parent="Category Menu/HBoxContainer" unique_id=2039991748]
+[node name="Attack" type="Button" parent="Category Menu/HBoxContainer" unique_id=1066699802]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_sbkf8")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_6eyfp")
-theme_override_styles/hover = SubResource("StyleBoxFlat_d8qwt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uyhd8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qq7e7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_by31l")
 toggle_mode = true
 button_pressed = true
-button_group = SubResource("ButtonGroup_vxmu1")
-icon = SubResource("AtlasTexture_d8qwt")
+button_group = SubResource("ButtonGroup_udb43")
+icon = SubResource("AtlasTexture_c07to")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Action" type="Button" parent="Category Menu/HBoxContainer" unique_id=1522666081]
+[node name="Action" type="Button" parent="Category Menu/HBoxContainer" unique_id=1657082315]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_sbkf8")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_6eyfp")
-theme_override_styles/hover = SubResource("StyleBoxFlat_d8qwt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uyhd8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qq7e7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_by31l")
 toggle_mode = true
-button_group = SubResource("ButtonGroup_vxmu1")
-icon = SubResource("AtlasTexture_205fa")
+button_group = SubResource("ButtonGroup_udb43")
+icon = SubResource("AtlasTexture_5grue")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Items" type="Button" parent="Category Menu/HBoxContainer" unique_id=2008339554]
+[node name="Items" type="Button" parent="Category Menu/HBoxContainer" unique_id=858421750]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_sbkf8")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_6eyfp")
-theme_override_styles/hover = SubResource("StyleBoxFlat_d8qwt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uyhd8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qq7e7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_by31l")
 toggle_mode = true
-button_group = SubResource("ButtonGroup_vxmu1")
-icon = SubResource("AtlasTexture_f6fb8")
+button_group = SubResource("ButtonGroup_udb43")
+icon = SubResource("AtlasTexture_cfsow")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Mercy" type="Button" parent="Category Menu/HBoxContainer" unique_id=1032483797]
+[node name="Mercy" type="Button" parent="Category Menu/HBoxContainer" unique_id=36332834]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_sbkf8")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_6eyfp")
-theme_override_styles/hover = SubResource("StyleBoxFlat_d8qwt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uyhd8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qq7e7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_by31l")
 toggle_mode = true
-button_group = SubResource("ButtonGroup_vxmu1")
-icon = SubResource("AtlasTexture_7yjd7")
+button_group = SubResource("ButtonGroup_udb43")
+icon = SubResource("AtlasTexture_mocnk")
 icon_alignment = 1
 expand_icon = true
 
-[node name="HP" type="TextureProgressBar" parent="Category Menu" unique_id=1185751861]
+[node name="HP" type="TextureProgressBar" parent="Category Menu" unique_id=731444333]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.60400003
@@ -174,11 +166,11 @@ offset_bottom = -0.020000458
 grow_horizontal = 2
 grow_vertical = 2
 value = 100.0
-texture_under = ExtResource("3_f6fb8")
-texture_progress = ExtResource("4_sbkf8")
+texture_under = ExtResource("3_2eets")
+texture_progress = ExtResource("4_x7wtv")
 tint_progress = Color(0.98039216, 0.22352941, 0.23137255, 1)
 
-[node name="HP2" type="TextureProgressBar" parent="Category Menu" unique_id=1511816018]
+[node name="HP2" type="TextureProgressBar" parent="Category Menu" unique_id=1979187571]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.60400003
@@ -192,11 +184,11 @@ offset_bottom = -0.008003235
 grow_horizontal = 2
 grow_vertical = 2
 value = 100.0
-texture_under = ExtResource("3_f6fb8")
-texture_progress = ExtResource("4_sbkf8")
+texture_under = ExtResource("3_2eets")
+texture_progress = ExtResource("4_x7wtv")
 tint_progress = Color(0, 0.6156863, 0.70980394, 1)
 
-[node name="Action Menu" type="Panel" parent="." unique_id=76322116]
+[node name="Action Menu" type="Panel" parent="." unique_id=608438756]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.21800001
@@ -205,9 +197,9 @@ anchor_bottom = 1.0020001
 offset_top = 0.039970398
 offset_bottom = -0.032043457
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxTexture_qeq5k")
+theme_override_styles/panel = SubResource("StyleBoxTexture_epcmy")
 
-[node name="Menu" type="VBoxContainer" parent="Action Menu" unique_id=682224449]
+[node name="Menu" type="VBoxContainer" parent="Action Menu" unique_id=303220501]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -221,113 +213,92 @@ offset_bottom = 0.01701355
 grow_horizontal = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="Action Menu/Menu" unique_id=1005315701]
+[node name="Label" type="Label" parent="Action Menu/Menu" unique_id=890514714]
 layout_mode = 2
 text = "Text Here"
-label_settings = SubResource("LabelSettings_qeq5k")
+label_settings = SubResource("LabelSettings_hi4da")
 
-[node name="Fight" type="HBoxContainer" parent="Action Menu/Menu" unique_id=1131993112]
+[node name="Fight" type="HBoxContainer" parent="Action Menu/Menu" unique_id=353853893]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="FO1" type="Button" parent="Action Menu/Menu/Fight" unique_id=2092457070]
+[node name="Base" type="Button" parent="Action Menu/Menu/Fight" unique_id=1524339207]
+visible = false
 custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
 icon_alignment = 1
 expand_icon = true
 
-[node name="FO2" type="Button" parent="Action Menu/Menu/Fight" unique_id=39998851]
+[node name="Enemies" type="HBoxContainer" parent="Action Menu/Menu" unique_id=1749201981]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Base" type="Button" parent="Action Menu/Menu/Enemies" unique_id=1646848740]
+visible = false
 custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
 icon_alignment = 1
 expand_icon = true
 
-[node name="Affector" type="HBoxContainer" parent="Action Menu/Menu" unique_id=1423477073]
+[node name="Back" type="Button" parent="Action Menu/Menu/Enemies" unique_id=1155304003]
+custom_maximum_size = Vector2(143, 124)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Back"
+icon_alignment = 1
+expand_icon = true
+
+[node name="Act" type="HBoxContainer" parent="Action Menu/Menu" unique_id=1922814000]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Enemy 1" type="Button" parent="Action Menu/Menu/Affector" unique_id=548207706]
+[node name="AO1" type="Button" parent="Action Menu/Menu/Act" unique_id=597597653]
 custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
 icon_alignment = 1
 expand_icon = true
 
-[node name="Act" type="HBoxContainer" parent="Action Menu/Menu" unique_id=1004102576]
+[node name="Mercy" type="HBoxContainer" parent="Action Menu/Menu" unique_id=314660517]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="AO1" type="Button" parent="Action Menu/Menu/Act" unique_id=793362522]
+[node name="MO1" type="Button" parent="Action Menu/Menu/Mercy" unique_id=1231520789]
 custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
 icon_alignment = 1
 expand_icon = true
 
-[node name="AO2" type="Button" parent="Action Menu/Menu/Act" unique_id=426595836]
+[node name="MO2" type="Button" parent="Action Menu/Menu/Mercy" unique_id=1533825348]
 custom_maximum_size = Vector2(143, 124)
 layout_mode = 2
 size_flags_horizontal = 3
 icon_alignment = 1
 expand_icon = true
 
-[node name="AO3" type="Button" parent="Action Menu/Menu/Act" unique_id=639397723]
-custom_maximum_size = Vector2(143, 124)
-layout_mode = 2
-size_flags_horizontal = 3
-icon = SubResource("AtlasTexture_x7wtv")
-icon_alignment = 1
-expand_icon = true
-
-[node name="AO4" type="Button" parent="Action Menu/Menu/Act" unique_id=1298468167]
-custom_maximum_size = Vector2(143, 124)
-layout_mode = 2
-size_flags_horizontal = 3
-icon = SubResource("AtlasTexture_ntsqp")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Mercy" type="HBoxContainer" parent="Action Menu/Menu" unique_id=1010154610]
+[node name="Inventory" type="ScrollContainer" parent="Action Menu/Menu" unique_id=218152314]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
+theme = SubResource("Theme_uwvw7")
 
-[node name="MO1" type="Button" parent="Action Menu/Menu/Mercy" unique_id=1423042568]
-custom_maximum_size = Vector2(143, 124)
-layout_mode = 2
-size_flags_horizontal = 3
-icon_alignment = 1
-expand_icon = true
-
-[node name="MO2" type="Button" parent="Action Menu/Menu/Mercy" unique_id=1239814977]
-custom_maximum_size = Vector2(143, 124)
-layout_mode = 2
-size_flags_horizontal = 3
-icon_alignment = 1
-expand_icon = true
-
-[node name="Inventory" type="ScrollContainer" parent="Action Menu/Menu" unique_id=585508941]
-visible = false
-layout_mode = 2
-size_flags_vertical = 3
-theme = SubResource("Theme_d8qwt")
-
-[node name="Inventory Slots" type="HBoxContainer" parent="Action Menu/Menu/Inventory" unique_id=18258318]
+[node name="Inventory Slots" type="HBoxContainer" parent="Action Menu/Menu/Inventory" unique_id=1237532570]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("6_ntsqp")
+script = ExtResource("5_d2a5v")
 
-[node name="SlotBase" type="Button" parent="Action Menu/Menu/Inventory/Inventory Slots" unique_id=1298074461]
+[node name="SlotBase" type="Button" parent="Action Menu/Menu/Inventory/Inventory Slots" unique_id=423421102]
 custom_minimum_size = Vector2(143, 0)
 layout_mode = 2
 
-[node name="Inspect Text Box" type="Panel" parent="." unique_id=441469320]
+[node name="Inspect Text Box" type="Panel" parent="." unique_id=1719835406]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.75900006
@@ -340,50 +311,39 @@ offset_right = 0.19998169
 offset_bottom = 0.015991211
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_okhu5")
-script = ExtResource("6_2eets")
+theme_override_styles/panel = SubResource("StyleBoxTexture_jyruj")
+script = ExtResource("6_gy3q7")
 
-[node name="TextBox" type="Label" parent="Inspect Text Box" unique_id=1597322949]
+[node name="MoveNameBox" type="Label" parent="Inspect Text Box" unique_id=823602702]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.009000001
 anchor_top = 0.038000003
 anchor_right = 0.99000007
-anchor_bottom = 0.95600003
+anchor_bottom = 0.277
 offset_left = -0.25400066
 offset_top = -0.004000187
 offset_right = 0.059936523
+offset_bottom = 7.2339973
+text = "Test"
+label_settings = SubResource("LabelSettings_kiage")
+
+[node name="DescriptionBox" type="Label" parent="Inspect Text Box" unique_id=671249098]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.009000001
+anchor_top = 0.291
+anchor_right = 0.99000007
+anchor_bottom = 0.95600003
+offset_left = 0.74599934
+offset_top = 0.02199936
+offset_right = 0.059936523
 offset_bottom = -0.04800415
 text = "Test"
-label_settings = SubResource("LabelSettings_7l4x2")
+label_settings = SubResource("LabelSettings_kiage")
 
 [connection signal="pressed" from="Category Menu/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="Category Menu/HBoxContainer/Action" to="." method="_on_action_pressed"]
 [connection signal="pressed" from="Category Menu/HBoxContainer/Items" to="." method="_on_items_pressed"]
-[connection signal="pressed" from="Category Menu/HBoxContainer/Mercy" to="." method="_on_run_pressed"]
-[connection signal="mouse_entered" from="Action Menu/Menu/Fight/FO1" to="Inspect Text Box" method="_on_fo_1_mouse_entered"]
-[connection signal="mouse_exited" from="Action Menu/Menu/Fight/FO1" to="Inspect Text Box" method="_on_fo_1_mouse_exited"]
-[connection signal="pressed" from="Action Menu/Menu/Fight/FO1" to="." method="_on_fo_1_pressed"]
-[connection signal="mouse_entered" from="Action Menu/Menu/Fight/FO2" to="Inspect Text Box" method="_on_fo_2_mouse_entered"]
-[connection signal="mouse_exited" from="Action Menu/Menu/Fight/FO2" to="Inspect Text Box" method="_on_fo_2_mouse_exited"]
-[connection signal="pressed" from="Action Menu/Menu/Fight/FO2" to="." method="_on_fo_2_pressed"]
-[connection signal="mouse_entered" from="Action Menu/Menu/Act/AO1" to="Inspect Text Box" method="_on_ao_1_mouse_entered"]
-[connection signal="mouse_exited" from="Action Menu/Menu/Act/AO1" to="Inspect Text Box" method="_on_ao_1_mouse_exited"]
-[connection signal="pressed" from="Action Menu/Menu/Act/AO1" to="." method="_on_ao_1_pressed"]
-[connection signal="mouse_entered" from="Action Menu/Menu/Act/AO2" to="Inspect Text Box" method="_on_ao_2_mouse_entered"]
-[connection signal="mouse_exited" from="Action Menu/Menu/Act/AO2" to="Inspect Text Box" method="_on_ao_2_mouse_exited"]
-[connection signal="pressed" from="Action Menu/Menu/Act/AO2" to="." method="_on_ao_2_pressed"]
-[connection signal="mouse_entered" from="Action Menu/Menu/Act/AO3" to="Inspect Text Box" method="_on_ao_3_mouse_entered"]
-[connection signal="mouse_exited" from="Action Menu/Menu/Act/AO3" to="Inspect Text Box" method="_on_ao_3_mouse_exited"]
-[connection signal="pressed" from="Action Menu/Menu/Act/AO3" to="." method="_on_ao_3_pressed"]
-[connection signal="mouse_entered" from="Action Menu/Menu/Act/AO4" to="Inspect Text Box" method="_on_ao_4_mouse_entered"]
-[connection signal="mouse_exited" from="Action Menu/Menu/Act/AO4" to="Inspect Text Box" method="_on_ao_4_mouse_exited"]
-[connection signal="pressed" from="Action Menu/Menu/Act/AO4" to="." method="_on_ao_4_pressed"]
-[connection signal="mouse_entered" from="Action Menu/Menu/Mercy/MO1" to="Inspect Text Box" method="_on_mo_1_mouse_entered"]
-[connection signal="mouse_exited" from="Action Menu/Menu/Mercy/MO1" to="Inspect Text Box" method="_on_mo_1_mouse_exited"]
-[connection signal="pressed" from="Action Menu/Menu/Mercy/MO1" to="." method="_on_mo_1_pressed"]
-[connection signal="mouse_entered" from="Action Menu/Menu/Mercy/MO2" to="Inspect Text Box" method="_on_mo_2_mouse_entered"]
-[connection signal="mouse_exited" from="Action Menu/Menu/Mercy/MO2" to="Inspect Text Box" method="_on_mo_2_mouse_exited"]
-[connection signal="pressed" from="Action Menu/Menu/Mercy/MO2" to="." method="_on_mo_2_pressed"]
-[connection signal="mouse_entered" from="Action Menu/Menu/Inventory/Inventory Slots/SlotBase" to="Inspect Text Box" method="_on_slot_base_mouse_entered"]
-[connection signal="mouse_exited" from="Action Menu/Menu/Inventory/Inventory Slots/SlotBase" to="Inspect Text Box" method="_on_slot_base_mouse_exited"]
+[connection signal="pressed" from="Category Menu/HBoxContainer/Mercy" to="." method="_on_mercy_pressed"]
+[connection signal="pressed" from="Action Menu/Menu/Enemies/Back" to="." method="_on_back_pressed"]
