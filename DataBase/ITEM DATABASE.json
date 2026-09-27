@@ -8,7 +8,8 @@
 	  "item_crit": 10,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 400
 	},
 	"sword2": {
 	  "item_name": "Silver Sword",
@@ -18,7 +19,8 @@
 	  "item_crit": 12,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 3600
 	},
 	"sword3": {
 	  "item_name": "Holy Knight's Sword",
@@ -28,7 +30,8 @@
 	  "item_crit": 15,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 9000
 	},
 	"dagger1": {
 	  "item_name": "Rusty Dagger",
@@ -38,7 +41,8 @@
 	  "item_crit": 15,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 300,
 	},
 	"dagger2": {
 	  "item_name": "Rouge's Dagger",
@@ -48,17 +52,19 @@
 	  "item_crit": 20,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 3400
 	},
 	"dagger3": {
-	  "item_name": "Shaddow's Whisper",
+	  "item_name": "Shadow's Whisper",
 	  "item_desc": "placeholder text",
 	  "item_rarity": "Rare",
 	  "item_damage": 14,
 	  "item_crit": 30,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 12000
 	},
 	"bataxe1": {
 	  "item_name": "Chipped Axe",
@@ -68,7 +74,8 @@
 	  "item_crit": 15,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 350
 	},
 	"bataxe2": {
 	  "item_name": "Polished Battle Axe",
@@ -78,7 +85,8 @@
 	  "item_crit": 17,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 4000
 	},
 	"bataxe3": {
 	  "item_name": "Executioner's Axe",
@@ -88,7 +96,8 @@
 	  "item_crit": 20,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 9700
 	},
 	"staff1": {
 	  "item_name": "Old Staff",
@@ -98,7 +107,8 @@
 	  "item_crit": 12,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 400
 	},
 	"staff2": {
 	  "item_name": "Apprentice's Staff",
@@ -108,7 +118,8 @@
 	  "item_crit": 15,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 3700
 	},
 	"staff3": {
 	  "item_name": "Mage's Staff",
@@ -118,7 +129,8 @@
 	  "item_crit": 18,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "price": 8000
 	}
   },
   "Armor": {
@@ -129,7 +141,8 @@
 	  "item_def": 3,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 300
 	},
 	"sheild2": {
 	  "item_name": "Silver Shield",
@@ -138,7 +151,8 @@
 	  "item_def": 5,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 750
 	},
 	"sheild3": {
 	  "item_name": "Holy Knight's Shield",
@@ -147,7 +161,8 @@
 	  "item_def": 10,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 2800
 	},
 	"armor1": {
 	  "item_name": "Leather Robe",
@@ -156,7 +171,8 @@
 	  "item_def": 15,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 600
 	},
 	"armor2": {
 	  "item_name": "Knight's Gear",
@@ -165,7 +181,8 @@
 	  "item_def": 25,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 6200
 	},
 	"armor3": {
 	  "item_name": "Holy Knight's Armor",
@@ -174,7 +191,8 @@
 	  "item_def": 30,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 12500
 	},
 	"armor4": {
 	  "item_name": "--- Hood",
@@ -183,7 +201,8 @@
 	  "item_def": 12,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 400
 	},
 	"armor5": {
 	  "item_name": "--- Cloak",
@@ -192,7 +211,8 @@
 	  "item_def": 20,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 1200
 	},
 	"armor6": {
 	  "item_name": "Shadowveil Mantle",
@@ -201,7 +221,8 @@
 	  "item_def": 28,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 8000
 	},
 	"armor7": {
 	  "item_name": "Preist's Robes",
@@ -210,7 +231,8 @@
 	  "item_def": 14,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 5700
 	},
 	"armor8": {
 	  "item_name": "Sage's Robes",
@@ -219,7 +241,8 @@
 	  "item_def": 19,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 9700
 	},
 	"armor9": {
 	  "item_name": "Bloodwoven Robes",
@@ -228,17 +251,20 @@
 	  "item_def": 27,
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 13800
 	}
   },
   "Misc": {
 	"torch": {
 	  "item_name": "Fate's Chamberstick",
+	  "item_desc": "placeholder text",
 	  "item_type": "Item",
 	  "item_rarity": "Rare",
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 2000
 	},
 	"hscroll": {
 	  "item_name": "Scroll of Health",
@@ -247,7 +273,8 @@
 	  "item_rarity": "Uncommon",
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 1200
 	},
 	"mscroll": {
 	  "item_name": "Scroll of Mana",
@@ -256,7 +283,8 @@
 	  "item_rarity": "Uncommon",
 	  "item_maxst": 1,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 1000
 	},
 	"ring": {
 	  "item_name": "Holy Ring of [DEITY]",
@@ -265,7 +293,8 @@
 	  "item_rarity": "Rare",
 	  "item_maxst": 1,
 	  "item_upgd": false,
-	  "item_maxup": "N/A"
+	  "item_maxup": "N/A",
+	  "item_price": 2500
 	},
 	"hppot1": {
 	  "item_name": "Vial of Health",
@@ -274,7 +303,8 @@
 	  "item_rarity": "Common",
 	  "item_maxst": 5,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 500
 	},
 	"hppot2": {
 	  "item_name": "Bottle of Health",
@@ -283,7 +313,8 @@
 	  "item_rarity": "Uncommon",
 	  "item_maxst": 5,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 700
 	},
 	"manapot1": {
 	  "item_name": "Vial of Mana",
@@ -292,7 +323,8 @@
 	  "item_rarity": "Common",
 	  "item_maxst": 5,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 400
 	},
 	"manapot2": {
 	  "item_name": "Bottle of Mana",
@@ -301,7 +333,8 @@
 	  "item_rarity": "Uncommon",
 	  "item_maxst": 5,
 	  "item_upgd": true,
-	  "item_maxup": 3
+	  "item_maxup": 3,
+	  "item_price": 650
 	}
   }
 }

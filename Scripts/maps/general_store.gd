@@ -27,45 +27,45 @@ func _on_back_pressed() -> void:
 func _on_I1_pressed() -> void:
 	var texture = preload("uid://bblgxqdel7dfq")
 	Box.visible = true
-	Name.text = "Item 1 Name"
+	Name.text = StaticData.ItemDataBase["Misc"]["torch"]["item_name"]
 	Picture.texture = texture
-	Desc.text = "lorem ipsumm"
-	Price.text = "100"
+	Desc.text = StaticData.ItemDataBase["Misc"]["torch"]["item_desc"]
+	Price.text = str(StaticData.ItemDataBase["Misc"]["torch"]["item_price"])
 func _on_I2_pressed() -> void:
 	var texture = preload("uid://bblgxqdel7dfq")
 	Box.visible = true
-	Name.text = "Item 2 Name"
+	Name.text = StaticData.ItemDataBase["Misc"]["mscroll"]["item_name"]
 	Picture.texture = texture
-	Desc.text = "lorem ipsu"
-	Price.text = "200"
+	Desc.text = StaticData.ItemDataBase["Misc"]["mscroll"]["item_desc"]
+	Price.text = str(StaticData.ItemDataBase["Misc"]["mscroll"]["item_price"])
 func _on_I3_pressed() -> void:
 	var texture = preload("uid://bblgxqdel7dfq")
 	Box.visible = true
-	Name.text = "Item 3 Name"
+	Name.text = StaticData.ItemDataBase["Misc"]["ring"]["item_name"]
 	Picture.texture = texture
-	Desc.text = "lorem ipsu"
-	Price.text = "100"
+	Desc.text = StaticData.ItemDataBase["Misc"]["ring"]["item_desc"]
+	Price.text = str(StaticData.ItemDataBase["Misc"]["ring"]["item_price"])
 func _on_I4_pressed() -> void:
 	var texture = preload("uid://bblgxqdel7dfq")
 	Box.visible = true
-	Name.text = "Item 4 Name"
+	Name.text = StaticData.ItemDataBase["Misc"]["hppot1"]["item_name"]
 	Picture.texture = texture
-	Desc.text = "lorem ipsu"
-	Price.text = "300"
+	Desc.text = StaticData.ItemDataBase["Misc"]["hppot1"]["item_desc"]
+	Price.text = str(StaticData.ItemDataBase["Misc"]["hppot1"]["item_price"])
 func _on_I5_pressed() -> void:
 	var texture = preload("uid://bblgxqdel7dfq")
 	Box.visible = true
-	Name.text = "Item 5 Name"
+	Name.text = StaticData.ItemDataBase["Misc"]["manapot1"]["item_name"]
 	Picture.texture = texture
-	Desc.text = "lorem ipsu"
-	Price.text = "500"
+	Desc.text = StaticData.ItemDataBase["Misc"]["manapot1"]["item_desc"]
+	Price.text = str(StaticData.ItemDataBase["Misc"]["manapot1"]["item_price"])
 func _on_I6_pressed() -> void:
 	var texture = preload("uid://bblgxqdel7dfq")
 	Box.visible = true
-	Name.text = "Item 6 Name"
+	Name.text = StaticData.ItemDataBase["Misc"]["manapot2"]["item_name"]
 	Picture.texture = texture
-	Desc.text = "lorem ipsu"
-	Price.text = "100"
+	Desc.text = StaticData.ItemDataBase["Misc"]["manapot2"]["item_desc"]
+	Price.text = str(StaticData.ItemDataBase["Misc"]["manapot2"]["item_price"])
 func _on_cancel_pressed() -> void:
 	Box.visible = false
 func _on_buy_pressed() -> void:
