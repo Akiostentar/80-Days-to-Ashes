@@ -5,135 +5,103 @@ extends Control
 @onready var act: HBoxContainer = $"Action Menu/Menu/Act"
 @onready var mercy: HBoxContainer = $"Action Menu/Menu/Mercy"
 @onready var inventory: ScrollContainer = $"Action Menu/Menu/Inventory"
-@onready var text_box: Label = $"Inspect Text Box/TextBox"
-@onready var inspect_text: Panel = $"Inspect Text Box"
 @onready var hp: TextureProgressBar = $"Category Menu/HP"
+@onready var attack_cat: Button = $"Category Menu/HBoxContainer/Attack"
+@onready var action_cat: Button = $"Category Menu/HBoxContainer/Action"
+@onready var items_cat: Button = $"Category Menu/HBoxContainer/Items"
+@onready var mercy_cat: Button = $"Category Menu/HBoxContainer/Mercy"
+
+var current_state = "Attack"
+
 
 func _ready() -> void:
-	label.text = "Attack"
-	clear_ui()
-	fight.visible = true
-	inspect_text.visible = false
-	text_box.text = ""
+	logic_update()
 	hp.value = 100.0
-	
-func clear_ui():
+
+
+func reset_ui():
 	fight.visible = false
 	act.visible = false
 	inventory.visible = false
 	mercy.visible = false
+	attack_cat.disabled = false
+	action_cat.disabled = false
+	items_cat.disabled = false
+	mercy_cat.disabled = false
 
-func clean_text():
-	inspect_text.visible = false
-	text_box.text = ""
+
+func logic_update():
+	reset_ui()
+	if current_state == "Attack":
+		label.text = "Attack"
+		fight.visible = true
+		attack_cat.disabled = true
+	elif current_state == "Action":
+		label.text = "Actions"
+		act.visible = true
+		action_cat.disabled = true
+	elif current_state == "Items":
+		label.text = "Item"
+		inventory.visible = true
+		items_cat.disabled = true
+	elif current_state == "Mercy":
+		label.text = "Mercy"
+		mercy.visible = true
+		mercy_cat.disabled = true
+
 
 # Category Checking
 func _on_attack_pressed() -> void:
-	label.text = "Attack"
-	clear_ui()
-	fight.visible = true
+	current_state = "Attack"
+	logic_update()
 
 func _on_action_pressed() -> void:
-	label.text = "Actions"
-	clear_ui()
-	act.visible = true
+	current_state = "Action"
+	logic_update()
+
 
 func _on_items_pressed() -> void:
-	label.text = "Items"
-	clear_ui()
-	inventory.visible = true
+	current_state = "Items"
+	logic_update()
+
 
 func _on_run_pressed() -> void:
-	label.text = "Mercy"
-	clear_ui()
-	mercy.visible = true
+	current_state = "Mercy"
+	logic_update()
 
 
-# Menu Buttons Entered (Hover)
-# Fight Options
-func _on_fo_1_mouse_entered() -> void:
-	inspect_text.visible = true
-	text_box.text = "Regular Attack:
-		Deals 10 damage"
 
-func _on_fo_2_mouse_entered() -> void:
-	inspect_text.visible = true
-	text_box.text = "Charged Attack:
-		Uses 10 Energy, Deals 25 damage"
+func _on_fo_1_pressed() -> void:
+	pass
+	#FO1_pressed.emit()
+	#print("Attack 1 Pressed!")
+	#fo_1.disabled = true
+	#fo_2.disabled = true
 
 
-# Actions Options
-func _on_ao_1_mouse_entered() -> void:
-	inspect_text.visible = true
-	text_box.text = "Action 1:
-		PLaceholder Text Here"
-
-func _on_ao_2_mouse_entered() -> void:
-	inspect_text.visible = true
-	text_box.text = "Action 2:
-		Placeholder Text Here"
-
-func _on_ao_3_mouse_entered() -> void:
-	inspect_text.visible = true
-	text_box.text = "Focus:
-		Gain 10 Energy"
-
-func _on_ao_4_mouse_entered() -> void:
-	inspect_text.visible = true
-	text_box.text = "Sheild:
-		Block 80% of incoming damage"
+func _on_fo_2_pressed() -> void:
+	pass # Replace with function body.
 
 
-# Inventory Slots
-func _on_slot_1_mouse_entered() -> void:
-	inspect_text.visible = true
-	text_box.text = "Item 1:
-		Description"
+func _on_ao_1_pressed() -> void:
+	pass # Replace with function body.
 
 
-# Mercy Options
-func _on_mo_1_mouse_entered() -> void:
-	inspect_text.visible = true
-	text_box.text = "Spare:
-		Attempt to spare the enemy"
-
-func _on_mo_2_mouse_entered() -> void:
-	inspect_text.visible = true
-	text_box.text = "Flee:
-		Attempt to flee from the enemy"
+func _on_ao_2_pressed() -> void:
+	pass # Replace with function body.
 
 
-# Menu Buttons Entered (Un-Hover)
-# Fight Options
-func _on_fo_1_mouse_exited() -> void:
-	clean_text()
-
-func _on_fo_2_mouse_exited() -> void:
-	clean_text()
+func _on_ao_3_pressed() -> void:
+	pass # Replace with function body.
 
 
-# Fight Options
-func _on_ao_1_mouse_exited() -> void:
-	clean_text()
-
-func _on_ao_2_mouse_exited() -> void:
-	clean_text()
-
-func _on_ao_3_mouse_exited() -> void:
-	clean_text()
-
-func _on_ao_4_mouse_exited() -> void:
-	clean_text()
+func _on_ao_4_pressed() -> void:
+	pass # Replace with function body.
 
 
-# Inventory Slots
-func _on_slot_1_mouse_exited() -> void:
-	clean_text()
+func _on_mo_1_pressed() -> void:
+	pass # Replace with function body.
 
 
-# Mercy Options
-func _on_mo_1_mouse_exited() -> void:
-	clean_text()
-
-func _on_mo_2_mouse_exited() -> void:
-	clean_text()
+func _on_mo_2_pressed() -> void:
+	pass # Replace with function body.
