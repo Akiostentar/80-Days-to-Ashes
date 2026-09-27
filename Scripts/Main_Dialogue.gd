@@ -1148,6 +1148,11 @@ func _on_button_pressed() -> void:
 			"portrait": character_texture,
 			"monologue": false
 		},
+		
+		#Fight lines:
+		#A crowd of smirking bandits block your way
+		#The thieves are now enraged for you killing their fellow comrade
+		#The bandits cower in fear after you killed most of their team
 	]
 	%DialoguePanel.start_sequence(sequence_part_9, false)
 	await %DialoguePanel.dialogue_ended
@@ -1178,7 +1183,95 @@ func _on_button_pressed() -> void:
 			"text": "What happens in the dungeon, stays in the dungeon",
 			"portrait": character_texture,
 			"monologue": false
-		}
+		},
+		{
+			"name": "Main Character",
+			"text": "(I was prepared to do anything but I guess, even doing this makes me disapointed in myself)",
+			"portrait": character_texture,
+			"monologue": false
+		},
+		{
+			"name": "Companion",
+			"text": "Well theres your adventure, are you satisfied?",
+			"portrait": character_texture,
+			"monologue": false
+		},
+		{
+			"name": "Main Character",
+			"text": "Of course, we made a lot of money/I was able to get stronger",
+			"portrait": character_texture,
+			"monologue": false
+		},
+		{
+			"name": "Companion",
+			"text": "I'm going to rest for a few days, I'll be back in around 5 days, think you can handle this alone?",
+			"portrait": character_texture,
+			"monologue": false
+		},
+		{
+			"name": "Main Character",
+			"text": "(Sigh, so much for getting help for my journey)",
+			"portrait": character_texture,
+			"monologue": false
+		},
+		{
+			"name": "Main Character",
+			"text": "Yeah I can handle it",
+			"portrait": character_texture,
+			"monologue": false
+		},
+		{
+			"name": "Companion",
+			"text": "I'm off",
+			"portrait": character_texture,
+			"monologue": false
+		},
+		{
+			"name": "Main Character",
+			"text": "Hmm...He is becoming more different, I wonder whats making him change",
+			"portrait": character_texture,
+			"monologue": false
+		},
+		{
+			"name": "Main Character",
+			"text": "Well I guess its time for me to also head back",
+			"portrait": character_texture,
+			"monologue": false
+		},
+		{
+			"name": "Main Character",
+			"text": "Damn, I need to eat, I was'nt able to eat in the morning since I was rushing",
+			"portrait": character_texture,
+			"monologue": false
+		},
+		{
+			"text": "I prepare a big meal for my small victory",
+			"monologue": true
+		},
+		{
+			"name": "Main Character",
+			"text": "Haah...that was a good meal",
+			"portrait": character_texture,
+			"monologue": false
+		},
+		{
+			"name": "Main Character",
+			"text": "...",
+			"portrait": character_texture,
+			"monologue": false
+		},
+		{
+			"name": "Main Character",
+			"text": "Its that thought again",
+			"portrait": character_texture,
+			"monologue": false
+		},
+		{
+			"name": "Main Character",
+			"text": "I'll just sleep it off",
+			"portrait": character_texture,
+			"monologue": false
+		},
 	]
 	%DialoguePanel.start_sequence(sequence_part_10, false)
 	
