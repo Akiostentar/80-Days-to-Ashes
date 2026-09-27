@@ -106,7 +106,7 @@ offset_bottom = 340.78964
 text = "1"
 alignment = 1
 
-[node name="Button" type="Button" parent="Panel" unique_id=1200492598]
+[node name="Buy" type="Button" parent="Panel" unique_id=1200492598]
 layout_mode = 0
 offset_left = 202.0
 offset_top = 288.0
@@ -114,7 +114,7 @@ offset_right = 287.0
 offset_bottom = 346.0
 text = "Buy"
 
-[node name="Button2" type="Button" parent="Panel" unique_id=83333207]
+[node name="Cancel" type="Button" parent="Panel" unique_id=83333207]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 287.0
@@ -130,40 +130,47 @@ offset_right = 1158.38
 offset_bottom = 465.5839
 columns = 3
 
-[node name="Button" type="Button" parent="GridContainer" unique_id=892808204]
+[node name="Item 1" type="Button" parent="GridContainer" unique_id=892808204]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Health Vial"
+text = "Item 1"
 
-[node name="Button2" type="Button" parent="GridContainer" unique_id=1493148830]
+[node name="Item 2" type="Button" parent="GridContainer" unique_id=1493148830]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Health Vial"
+text = "Item 2"
 
-[node name="Button3" type="Button" parent="GridContainer" unique_id=1952608981]
+[node name="Item 3" type="Button" parent="GridContainer" unique_id=1952608981]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Mana Vial"
+text = "Item 3"
 
-[node name="Button4" type="Button" parent="GridContainer" unique_id=994308982]
+[node name="Item 4" type="Button" parent="GridContainer" unique_id=994308982]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Health Vial"
+text = "Item 4"
 
-[node name="Button5" type="Button" parent="GridContainer" unique_id=1078268385]
+[node name="Item 5" type="Button" parent="GridContainer" unique_id=1078268385]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Scroll of Health"
+text = "Item 5"
 
-[node name="Button6" type="Button" parent="GridContainer" unique_id=1949582060]
+[node name="Item 6" type="Button" parent="GridContainer" unique_id=1949582060]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Mana Vial"
+text = "Item 6"
 
 [connection signal="pressed" from="Back Butt" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Panel/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="GridContainer/Item 1" to="." method="_on_I1_pressed"]
+[connection signal="pressed" from="GridContainer/Item 2" to="." method="_on_I2_pressed"]
+[connection signal="pressed" from="GridContainer/Item 3" to="." method="_on_I3_pressed"]
+[connection signal="pressed" from="GridContainer/Item 4" to="." method="_on_I4_pressed"]
+[connection signal="pressed" from="GridContainer/Item 5" to="." method="_on_I5_pressed"]
+[connection signal="pressed" from="GridContainer/Item 6" to="." method="_on_I6_pressed"]

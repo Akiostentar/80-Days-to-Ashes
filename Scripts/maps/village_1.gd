@@ -15,4 +15,4 @@ func _on_GS_pressed() -> void:
 	get_tree().change_scene_to_file("uid://djikfq55m6ru5")
 
 func _on_outside_pressed() -> void:
-	print("you left the village")
+	get_tree().quit()
