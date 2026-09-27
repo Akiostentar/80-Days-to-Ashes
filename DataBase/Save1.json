@@ -1,0 +1,27 @@
+{
+	"stats": {
+		"player_name": "Easan",
+		"player_health": 100,
+		"player_strength": 5,
+		"player_defense": 5,
+		"player_agility": 10,
+		"player_intelligence": 50,
+		"player_dexterity": 10
+	},
+	"growth": {
+		"level": 0,
+		"exp": 0,
+		"attribute_points": 10,
+	},
+	"progression": {
+		"day": 0,
+		"prologue": false
+	},
+	"inventory": [
+	],
+	"equipped": {
+		"weapon": "none",
+		"off-hand": "none",
+		"armor": "none",
+	}
+}
