@@ -7,9 +7,11 @@ extends Control
 @onready var Price: Label = $Panel/Price
 @onready var Money: Label = $Label
 @onready var Notif: Label = $Notif
+@onready var Sell: HBoxContainer = $ScrollContainer/HBoxContainer
 
 func _ready() -> void:
 	upd_money()
+	upd_sell()
 	 # INSERT DIALOGUE HERE
 
 func upd_money() -> void:
@@ -74,6 +76,7 @@ func _on_buy_pressed() -> void:
 				Save1.growth["money"] -= int(Price.text)
 			Notif.text = $Panel/Amount.text + " " + Name.text +  " succesfully purchased"
 			upd_money()
+			upd_sell()
 			await get_tree().create_timer(1.0).timeout
 			Notif.text = ""
 			Box.visible = false
@@ -88,6 +91,7 @@ func _on_buy_pressed() -> void:
 				Save1.growth["money"] -= int(Price.text)
 			Notif.text = $Panel/Amount.text + " " + Name.text +  " succesfully purchased"
 			upd_money()
+			upd_sell()
 			await get_tree().create_timer(1.0).timeout
 			Notif.text = "0"
 			Box.visible = false
@@ -102,6 +106,7 @@ func _on_buy_pressed() -> void:
 				Save1.growth["money"] -= int(Price.text)
 			Notif.text = $Panel/Amount.text + " " + Name.text +  " succesfully purchased"
 			upd_money()
+			upd_sell()
 			await get_tree().create_timer(1.0).timeout
 			Notif.text = ""
 			Box.visible = false
@@ -109,3 +114,19 @@ func _on_buy_pressed() -> void:
 			Notif.text = "Not enough money"
 			await get_tree().create_timer(1).timeout
 			Notif.text = ""
+
+#--------------------------------------------
+
+func upd_sell() -> void:
+	for child in Sell.get_children():
+		child.queue_free()
+	for item in Save1.inventory:
+		var button = Button.new()
+		button.text = item
+		button.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		button.pressed.connect(_on_bs_pressed.bind(button))
+		Sell.add_child(button)
+
+func _on_bs_pressed(btn: Button):
+	var item = btn.text
+	print(item)
