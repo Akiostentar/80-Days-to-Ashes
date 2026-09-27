@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bmvcn4vr14y3i"]
 
 [ext_resource type="Script" uid="uid://wbqpas1khq0x" path="res://Scripts/maps/black_smith.gd" id="1_r7a1b"]
+[ext_resource type="Texture2D" uid="uid://c8acpm0agj0tm" path="res://Assets/shrek placeholder.png" id="2_4caqr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vivr"]
 
 [node name="Black Smith" type="Control" unique_id=1997961319]
 layout_mode = 3
@@ -11,14 +14,165 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r7a1b")
 
+[node name="Panel" type="Panel" parent="." unique_id=1425400611]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.5
+offset_top = -195.5
+offset_right = 150.5
+offset_bottom = 195.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item Name" type="Label" parent="Panel" unique_id=852080522]
+layout_mode = 0
+offset_left = 122.5
+offset_top = 8.5
+offset_right = 162.5
+offset_bottom = 31.5
+
+[node name="Item Desc" type="Label" parent="Panel" unique_id=1697960830]
+layout_mode = 0
+offset_left = 123.5
+offset_top = 240.5
+offset_right = 163.5
+offset_bottom = 263.5
+
+[node name="Item Price" type="Label" parent="Panel" unique_id=1449644508]
+layout_mode = 0
+offset_left = 123.5
+offset_top = 350.5
+offset_right = 163.5
+offset_bottom = 373.5
+
+[node name="Buy" type="Button" parent="Panel" unique_id=127413975]
+layout_mode = 0
+offset_left = 228.5
+offset_top = 294.5
+offset_right = 284.0
+offset_bottom = 346.0
+
+[node name="Cancel" type="Button" parent="Panel" unique_id=838991742]
+layout_mode = 0
+offset_left = 8.5
+offset_top = 289.5
+offset_right = 64.0
+offset_bottom = 341.0
+
+[node name="Picture" type="TextureRect" parent="Panel" unique_id=471020842]
+layout_mode = 0
+offset_left = 57.5
+offset_top = 73.5
+offset_right = 254.5
+offset_bottom = 223.5
+
 [node name="Button" type="Button" parent="." unique_id=15687160]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -104.0
-offset_bottom = 49.0
+offset_left = -123.0
+offset_top = 23.0
+offset_right = -19.0
+offset_bottom = 72.0
 grow_horizontal = 0
 text = "back"
+
+[node name="Money" type="Label" parent="." unique_id=123230739]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 27.0
+offset_right = 1118.0
+offset_bottom = 75.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+
+[node name="Notif" type="Label" parent="." unique_id=1751021734]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 14.0
+offset_right = 403.0
+offset_bottom = 158.0
+
+[node name="Shrek" type="TextureRect" parent="." unique_id=1864799505]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 181.0
+offset_right = 557.0
+offset_bottom = 827.52435
+texture = ExtResource("2_4caqr")
+expand_mode = 1
+
+[node name="Choice" type="GridContainer" parent="." unique_id=258331774]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 210.0
+offset_right = 1132.0
+offset_bottom = 538.0
+columns = 2
+
+[node name="Weapon" type="Button" parent="Choice" unique_id=473336450]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Weapons"
+
+[node name="Armor" type="Button" parent="Choice" unique_id=1148572895]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Armor"
+
+[node name="Weapons" type="GridContainer" parent="." unique_id=1346166221]
+visible = false
+layout_mode = 0
+offset_left = 612.0
+offset_top = 210.0
+offset_right = 1132.0
+offset_bottom = 538.0
+columns = 3
+
+[node name="Weapon1" type="Button" parent="Weapons" unique_id=17826412]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Weapon 1"
+
+[node name="Weapon2" type="Button" parent="Weapons" unique_id=1583773374]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Weapon 2"
+
+[node name="Weapon3" type="Button" parent="Weapons" unique_id=867383016]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Weapon 3"
+
+[node name="Armors" type="GridContainer" parent="." unique_id=1818655606]
+visible = false
+layout_mode = 0
+offset_left = 612.0
+offset_top = 210.0
+offset_right = 1132.0
+offset_bottom = 538.0
+columns = 2
+
+[node name="Armor 1" type="Button" parent="Armors" unique_id=1344066654]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Weapons"
+
+[node name="Armor 2" type="Button" parent="Armors" unique_id=2043607133]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Armor"
 
 [connection signal="pressed" from="Button" to="." method="_on_back_pressed"]
