@@ -3,9 +3,6 @@ extends Button
 @export var speaker_name: String = "Enchanter's Apprentice"
 
 @export_multiline var dialogue_lines: Array[String] = [
-	"H-hello.",
-	"I-if you're looking for master, she is currently out finding extra spell books and enchants",
-	"But I'm just as good as her in doing basic enchants, Uhm and the enchants depend on the price",
 	#These are some dialogues for the seller
 	"O-Oh okay, the enchant is done",
 	"Phew that was a success", 
