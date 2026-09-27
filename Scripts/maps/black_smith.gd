@@ -1,5 +1,6 @@
 extends Control
 
+@onready var Box: Panel = $Panel
 @onready var Money: Label = $Money
 @onready var Notif: Label = $Label
 @onready var Choice: GridContainer = $Choice

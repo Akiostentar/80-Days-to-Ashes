@@ -4,6 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://c8acpm0agj0tm" path="res://Assets/shrek placeholder.png" id="2_4caqr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vivr"]
+bg_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+border_width_right = 10
+border_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4caqr"]
+bg_color = Color(0.5803922, 0.5803922, 0.5803922, 0)
+border_width_left = 10
+border_width_right = 10
+border_color = Color(0.5803922, 0.5803922, 0.5803922, 0)
 
 [node name="Black Smith" type="Control" unique_id=1997961319]
 layout_mode = 3
@@ -85,18 +94,25 @@ text = "back"
 
 [node name="Money" type="Label" parent="." unique_id=123230739]
 layout_mode = 0
-offset_left = 850.0
-offset_top = 27.0
-offset_right = 1118.0
-offset_bottom = 75.0
+offset_left = 857.0
+offset_top = 24.0
+offset_right = 1125.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_1vivr")
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="Notif" type="Label" parent="." unique_id=1751021734]
 layout_mode = 0
-offset_left = 53.0
-offset_top = 14.0
-offset_right = 403.0
-offset_bottom = 158.0
+offset_left = 91.0
+offset_top = 38.0
+offset_right = 562.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_4caqr")
+vertical_alignment = 1
 
 [node name="Shrek" type="TextureRect" parent="." unique_id=1864799505]
 layout_mode = 0
