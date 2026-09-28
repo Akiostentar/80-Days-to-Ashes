@@ -145,12 +145,27 @@ func _on_buy_pressed() -> void:
 func upd_sell() -> void:
 	for child in Sell.get_children():
 		child.queue_free()
-	for item in Save1.inventory:
-		var button = Button.new()
-		button.text = item
-		button.size_flags_vertical = Control.SIZE_EXPAND_FILL
-		button.pressed.connect(_on_bs_pressed.bind(button))
-		Sell.add_child(button)
+	if MainMenu.GS == 1:	
+		for item in Save1.inventory:
+			var button = Button.new()
+			button.text = item
+			button.size_flags_vertical = Control.SIZE_EXPAND_FILL
+			button.pressed.connect(_on_bs_pressed.bind(button))
+			Sell.add_child(button)
+	elif MainMenu.GS == 2:
+		for item in Save2.inventory:
+			var button = Button.new()
+			button.text = item
+			button.size_flags_vertical = Control.SIZE_EXPAND_FILL
+			button.pressed.connect(_on_bs_pressed.bind(button))
+			Sell.add_child(button)
+	else:
+		for item in Save3.inventory:
+			var button = Button.new()
+			button.text = item
+			button.size_flags_vertical = Control.SIZE_EXPAND_FILL
+			button.pressed.connect(_on_bs_pressed.bind(button))
+			Sell.add_child(button)
 
 func get_value(data: Dictionary, target_name: String):
 	for category in data:
@@ -189,8 +204,15 @@ func _on_bs_pressed(btn: Button):
 	
 	on_yes_pressed = func():
 		btn.queue_free()
-		Save1.inventory.erase(item) 
-		Save1.growth["money"] += cashback
+		if MainMenu.GS == 1:
+			Save1.inventory.erase(item) 
+			Save1.growth["money"] += cashback
+		elif MainMenu.GS == 2:
+			Save2.inventory.erase(item)
+			Save2.growth["money"] += cashback
+		else:
+			Save3.inventory.erase(item)
+			Save3.growth["money"] += cashback
 		upd_money()
 		await get_tree().create_timer(1).timeout
 		SellCon.visible = false
