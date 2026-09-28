@@ -15,6 +15,8 @@ extends Control
 @onready var Item4: Button = $"GridContainer/Item 4"
 @onready var Item5: Button = $"GridContainer/Item 5"
 @onready var Item6: Button = $"GridContainer/Item 6"
+@onready var SellCon: Panel = $Panel2
+@onready var Sure: Label = $Panel2/Details
 
 var price = 0
 
@@ -157,12 +159,32 @@ func get_value(data: Dictionary, target_name: String):
 			if items[item_id].get("item_name") == target_name:
 				return item_id
 	return null
-	
+
+var on_yes_pressed: Callable
+var on_no_pressed: Callable
+
 func _on_bs_pressed(btn: Button):
 	var item = btn.text
 	var itemID = get_value(StaticData.ItemDataBase, item)
+	var cashback = StaticData.ItemDataBase["Misc"][itemID]["item_price"]*0.7
 	
-	btn.queue_free()
-	Save1.inventory.erase(item) 
-	Save1.growth["money"] += StaticData.ItemDataBase["Misc"][itemID]["item_price"]*0.7
-	upd_money()
+	Sure.text = item + " for " + str(cashback) + " gold?"
+	SellCon.visible = true
+	
+	if on_yes_pressed.is_valid() and $Panel2/Yes.pressed.is_connected(on_yes_pressed):
+		$Panel2/Yes.pressed.disconnect(on_yes_pressed)
+	if on_no_pressed.is_valid() and $Panel2/No.pressed.is_connected(on_no_pressed):
+		$Panel2/No.pressed.disconnect(on_no_pressed)
+	
+	on_yes_pressed = func():
+		btn.queue_free()
+		Save1.inventory.erase(item) 
+		Save1.growth["money"] += cashback
+		upd_money()
+		await get_tree().create_timer(1).timeout
+		SellCon.visible = false
+	on_no_pressed = func():
+		SellCon.visible = false
+	
+	$Panel2/Yes.pressed.connect(on_yes_pressed)
+	$Panel2/No.pressed.connect(on_no_pressed)
