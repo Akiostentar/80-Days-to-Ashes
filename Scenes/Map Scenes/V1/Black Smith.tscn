@@ -68,6 +68,7 @@ texture = ExtResource("2_4caqr")
 expand_mode = 1
 
 [node name="Choice" type="GridContainer" parent="." unique_id=258331774]
+visible = false
 layout_mode = 0
 offset_left = 612.0
 offset_top = 210.0
@@ -100,22 +101,24 @@ columns = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Weapon 1"
+text = "Rusty Sword
+400G"
 
 [node name="Weapon2" type="Button" parent="Weapons" unique_id=1583773374]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Weapon 2"
+text = "Rusty Dagger
+300G"
 
 [node name="Weapon3" type="Button" parent="Weapons" unique_id=867383016]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Weapon 3"
+text = "Chipped Axe
+350G"
 
 [node name="Armors" type="GridContainer" parent="." unique_id=1818655606]
-visible = false
 layout_mode = 0
 offset_left = 612.0
 offset_top = 210.0
@@ -127,13 +130,15 @@ columns = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Armor 1"
+text = "Wooden Shield
+300G"
 
 [node name="Armor 2" type="Button" parent="Armors" unique_id=2043607133]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Armor 2"
+text = "Leather Robe
+600G"
 
 [node name="bck2ch" type="Button" parent="." unique_id=972021902]
 visible = false
