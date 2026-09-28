@@ -47,41 +47,39 @@ func _on_bck_2_ch_pressed() -> void:
 func _on_W1_pressed() -> void:
 	var texture = preload("uid://dm47f72q5wi5i")
 	Box.visible = true
-	item_name.text = "Weapon 1 Name"
-	item_desc.text = "Weapon 1 Description"
-	item_price.text = "999"
+	item_name.text = StaticData.ItemDataBase["Weapons"]["sword1"]["item_name"]
+	item_desc.text = StaticData.ItemDataBase["Weapons"]["sword1"]["item_desc"]
+	item_price.text = str(StaticData.ItemDataBase["Weapons"]["sword1"]["item_price"])
 	item_pic.texture = texture
-
 func _on_W2_pressed() -> void:
 	var texture = preload("uid://dm47f72q5wi5i")
 	Box.visible = true
-	item_name.text = "Weapon 2 Name"
-	item_desc.text = "Weapon 2 Description"
-	item_price.text = "499"
+	item_name.text = StaticData.ItemDataBase["Weapons"]["dagger1"]["item_name"]
+	item_desc.text = StaticData.ItemDataBase["Weapons"]["dagger1"]["item_desc"]
+	item_price.text = StaticData.ItemDataBase["Weapons"]["dagger1"]["item_price"]
 	item_pic.texture = texture
-
 func _on_W3_pressed() -> void:
 	var texture = preload("uid://dm47f72q5wi5i")
 	Box.visible = true
-	item_name.text = "Weapon 3 Name"
-	item_desc.text = "Weapon 3 Description"
-	item_price.text = "1800"
+	item_name.text = StaticData.ItemDataBase["Weapons"]["bataxe1"]["item_name"]
+	item_desc.text = StaticData.ItemDataBase["Weapons"]["bataxe1"]["item_desc"]
+	item_price.text = StaticData.ItemDataBase["Weapons"]["bataxe1"]["item_price"]
 	item_pic.texture = texture
 
 func _on_A1_pressed() -> void:
 	var texture = preload("uid://dm47f72q5wi5i")
 	Box.visible = true
-	item_name.text = "Armor 1 name"
-	item_desc.text = "Armor 1 Description"
-	item_price.text = "700"
+	item_name.text = StaticData.ItemDataBase["Armor"]["shield1"]["item_name"]
+	item_desc.text = StaticData.ItemDataBase["Armor"]["shield1"]["item_desc"]
+	item_price.text = StaticData.ItemDataBase["Armor"]["shield1"]["item_price"]
 	item_pic.texture = texture	
 
 func _on_A2_pressed() -> void:
 	var texture = preload("uid://dm47f72q5wi5i")
 	Box.visible = true
-	item_name.text = "Armor 2 name"
-	item_desc.text = "Armor 2 description"
-	item_price.text = "3400"
+	item_name.text = StaticData.ItemDataBase["Armor"]["armor1"]["item_name"]
+	item_desc.text = StaticData.ItemDataBase["Armor"]["armor1"]["item_desc"]
+	item_price.text = StaticData.ItemDataBase["Armor"]["armor1"]["item_price"]
 	item_pic.texture = texture
 func _on_cancel_pressed() -> void:
 	Box.visible = false

@@ -134,7 +134,7 @@
 	}
   },
   "Armor": {
-	"sheild1": {
+	"shield1": {
 	  "item_name": "Wooden Shield",
 	  "item_desc": "placeholder text",
 	  "item_rarity": "Common",
@@ -144,7 +144,7 @@
 	  "item_maxup": 3,
 	  "item_price": 300
 	},
-	"sheild2": {
+	"shield2": {
 	  "item_name": "Silver Shield",
 	  "item_desc": "placeholder text",
 	  "item_rarity": "Uncommon",
@@ -154,7 +154,7 @@
 	  "item_maxup": 3,
 	  "item_price": 750
 	},
-	"sheild3": {
+	"shield3": {
 	  "item_name": "Holy Knight's Shield",
 	  "item_desc": "placeholder text",
 	  "item_rarity": "Rare",
