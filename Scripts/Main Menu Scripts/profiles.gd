@@ -27,19 +27,19 @@ func _on_s1b_pressed() -> void:
 		name_input.visible = true
 		MainMenu.GS = 1
 	else:
-		print("start game")
+		get_tree().change_scene_to_file("uid://c07yycqhh86kk")
 func _on_s2b_pressed() -> void:
 	if Save2.stats['player_name'] == "":
 		name_input.visible = true
 		MainMenu.GS = 2
 	else:
-		pass
+		get_tree().change_scene_to_file("uid://c07yycqhh86kk")
 func _on_s3b_pressed() -> void:
 	if Save3.stats['player_name'] == '':
 		name_input.visible = true
 		MainMenu.GS = 3
 	else:
-		pass
+		get_tree().change_scene_to_file("uid://c07yycqhh86kk")
 
 func _on_nameback_pressed() -> void:
 	var a = $Panel/LineEdit
