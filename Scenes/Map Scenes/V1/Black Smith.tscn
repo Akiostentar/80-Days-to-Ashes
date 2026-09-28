@@ -258,3 +258,4 @@ alignment = 1
 [connection signal="pressed" from="bck2ch" to="." method="_on_bck_2_ch_pressed"]
 [connection signal="pressed" from="Panel/Buy" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="Panel/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="text_changed" from="Panel/Amount" to="." method="_on_amount_text_changed"]
