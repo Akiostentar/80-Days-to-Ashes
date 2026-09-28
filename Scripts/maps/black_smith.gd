@@ -7,11 +7,12 @@ extends Control
 @onready var Weapons: GridContainer = $Weapons
 @onready var Armor: GridContainer = $Armors
 @onready var back: Button = $bck2ch
-@onready var Amount: LineEdit = $Panel/Amount
+@onready var Amount: SpinBox = $Panel/Amount
 @onready var item_name: Label = $"Panel/Item Name"
 @onready var item_desc: Label = $"Panel/Item Desc"
 @onready var item_price: Label = $"Panel/Item Price"
 @onready var item_pic: TextureRect = $"Panel/Picture"
+@onready var sell: HBoxContainer = $Sell
 
 var price = 0
 
@@ -85,18 +86,47 @@ func _on_A2_pressed() -> void:
 	item_pic.texture = texture
 func _on_cancel_pressed() -> void:
 	Box.visible = false
-func _on_amount_text_changed(new_text: String) -> void:
-	var amt = int(Amount.text)
+func _on_amount_value_changed(value: float) -> void:
+	var amt = int(Amount.value)
 	var calc = price * amt
 	item_price.text = str(calc)
 func _on_buy_pressed() -> void:
-	
 	if MainMenu.GS == 1:
-		if Save1.growth["money"] >= int(item_price.text)*int($Panel/Amount.text):
-			for i in range(int($Panel/Amount.text)):
-				Save1.growth["money"] -= int(item_price.text)
+		if Save1.growth["money"] >= int(item_price.text):
+			for i in range(Amount):
+				Save1.growth["money"] -= price
 				Save1.inventory.append(item_name.text)
-			Notif.text = str($Panel/Amount.text) + " " + str(item_name.text) + " successfully purchased"
+			Notif.text = str(Amount) + " " + str(item_name.text) + " successfully purchased"
+			upd_money()
+			await get_tree().create_timer(1.0).timeout
+			Notif.text = ""
+			Box.visible = false
+		else:
+			Notif.text = "not enough money"
+			await get_tree().create_timer(1).timeout
+			Notif.text = ""
+			Box.visible = false
+	elif MainMenu.GS == 2:
+		if Save2.growth["money"] >= int(item_price.text):
+			for i in range(Amount):
+				Save2.growth["money"] -= price
+				Save2.inventory.append(item_name.text)
+			Notif.text = str(Amount) + " " + str(item_name.text) + " successfully purchased"
+			upd_money()
+			await get_tree().create_timer(1.0).timeout
+			Notif.text = ""
+			Box.visible = false
+		else:
+			Notif.text = "not enough money"
+			await get_tree().create_timer(1).timeout
+			Notif.text = ""
+			Box.visible = false
+	else:
+		if Save3.growth["money"] >= int(item_price.text):
+			for i in range(Amount):
+				Save3.growth["money"] -= price
+				Save3.inventory.append(item_name.text)
+			Notif.text = str(Amount) + " " + str(item_name.text) + " successfully purchased"
 			upd_money()
 			await get_tree().create_timer(1.0).timeout
 			Notif.text = ""

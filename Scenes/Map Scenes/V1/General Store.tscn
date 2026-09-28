@@ -129,13 +129,12 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Amount" type="LineEdit" parent="Panel" unique_id=424327318]
+[node name="Amount" type="SpinBox" parent="Panel" unique_id=1021291330]
 layout_mode = 0
 offset_left = 111.0
 offset_top = 291.0
-offset_right = 190.0
+offset_right = 197.5
 offset_bottom = 340.78964
-text = "1"
 alignment = 1
 
 [node name="Buy" type="Button" parent="Panel" unique_id=1200492598]
@@ -336,7 +335,7 @@ offset_bottom = 687.0
 layout_mode = 2
 
 [connection signal="pressed" from="Back Butt" to="." method="_on_back_pressed"]
-[connection signal="text_changed" from="Panel/Amount" to="." method="_on_amount_text_changed"]
+[connection signal="value_changed" from="Panel/Amount" to="." method="_on_amount_value_changed"]
 [connection signal="pressed" from="Panel/Buy" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="Panel/Cancel" to="." method="_on_cancel_pressed"]
 [connection signal="pressed" from="Panel2/No" to="." method="_on_no_pressed"]

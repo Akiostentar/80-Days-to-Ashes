@@ -86,8 +86,8 @@ func _on_I6_pressed() -> void:
 func _on_cancel_pressed() -> void:
 	Box.visible = false
 	Amount.text = "1"
-func _on_amount_text_changed(new_text: String) -> void:
-	var manu = int(Amount.text)
+func _on_amount_value_changed(value: float) -> void:
+	var manu = int(Amount.value)
 	var comp_price = price * manu 
 	Price.text = str(comp_price)
 func _on_buy_pressed() -> void:

@@ -230,7 +230,7 @@ offset_right = 266.5
 offset_bottom = 233.5
 texture = ExtResource("3_tibw5")
 
-[node name="Amount" type="LineEdit" parent="Panel" unique_id=1671778399]
+[node name="Amount" type="SpinBox" parent="Panel" unique_id=617346626]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -243,9 +243,43 @@ offset_right = 51.5
 offset_bottom = -45.5
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 25
-text = "1"
+min_value = 1.0
+value = 1.0
 alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=638526087]
+layout_mode = 0
+offset_left = 611.0
+offset_top = 175.0
+offset_right = 724.0
+offset_bottom = 214.0
+theme_override_font_sizes/font_size = 26
+text = "BUY"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=910936762]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 558.0
+offset_right = 726.0
+offset_bottom = 597.0
+theme_override_font_sizes/font_size = 26
+text = "SELL"
+vertical_alignment = 1
+
+[node name="Sell" type="HBoxContainer" parent="." unique_id=1508128767]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -127.0
+offset_right = 493.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
 
 [connection signal="pressed" from="Button" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Choice/Weapon" to="." method="_on_weapon_pressed"]
@@ -258,4 +292,4 @@ alignment = 1
 [connection signal="pressed" from="bck2ch" to="." method="_on_bck_2_ch_pressed"]
 [connection signal="pressed" from="Panel/Buy" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="Panel/Cancel" to="." method="_on_cancel_pressed"]
-[connection signal="text_changed" from="Panel/Amount" to="." method="_on_amount_text_changed"]
+[connection signal="value_changed" from="Panel/Amount" to="." method="_on_amount_value_changed"]
