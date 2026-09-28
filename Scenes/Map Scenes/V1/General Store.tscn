@@ -135,6 +135,8 @@ offset_left = 111.0
 offset_top = 291.0
 offset_right = 197.5
 offset_bottom = 340.78964
+min_value = 1.0
+value = 1.0
 alignment = 1
 
 [node name="Buy" type="Button" parent="Panel" unique_id=1200492598]

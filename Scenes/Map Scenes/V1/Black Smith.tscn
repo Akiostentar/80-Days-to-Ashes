@@ -146,6 +146,7 @@ text = "<<<"
 
 [node name="Panel" type="Panel" parent="." unique_id=1425400611]
 visible = false
+top_level = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -267,19 +268,75 @@ theme_override_font_sizes/font_size = 26
 text = "SELL"
 vertical_alignment = 1
 
-[node name="Sell" type="HBoxContainer" parent="." unique_id=1508128767]
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1068712159]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 593.0
+offset_right = 1135.0
+offset_bottom = 688.0
+
+[node name="Sell" type="HBoxContainer" parent="ScrollContainer" unique_id=1508128767]
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="." unique_id=2025022097]
+visible = false
+layout_mode = 0
+offset_left = 489.5
+offset_top = 223.0
+offset_right = 790.0
+offset_bottom = 484.0
+
+[node name="Label" type="Label" parent="Panel2" unique_id=1717635429]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -28.0
-offset_top = -127.0
-offset_right = 493.0
-offset_bottom = -32.0
+offset_left = -126.0
+offset_top = 8.0
+offset_right = 126.0
+offset_bottom = 34.0
 grow_horizontal = 2
-grow_vertical = 0
+theme_override_font_sizes/font_size = 18
+text = "Are you sure you want to sell"
+horizontal_alignment = 1
+
+[node name="Details" type="Label" parent="Panel2" unique_id=202118878]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -124.5
+offset_top = 34.0
+offset_right = 124.5
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 18
+text = "[Item Name] for [Price] gold?"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel2" unique_id=1616157625]
+layout_mode = 0
+offset_left = 73.5
+offset_top = 83.0
+offset_right = 226.5
+offset_bottom = 236.0
+texture = ExtResource("3_tibw5")
+
+[node name="No" type="Button" parent="Panel2" unique_id=797709135]
+layout_mode = 0
+offset_left = 9.5
+offset_top = 82.0
+offset_right = 66.0
+offset_bottom = 236.0
+text = "No"
+
+[node name="Yes" type="Button" parent="Panel2" unique_id=1347328767]
+layout_mode = 0
+offset_left = 233.5
+offset_top = 82.0
+offset_right = 290.0
+offset_bottom = 236.0
+text = "Yes"
 
 [connection signal="pressed" from="Button" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Choice/Weapon" to="." method="_on_weapon_pressed"]

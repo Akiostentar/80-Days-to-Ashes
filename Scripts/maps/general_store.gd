@@ -5,7 +5,7 @@ extends Control
 @onready var Picture: TextureRect = $Panel/Picture
 @onready var Desc: Label = $Panel/Desc
 @onready var Price: Label = $Panel/Price
-@onready var Amount: LineEdit = $Panel/Amount
+@onready var Amount: SpinBox = $Panel/Amount
 @onready var Money: Label = $Label
 @onready var Notif: Label = $Notif
 @onready var Sell: HBoxContainer = $ScrollContainer/HBoxContainer
@@ -85,7 +85,7 @@ func _on_I6_pressed() -> void:
 	Price.text = str(price)
 func _on_cancel_pressed() -> void:
 	Box.visible = false
-	Amount.text = "1"
+	Amount.value = 1
 func _on_amount_value_changed(value: float) -> void:
 	var manu = int(Amount.value)
 	var comp_price = price * manu 
@@ -93,42 +93,42 @@ func _on_amount_value_changed(value: float) -> void:
 func _on_buy_pressed() -> void:
 	if MainMenu.GS == 1:
 		if Save1.growth["money"] >= int(Price.text):
-			for i in range(int(Amount.text)):
+			for i in range(int(Amount.value)):
 				Save1.inventory.append(Name.text)
 				Save1.growth["money"] -= price
-			Notif.text = Amount.text + " " + Name.text +  " succesfully purchased"
+			Notif.text = str(Amount.value) + " " + Name.text +  " succesfully purchased"
 			upd_money()
 			upd_sell()
 			await get_tree().create_timer(1.0).timeout
 			Notif.text = ""
 			Box.visible = false
-			Amount.text = "1"
+			Amount.value = 1
 		else:
 			Notif.text = "Not enough money"
 			await get_tree().create_timer(1).timeout
 			Notif.text = ""
 	if MainMenu.GS == 2:
 		if Save1.growth["money"] >= int(Price.text):
-			for i in range(int(Amount.text)):
+			for i in range(int(Amount.value)):
 				Save1.inventory.append(Name.text)
 				Save1.growth["money"] -= price
-			Notif.text = Amount.text + " " + Name.text +  " succesfully purchased"
+			Notif.text = str(Amount.value) + " " + Name.text +  " succesfully purchased"
 			upd_money()
 			upd_sell()
 			await get_tree().create_timer(1.0).timeout
 			Notif.text = "0"
 			Box.visible = false
-			Amount.text = "1"
+			Amount.value = 1
 		else:
 			Notif.text = "Not enough money"
 			await get_tree().create_timer(1).timeout
 			Notif.text = ""
 	if MainMenu.GS == 3:
 		if Save1.growth["money"] >= int(Price.text):
-			for i in range(int(Amount.text)):
+			for i in range(int(Amount.value)):
 				Save1.inventory.append(Name.text)
 				Save1.growth["money"] -= price
-			Notif.text = Amount.text + " " + Name.text +  " succesfully purchased"
+			Notif.text = str(Amount.value) + " " + Name.text +  " succesfully purchased"
 			upd_money()
 			upd_sell()
 			await get_tree().create_timer(1.0).timeout
@@ -175,9 +175,9 @@ func _on_bs_pressed(btn: Button):
 	var itemcateg = get_category(StaticData.ItemDataBase, str(itemID))
 	var cashback = 0
 	if itemcateg == "Misc":
-		cashback = StaticData.ItemDataBase["Misc"][itemID]["item_price"]*0.7
+		cashback = StaticData.ItemDataBase[itemcateg][itemID]["item_price"]*0.7
 	else:
-		cashback = StaticData.ItemDataBase["Misc"][itemID]["item_price"]*0.5
+		cashback = StaticData.ItemDataBase[itemcateg][itemID]["item_price"]*0.5
 	
 	Sure.text = item + " for " + str(cashback) + " gold?"
 	SellCon.visible = true
