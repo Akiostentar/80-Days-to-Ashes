@@ -159,6 +159,12 @@ func get_value(data: Dictionary, target_name: String):
 			if items[item_id].get("item_name") == target_name:
 				return item_id
 	return null
+func get_category(data: Dictionary, target_id: String):
+	for category in data:
+		var items = data[category]
+		if items.has(target_id):
+			return category
+	return null
 
 var on_yes_pressed: Callable
 var on_no_pressed: Callable
@@ -166,7 +172,12 @@ var on_no_pressed: Callable
 func _on_bs_pressed(btn: Button):
 	var item = btn.text
 	var itemID = get_value(StaticData.ItemDataBase, item)
-	var cashback = StaticData.ItemDataBase["Misc"][itemID]["item_price"]*0.7
+	var itemcateg = get_category(StaticData.ItemDataBase, str(itemID))
+	var cashback = 0
+	if itemcateg == "Misc":
+		cashback = StaticData.ItemDataBase["Misc"][itemID]["item_price"]*0.7
+	else:
+		cashback = StaticData.ItemDataBase["Misc"][itemID]["item_price"]*0.5
 	
 	Sure.text = item + " for " + str(cashback) + " gold?"
 	SellCon.visible = true
