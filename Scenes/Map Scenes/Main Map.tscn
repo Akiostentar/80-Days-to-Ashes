@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://b8irnx0v7lwu2"]
+
+[ext_resource type="Texture2D" uid="uid://cte6onldef1tb" path="res://Assets/20260914_164936.jpg" id="1_8a1eb"]
+[ext_resource type="Script" uid="uid://b88hcsi8cqupg" path="res://Scripts/maps/main_map.gd" id="1_jtu6d"]
+
+[node name="Control" type="Control" unique_id=1358985409]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jtu6d")
+
+[node name="20260914164936" type="Sprite2D" parent="." unique_id=1881803760]
+position = Vector2(626.3125, 295)
+scale = Vector2(0.3481038, 0.21569823)
+texture = ExtResource("1_8a1eb")
+
+[node name="Mountain Village" type="Button" parent="." unique_id=114268280]
+visible = false
+layout_mode = 0
+offset_left = 543.0
+offset_top = 119.0
+offset_right = 607.0
+offset_bottom = 170.0
+
+[node name="Forrest Village" type="Button" parent="." unique_id=2011503993]
+visible = false
+layout_mode = 0
+offset_left = 772.0
+offset_top = 208.0
+offset_right = 836.0
+offset_bottom = 259.0
+
+[node name="Coastal Village" type="Button" parent="." unique_id=1579346681]
+visible = false
+layout_mode = 0
+offset_left = 402.0
+offset_top = 324.0
+offset_right = 466.0
+offset_bottom = 375.0
+
+[node name="Swamp Village" type="Button" parent="." unique_id=469178059]
+visible = false
+layout_mode = 0
+offset_left = 529.0
+offset_top = 480.0
+offset_right = 593.0
+offset_bottom = 531.0
+
+[node name="Main Village" type="Button" parent="." unique_id=1506086755]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 353.0
+offset_right = 714.0
+offset_bottom = 404.0
+text = "Home"
+
+[node name="Forrest" type="Button" parent="." unique_id=1838115720]
+visible = false
+layout_mode = 0
+offset_left = 553.0
+offset_top = 222.0
+offset_right = 691.0
+offset_bottom = 279.0
+
+[node name="Mountain" type="Button" parent="." unique_id=929353162]
+visible = false
+layout_mode = 0
+offset_left = 619.0
+offset_top = 151.0
+offset_right = 757.0
+offset_bottom = 208.0
+
+[node name="Mountain Bastion" type="Button" parent="." unique_id=1797418521]
+visible = false
+layout_mode = 0
+offset_left = 749.0
+offset_top = 92.0
+offset_right = 887.0
+offset_bottom = 149.0
+
+[node name="Plains Bastion" type="Button" parent="." unique_id=12930166]
+visible = false
+layout_mode = 0
+offset_left = 788.0
+offset_top = 292.0
+offset_right = 958.0
+offset_bottom = 351.0
+
+[node name="Coastal Bastion" type="Button" parent="." unique_id=1402622345]
+visible = false
+layout_mode = 0
+offset_left = 162.0
+offset_top = 411.0
+offset_right = 332.0
+offset_bottom = 470.0
+
+[node name="Lake" type="Button" parent="." unique_id=766027550]
+visible = false
+layout_mode = 0
+offset_left = 770.0
+offset_top = 426.0
+offset_right = 908.0
+offset_bottom = 483.0
+
+[node name="Plains" type="Button" parent="." unique_id=1226903477]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 377.0
+offset_right = 625.0
+offset_bottom = 448.0
+text = "Plains"
+
+[node name="MM" type="Button" parent="." unique_id=1479597186]
+layout_mode = 0
+offset_left = 1113.0
+offset_top = 18.0
+offset_right = 1260.2224
+offset_bottom = 57.0
+text = "Main Menu"
+
+[connection signal="pressed" from="Main Village" to="." method="_on_main_village_pressed"]
+[connection signal="pressed" from="Plains" to="." method="_on_plains_pressed"]
+[connection signal="pressed" from="MM" to="." method="_on_mm_pressed"]
